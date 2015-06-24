@@ -83,6 +83,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 - [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)
 - [Paper Now](https://github.com/PeerJ/paper-now#paper-now) by [PeerJ](https://peerj.com/)
+![](images/funding.png)
 
 ### Thanks for your attention! Questions?
 
