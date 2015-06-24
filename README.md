@@ -70,6 +70,10 @@ license: CC-BY-4.0 for own content; image attributions in titles
 - [![](images/overleaf-fav.png)\ Overleaf.com](https://www.overleaf.com/)
 - [![](images/authorea-fav.png)\ Authorea.com](https://www.sharelatex.com/)
 
+> - and versioned in order to stop this:
+![](images/versions-win-explorer.png "")
+> - more at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)
+
 ### Write in Word
 
 - exponentially increasing learning curve
