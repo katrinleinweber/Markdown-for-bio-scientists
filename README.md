@@ -29,16 +29,17 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ### Markdown
 
-> "[...] as easy-to-read and easy-to-write as is feasible."
-> -- John Gruber and Aaron Swartz [^1]
+> Markdown is two things: (1) a plain text formatting syntax; and (2) a software tool [...] intended to be as easy-to-read and easy-to-write as is feasible. -- John Gruber and Aaron Swartz (2004)
 
-> - markup[^2] language (like HTML & \LaTeX) with minimal syntax
+### Markdown
+
+> - markup[^1] language (like HTML & \LaTeX) with minimal syntax[^2]
 > - flatter learning curve than \LaTeX
 
-[^1]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
-[^2]: formatting, either via in-text commands or buttons
+[^1]: markup = formatting & annotation, either via in-text commands or buttons
+[^2]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 
-### Markdown saves you time & nerves
+### Some Markdown syntax[^3]
 
 \ 				| Markdown			| \LaTeX \ 
 ----------------|-------------------|---------
@@ -47,8 +48,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ~sub~script		| `~sub~script` 	| `\textsubscript{sub}script`
 ^super^script	| `^super^script`	| `\textsuperscript{super}script`
 
-> - short commands are typed faster than buttons can be clicked
-> - syntax examples at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
+[^3]: more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
 
 ### Application examples of Markdown in scientific publishing
 

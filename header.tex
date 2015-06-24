@@ -1,3 +1,7 @@
+% hide footnotes until item is actually displayed, see https://github.com/JensErat/scientific-markdown/blob/master/presentation-header.tex#L53
+\renewcommand\footnoterule{%
+  \vspace*{1.5ex}\rule{.4\columnwidth}{0.4pt}\vspace*{.5ex}}
+
 % suppress "Figure:" label, see https://tex.stackexchange.com/questions/82456/
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
 
