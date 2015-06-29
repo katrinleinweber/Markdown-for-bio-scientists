@@ -23,6 +23,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 > \TeX\ is for technical text. -- Donald E. Knuth (1977)
 
 > \LaTeX\ is a document preparation system. -- Leslie Lamport (1986)
+> - *easy-to-write*: automatable with [![](images/textexpander.png)\ TextExpander](http://smilesoftware.com/TextExpander/index.html) (Mac), [![](images/phraseexpress.png)\ PhraseExpress](http://www.phraseexpress.com/index.html) (Win), etc.[^2]
 
 > - beautiful typesetting, esp. of mathematical formulae
 > - powerful automations (species names, intra-doc links etc.)
