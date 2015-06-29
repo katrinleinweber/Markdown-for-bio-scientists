@@ -25,10 +25,10 @@ license: CC-BY-4.0 for own content; image attributions in titles
 > - *plain text*: small files, fast loading & saving, interoperable
 > - *formatting syntax*: annotation/formatting commands within your text
 > - *easy-to-read*: few & small commands, compared \LaTeX, HTML & other markup languages
-> - *easy-to-write*: automatable with [![](images/textexpander.png)\ TextExpander](http://smilesoftware.com/TextExpander/index.html) (Mac), [![](images/phraseexpress.png)\ PhraseExpress](http://www.phraseexpress.com/index.html) (Win), etc.[^2]
+> - *easy-to-write*: automatable with [![](images/textexpander.png)\ TextExpander](http://smilesoftware.com/TextExpander/index.html) (Mac), [![](images/phraseexpress.png)\ PhraseExpress](http://www.phraseexpress.com/index.html) (Win), etc.[^at]
 
 [^1]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
-[^2]: [alternativeto.net/tag/text-substitution](https://alternativeto.net/tag/text-substitution/)
+[^at]: [alternativeto.net/tag/text-substitution](https://alternativeto.net/tag/text-substitution/)
 
 ### Markdown advantages over...
 
@@ -45,7 +45,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ### Markdown syntax
 
-\ 				| Markdown[^3]		| \LaTeX \ 
+\ 				| Markdown    		| \LaTeX \ 
 ---------------:|-------------------|----------
 **bold**		| `**bold**` 	    | `\textbf{bold}`
 *Species name*	| `*Species name*` 	| `\emph{Species name}`
@@ -53,7 +53,6 @@ license: CC-BY-4.0 for own content; image attributions in titles
 Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
 ...             | ...               | ...
 
-[^3]: more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples) 
 
 ### Application examples of Markdown in scientific publishing
 ### Markdown editors
