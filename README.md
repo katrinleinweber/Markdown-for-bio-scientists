@@ -54,8 +54,15 @@ Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
 [^3]: more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples) 
 
 ### Application examples of Markdown in scientific publishing
+### Markdown editors
 
 - Humanities going digitally faster than natural sciences?
+Windows | Mac OS X | both + Linux
+-|-|-
+[![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/) | [![](images/macdown.png)\ MacDown](http://macdown.uranusjr.com/) | [![](images/atom.png)\ Atom](https://atom.io/)
+\ | [![](images/mou.png)\ Mou](http://25.io/mou/) | [![](images/brackets.png)\ Brackets](http://brackets.io/)
+\ | \ | [![](images/sublime.png)\ Sublime](https://www.sublimetext.com/)
+
 - [Scholarly Markdown](http://scholarlymarkdown.com/), [pandoc](http://pandoc.org/index.html), etc. extend classical markdown syntax for academics (citations, figures, tables, bibliographies)
  
 ### Save in Markdown

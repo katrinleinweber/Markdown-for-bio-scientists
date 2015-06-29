@@ -6,7 +6,8 @@
 *.out
 *.snm
 *.toc
+*.vrb
 *.xcf
 *.pdf
 markdown.tex
-snippets.txt
+*ippets*
