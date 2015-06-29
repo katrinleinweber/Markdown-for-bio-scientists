@@ -1,6 +1,6 @@
 ---
-title: Write in Word, Save in Markdown, Publish in \LaTeX
-subtitle: Bringing it all together.
+title: Write in Word, \newline Save in Markdown, \newline Publish in \LaTeX
+subtitle: Cherry picking some writing tools.
 author: Katrin Leinweber
 date: 2015-Aug-31/-Sep-02
 license: CC-BY-4.0 for own content; image attributions in titles
@@ -14,13 +14,17 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ### Goals
 
-> - Show you a simpler way to use \LaTeX.
-> - Explain the advantages of Markdown (MD).
-> - Highlight some use-cases for MD.
+> - explain Markdown (MD) & its advantages
+> - highlight some use-cases
+> - show a simpler way to use \LaTeX
+
+# Markdown
 
 ### Markdown advantages
 
-> [...] a plain text formatting syntax [...] intended to be as easy-to-read and easy-to-write as is feasible. \\ -- John Gruber and Aaron Swartz (2004)[^1]
+> [...] a plain text formatting syntax [...] intended to be as easy-to-read and easy-to-write as is feasible.
+> 
+> -- John Gruber and Aaron Swartz (2004)[^1]
 
 > - *plain text*: small files, fast loading & saving, interoperable
 > - *formatting syntax*: annotation/formatting commands within your text
@@ -51,8 +55,11 @@ license: CC-BY-4.0 for own content; image attributions in titles
 *Species name*	| `*Species name*` 	| `\emph{Species name}`
 **Headline 1**  | `# Headline 1`    | `\section{Headline 1}`
 Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
+...             | `### Headline 3`  | `\subsubsection{Headline 3}`
 ...             | ...               | ...
 
+> - high ratio of function-to-character  
+> - more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
 
 ### Application examples of Markdown in scientific publishing
 ### Markdown editors
