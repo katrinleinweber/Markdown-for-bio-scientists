@@ -92,6 +92,15 @@ Windows | Mac OS X | both + Linux
 
 ### \LaTeX\ & Markdown can be edited collaboratively
 
+### Offline editors
+
+Windows | Mac OS X | both + Linux
+-|-|-
+[![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/) | [![](images/macdown.png)\ MacDown](http://macdown.uranusjr.com/) | [![](images/atom.png)\ Atom](https://atom.io/)
+\ | [![](images/mou.png)\ Mou](http://25.io/mou/) | [![](images/brackets.png)\ Brackets](http://brackets.io/)
+\ | \ | [![](images/sublime.png)\ Sublime](https://www.sublimetext.com/)
+
+### Online editors
 
 - [![](images/sharelatex-fav.png)\ ShareLaTeX.com](https://www.authorea.com/)
 - [![](images/overleaf-fav.png)\ Overleaf.com](https://www.overleaf.com/)
