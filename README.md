@@ -56,6 +56,7 @@ Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
 
 ### Application examples of Markdown in scientific publishing
 ### Markdown editors
+# Using Markdown for...
 
 - Humanities going digitally faster than natural sciences?
 Windows | Mac OS X | both + Linux
@@ -63,10 +64,25 @@ Windows | Mac OS X | both + Linux
 [![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/) | [![](images/macdown.png)\ MacDown](http://macdown.uranusjr.com/) | [![](images/atom.png)\ Atom](https://atom.io/)
 \ | [![](images/mou.png)\ Mou](http://25.io/mou/) | [![](images/brackets.png)\ Brackets](http://brackets.io/)
 \ | \ | [![](images/sublime.png)\ Sublime](https://www.sublimetext.com/)
+### ... digital lab journalling
 
 - [Scholarly Markdown](http://scholarlymarkdown.com/), [pandoc](http://pandoc.org/index.html), etc. extend classical markdown syntax for academics (citations, figures, tables, bibliographies)
  
 ### Save in Markdown
+![(Check)lists, hyperlinks, images](images/lab-journal.png)
+
+### ... experiment summaries
+
+![[RMarkdown.RStudio.com](http://rmarkdown.rstudio.com/)](images/rmarkdown.jpg)
+
+### ... better document versioning than this:
+
+![](images/versions-win-explorer.png)
+
+### ... better document versioning with Git:
+
+![30min Git intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
+
 
 
 
