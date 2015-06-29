@@ -98,3 +98,4 @@ Windows | Mac OS X | both + Linux
 
 ### Thanks for your attention! Questions?
 
+- Markdown questions on [![](images/researchgate.png)\ Researchgate](https://www.researchgate.net/search.Search.html?type=question&query=markdown) and [![](images/stackexchange.png)\ StackExchange](https://stackoverflow.com/questions/tagged/markdown?sort=votes&pageSize=15)
