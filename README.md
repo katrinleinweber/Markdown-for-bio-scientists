@@ -18,36 +18,39 @@ license: CC-BY-4.0 for own content; image attributions in titles
 > - Explain the advantages of Markdown (MD).
 > - Highlight some use-cases for MD.
 
-### \TeX\ & \LaTeX\
+### Markdown advantages
 
-> \TeX\ is for technical text. -- Donald E. Knuth (1977)
+> [...] a plain text formatting syntax [...] intended to be as easy-to-read and easy-to-write as is feasible. \\ -- John Gruber and Aaron Swartz (2004)[^1]
 
-> \LaTeX\ is a document preparation system. -- Leslie Lamport (1986)
+> - *plain text*: small files, fast loading & saving, interoperable
+> - *formatting syntax*: annotation/formatting commands within your text
+> - *easy-to-read*: few & small commands, compared \LaTeX, HTML & other markup languages
 > - *easy-to-write*: automatable with [![](images/textexpander.png)\ TextExpander](http://smilesoftware.com/TextExpander/index.html) (Mac), [![](images/phraseexpress.png)\ PhraseExpress](http://www.phraseexpress.com/index.html) (Win), etc.[^2]
 
-> - beautiful typesetting, esp. of mathematical formulae
-> - powerful automations (species names, intra-doc links etc.)
+[^1]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
+[^2]: [alternativeto.net/tag/text-substitution](https://alternativeto.net/tag/text-substitution/)
 
-### Markdown
+### Markdown advantages over...
 
-> Markdown is two things: (1) a plain text formatting syntax; and (2) a software tool [...] intended to be as easy-to-read and easy-to-write as is feasible. -- John Gruber and Aaron Swartz (2004)
+#### \LaTeX\ & other markup languages
 
-### Markdown
+> - flatter learning curve
+> - made by and for the Internet
 
-> - markup[^1] language (like HTML & \LaTeX) with minimal syntax[^2]
-> - flatter learning curve than \LaTeX
+#### Word & other text processing software
 
-[^1]: markup = formatting & annotation, either via in-text commands or buttons
-[^2]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
+> - wider choice of software (any text editor)
+> - faster to type few commands than clicking buttons
+> - convertible to \LaTeX\, .docx & many other formats
 
-### Markdown has minimal syntax[^3]
+### Markdown syntax
 
-\ 				| Markdown			| \LaTeX \ 
-----------------|-------------------|----------
+\ 				| Markdown[^3]		| \LaTeX \ 
+---------------:|-------------------|----------
 **bold**		| `**bold**` 	    | `\textbf{bold}`
 *Species name*	| `*Species name*` 	| `\emph{Species name}`
-H~2~O   		| `H~2~O` 	        | `H\textsubscript{2}O`
-Ca^2+^      	| `Ca^2+^`	        | `Ca\textsuperscript{2+}`
+H~2~O   		| `H~2~O` 	        | `$H_{2}O$`
+Ca^2+^      	| `Ca^2+^`	        | `$Ca^{2+}$`
 **Headline 1**  | `# Headline 1`    | `\section{Headline 1}`
 Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
 ...             | ...               | ...
