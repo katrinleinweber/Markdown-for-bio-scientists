@@ -39,16 +39,19 @@ license: CC-BY-4.0 for own content; image attributions in titles
 [^1]: markup = formatting & annotation, either via in-text commands or buttons
 [^2]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 
-### Some Markdown syntax[^3]
+### Markdown has minimal syntax[^3]
 
 \ 				| Markdown			| \LaTeX \ 
-----------------|-------------------|---------
-**bold**		| `**bold**` 		| `\textbf{bold}`
-*italic*		| `*italic*` 		| `\texit{italic}`
-~sub~script		| `~sub~script` 	| `\textsubscript{sub}script`
-^super^script	| `^super^script`	| `\textsuperscript{super}script`
+----------------|-------------------|----------
+**bold**		| `**bold**` 	    | `\textbf{bold}`
+*Species name*	| `*Species name*` 	| `\emph{Species name}`
+H~2~O   		| `H~2~O` 	        | `H\textsubscript{2}O`
+Ca^2+^      	| `Ca^2+^`	        | `Ca\textsuperscript{2+}`
+**Headline 1**  | `# Headline 1`    | `\section{Headline 1}`
+Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
+...             | ...               | ...
 
-[^3]: more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
+[^3]: more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples) 
 
 ### Application examples of Markdown in scientific publishing
 
