@@ -107,11 +107,19 @@ Windows | Mac OS X | both + Linux
 - [Writage add-in ](http://www.writage.com/) 
 
 ### Acknowledgements
-### Word of caution: Don't switch in the middle of a writing project!
+### Words of caution: try with finished doc, or small new one!
 
-> - try this out with either a finished document, or a new, small one
-> - learning curve is opposite of Word: everything at once, then easier, no matter how large the doc
-> - getting used to Markdown, set-up of text editor and other tools automations
+
+> - initially steep learning curve:
+>     - memorising MD syntax
+>     - set-up of text editor, automations & other tools
+> - but getting easier with time, regardless of document size
+
+\begin{figure}
+  \centering
+  \includegraphics[width=4cm]{images/dont-change-horses-in-middle-of-river.png}
+  \caption{\href{http://www.ishestar.is/}{Íshestar} via \href{http://www.equitrekking.com/articles/entry/iceland_horseback_riding_vacation_photo_journey/}{equitrekking.com}}
+\end{figure}
 
 
 - [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)
