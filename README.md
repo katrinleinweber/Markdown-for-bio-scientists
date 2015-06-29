@@ -91,6 +91,12 @@ Windows | Mac OS X | both + Linux
 - [Writage add-in ](http://www.writage.com/) 
 
 ### Acknowledgements
+### Word of caution: Don't switch in the middle of a writing project!
+
+> - try this out with either a finished document, or a new, small one
+> - learning curve is opposite of Word: everything at once, then easier, no matter how large the doc
+> - getting used to Markdown, set-up of text editor and other tools automations
+
 
 - [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)
 - [Paper Now](https://github.com/PeerJ/paper-now#paper-now) by [PeerJ](https://peerj.com/)
