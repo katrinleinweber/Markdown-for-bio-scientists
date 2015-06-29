@@ -41,7 +41,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 > - wider choice of software (any text editor)
 > - faster to type few commands than clicking buttons
-> - convertible to \LaTeX\, .docx & many other formats
+> - convertible into \LaTeX\, see [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown)
 
 ### Markdown syntax
 
@@ -49,8 +49,6 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ---------------:|-------------------|----------
 **bold**		| `**bold**` 	    | `\textbf{bold}`
 *Species name*	| `*Species name*` 	| `\emph{Species name}`
-H~2~O   		| `H~2~O` 	        | `$H_{2}O$`
-Ca^2+^      	| `Ca^2+^`	        | `$Ca^{2+}$`
 **Headline 1**  | `# Headline 1`    | `\section{Headline 1}`
 Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
 ...             | ...               | ...
