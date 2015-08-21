@@ -1,25 +1,21 @@
 ---
 title: Write in Word, \newline Save in Markdown, \newline Publish in \LaTeX
-subtitle: Cherry picking some writing tools.
+subtitle: May take some pain out of scientific writing.
 author: Katrin Leinweber \newline katrin.leinweber@uni.kn
 date: 2015-Aug-31/-Sep-02
 license: CC-BY-4.0 for own content; image attributions in titles
 ---
 
-### Questions
 
-> - Who likes \LaTeX?
-> - Who knows Markdown?
-> - Who uses Word?
+# This is not a scientific talk, but an introduction to a modern way of writing.
 
-### Goals
+<!--
+http://www.chembiol.uni-konstanz.de/statement.html says "training programs that transcend traditional disciplines"
+Me, and the organisers apparently as well, believe it is relevant to many aspects of science
+-->
 
-> - explain Markdown (MD) & its advantages
-> - highlight some use-cases
-> - show a simpler way to use \LaTeX
 ### Any new way of writing may touch many aspects of science
 
-# Markdown
 \begin{center}
     \smartdiagram[bubble diagram]{
         SCIENCE,
@@ -43,6 +39,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 > - *formatting syntax*: annotation/formatting commands within your text
 > - *easy-to-read*: few & small commands, compared \LaTeX, HTML & other markup languages
 > - *easy-to-write*: automatable with [![](images/textexpander.png)\ TextExpander](http://smilesoftware.com/TextExpander/index.html) (Mac), [![](images/phraseexpress.png)\ PhraseExpress](http://www.phraseexpress.com/index.html) (Win), etc.[^at]
+# Markdown is one such modern way of writing.
 
 [^1]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 [^at]: [alternativeto.net/tag/text-substitution](https://alternativeto.net/tag/text-substitution/)
