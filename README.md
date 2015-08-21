@@ -17,8 +17,21 @@ license: CC-BY-4.0 for own content; image attributions in titles
 > - explain Markdown (MD) & its advantages
 > - highlight some use-cases
 > - show a simpler way to use \LaTeX
+### Any new way of writing may touch many aspects of science
 
 # Markdown
+\begin{center}
+    \smartdiagram[bubble diagram]{
+        SCIENCE,
+            review\\literature,
+            formulate\\hypotheses,
+            prepare\\lectures,
+            publish\\findings,
+            analyse\\data,
+            document\\observations,
+            conduct\\experiments
+        }
+\end{center}
 
 ### Markdown advantages
 
@@ -64,6 +77,7 @@ Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
 ### Application examples of Markdown in scientific publishing
 ### Markdown editors
 # Using Markdown for...
+### What is Markdown? Markup language.
 
 - Humanities going digitally faster than natural sciences?
 Windows | Mac OS X | both + Linux
@@ -72,6 +86,13 @@ Windows | Mac OS X | both + Linux
 \ | [![](images/mou.png)\ Mou](http://25.io/mou/) | [![](images/brackets.png)\ Brackets](http://brackets.io/)
 \ | \ | [![](images/sublime.png)\ Sublime](https://www.sublimetext.com/)
 ### ... digital lab journalling
+\begin{center}
+    \smartdiagram[sequence diagram]{
+        unformatted text,
+        markup / formatting,
+        presentable document
+        }
+\end{center}
 
 - [Scholarly Markdown](http://scholarlymarkdown.com/), [pandoc](http://pandoc.org/index.html), etc. extend classical markdown syntax for academics (citations, figures, tables, bibliographies)
  
@@ -89,8 +110,12 @@ Windows | Mac OS X | both + Linux
 ### ... better document versioning with Git:
 
 ![30min Git intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
+### Words of caution: Different dialects/flavors
 
+> - similar to \LaTeX\ templates, classes & styles
+> - any is fine for simple document
 
+![](images/MD-Venn.png)
 
 
 ### Enables Open Science
