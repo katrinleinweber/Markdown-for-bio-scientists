@@ -29,51 +29,27 @@ Me, and the organisers apparently as well, believe it is relevant to many aspect
         }
 \end{center}
 
-### Markdown advantages
 
 > [...] a plain text formatting syntax [...] intended to be as easy-to-read and easy-to-write as is feasible.
 > 
 > -- John Gruber and Aaron Swartz (2004)[^1]
 
-> - *plain text*: small files, fast loading & saving, interoperable
-> - *formatting syntax*: annotation/formatting commands within your text
-> - *easy-to-read*: few & small commands, compared \LaTeX, HTML & other markup languages
-> - *easy-to-write*: automatable with [![](images/textexpander.png)\ TextExpander](http://smilesoftware.com/TextExpander/index.html) (Mac), [![](images/phraseexpress.png)\ PhraseExpress](http://www.phraseexpress.com/index.html) (Win), etc.[^at]
 # Markdown is one such modern way of writing.
 
 [^1]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 [^at]: [alternativeto.net/tag/text-substitution](https://alternativeto.net/tag/text-substitution/)
 
-### Markdown advantages over...
 
-#### \LaTeX\ & other markup languages
 
-> - flatter learning curve
-> - made by and for the Internet
 
-#### Word & other text processing software
 
-> - wider choice of software (any text editor)
-> - faster to type few commands than clicking buttons
-> - convertible into \LaTeX\, see [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown)
 ### What is Markdown? Plain text.
 
-### Markdown syntax
 > - small files load, save & sync faster
 > - large choice of editors & related software tools
 
-\ 				| Markdown    		| \LaTeX \ 
----------------:|-------------------|----------
-**bold**		| `**bold**` 	    | `\textbf{bold}`
-*Species name*	| `*Species name*` 	| `\emph{Species name}`
-**Headline 1**  | `# Headline 1`    | `\section{Headline 1}`
-Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
-...             | `### Headline 3`  | `\subsubsection{Headline 3}`
-...             | ...               | ...
 ![](images/filesizes.png)
 
-> - high ratio of function-to-character  
-> - more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
 
 ### What is Markdown? Markup language.
 
@@ -86,11 +62,45 @@ Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
         }
 \end{center}
 
+> - separate content from display style ("marking up")
+> - but intermix markup tags/commands with text
+> - `.docx`, `.odt`, etc. also XML-based
+
+<!--
+all modern document formats are markup
+choice is: control the markup, or let the software control it?
+Markdown lets you control it.
+-->
+
+### What is Markdown? Markup language.
+
+\               | \LaTeX\                      | HTML                 
+---------------:|----------------------------- |----------------------
+**bold**        | `\textbf{bold}`              | `<b>bold</b>`        
+*Species name*  | `\textit{Species name}`      | `<i>Species name</i>`
+**Heading 1**   | `\section{Heading 1}`        | `<h1>Heading 1</h1>`
+Heading 2       | `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`
+~~strike out~~  | `\sout{strike out}`          | `<strike>out</strike>`
 
 
+### What is Markdown? Minimalistic formatting syntax.
 
+\               | Markdown              
+---------------:|-----------------
+**bold**        | `**bold**`      
+*Species name*  | `*Species name*`
+**Heading 1**   | `# Heading 1`   
+Heading 2       | `## Heading 2`  
+~~strike out~~  | `~~strike out~~`
 
+> - short commands = easier typing & reading
+> - tried & tested through decades of Internet communication
+> - interoperable across many editors & online services
+> - basis for powerful automation & conversion options
 
+<!--
+evolutionary time spans on Internet
+-->
 
 ### Words of caution: Different dialects/flavors
 
