@@ -75,16 +75,9 @@ Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
 > - high ratio of function-to-character  
 > - more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
 
-### Application examples of Markdown in scientific publishing
-### Markdown editors
 ### What is Markdown? Markup language.
 
 - Humanities going digitally faster than natural sciences?
-Windows | Mac OS X | both + Linux
--|-|-
-[![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/) | [![](images/macdown.png)\ MacDown](http://macdown.uranusjr.com/) | [![](images/atom.png)\ Atom](https://atom.io/)
-\ | [![](images/mou.png)\ Mou](http://25.io/mou/) | [![](images/brackets.png)\ Brackets](http://brackets.io/)
-\ | \ | [![](images/sublime.png)\ Sublime](https://www.sublimetext.com/)
 \begin{center}
     \smartdiagram[sequence diagram]{
         unformatted text,
@@ -93,9 +86,6 @@ Windows | Mac OS X | both + Linux
         }
 \end{center}
 
-- [Scholarly Markdown](http://scholarlymarkdown.com/), [pandoc](http://pandoc.org/index.html), etc. extend classical markdown syntax for academics (citations, figures, tables, bibliographies)
- 
-### Save in Markdown
 
 
 
@@ -111,28 +101,28 @@ Windows | Mac OS X | both + Linux
 
 
 ### Enables Open Science
+### Some software tools with Markdown support
 
+<!--
+not something I have developed
+just passing along the message
+-->
 
+> - [![](images/sublime.png)\ Sublime Text](https://www.sublimetext.com/) 
+> - [Jens Erat's Scientific Markdown](https://github.com/JensErat/scientific-markdown) & [John MacFarlane's pandoc by ](http://pandoc.org/index.html) provide scientific writing environment (citations, figures, tables, bibliographies, formulas, etc.)
 
-### \LaTeX\ & Markdown can be edited collaboratively
+#### [![](images/authorea-fav.png)\ Authorea.com](https://authorea.com/)
 
-### Offline editors
+> - collaborative manuscript preparation platform (also for \LaTeX)
+> - integrates Mendeley, EndNote & Zotero
+
 #### [![](images/peerj.png)\ PeerJ Paper Now](https://github.com/PeerJ/paper-now)
 
-Windows | Mac OS X | both + Linux
--|-|-
-[![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/) | [![](images/macdown.png)\ MacDown](http://macdown.uranusjr.com/) | [![](images/atom.png)\ Atom](https://atom.io/)
-\ | [![](images/mou.png)\ Mou](http://25.io/mou/) | [![](images/brackets.png)\ Brackets](http://brackets.io/)
-\ | \ | [![](images/sublime.png)\ Sublime](https://www.sublimetext.com/)
 > - template for MD-formatted scientific texts & figures
 > - generates & publishes article website[^PN]
 
-### Online editors
 [^PN]: [katrinleinweber.github.io/paper-now](https://katrinleinweber.github.io/paper-now/)
 
-- [![](images/sharelatex-fav.png)\ ShareLaTeX.com](https://www.authorea.com/)
-- [![](images/overleaf-fav.png)\ Overleaf.com](https://www.overleaf.com/)
-- [![](images/authorea-fav.png)\ Authorea.com](https://www.sharelatex.com/)
 
 
 ### Write in Word
