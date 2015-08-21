@@ -1,7 +1,7 @@
 ---
 title: Write in Word, \newline Save in Markdown, \newline Publish in \LaTeX
 subtitle: Cherry picking some writing tools.
-author: Katrin Leinweber
+author: Katrin Leinweber \newline katrin.leinweber@uni.kn
 date: 2015-Aug-31/-Sep-02
 license: CC-BY-4.0 for own content; image attributions in titles
 ---
@@ -195,3 +195,4 @@ Windows | Mac OS X | both + Linux
 ### Thanks for your attention! Questions?
 
 - Markdown questions on [![](images/researchgate.png)\ Researchgate](https://www.researchgate.net/search.Search.html?type=question&query=markdown) and [![](images/stackexchange.png)\ StackExchange](https://stackoverflow.com/questions/tagged/markdown?sort=votes&pageSize=15)
+- katrin.leinweber@uni.kn
