@@ -152,7 +152,6 @@ Windows | Mac OS X | both + Linux
 - exponentially increasing learning curve
 - [Writage add-in ](http://www.writage.com/) 
 
-### Acknowledgements
 ### Words of caution: try with finished doc, or small new one!
 
 
@@ -168,8 +167,6 @@ Windows | Mac OS X | both + Linux
 \end{figure}
 
 
-- [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)
-![](images/funding.png)
 ### *Write in Word?* Save in Markdown! Publish in \LaTeX!
 
 > - [Writage.com](http://www.writage.com/) adds Markdown support into MS Word
@@ -191,5 +188,15 @@ Windows | Mac OS X | both + Linux
 
 ### Thanks for your attention! Questions?
 
-- Markdown questions on [![](images/researchgate.png)\ Researchgate](https://www.researchgate.net/search.Search.html?type=question&query=markdown) and [![](images/stackexchange.png)\ StackExchange](https://stackoverflow.com/questions/tagged/markdown?sort=votes&pageSize=15)
 - katrin.leinweber@uni.kn
+- Markdown questions on [![](images/stackoverflow.png)\ StackOverflow.com](https://stackoverflow.com/questions/tagged/markdown)
+- live demo: [commonmark.org/dingus](http://spec.commonmark.org/dingus/)
+- more syntax: [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
+- recording will appear on [konscience.de/md](http://www.konscience.de/md) soon
+
+##### Acknowledgements
+
+- Ralf, Sarah, Sina, Xiaohui, and all other retreat organisers
+- [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)
+
+![](images/funding.png)
