@@ -125,14 +125,18 @@ Windows | Mac OS X | both + Linux
 ### \LaTeX\ & Markdown can be edited collaboratively
 
 ### Offline editors
+#### [![](images/peerj.png)\ PeerJ Paper Now](https://github.com/PeerJ/paper-now)
 
 Windows | Mac OS X | both + Linux
 -|-|-
 [![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/) | [![](images/macdown.png)\ MacDown](http://macdown.uranusjr.com/) | [![](images/atom.png)\ Atom](https://atom.io/)
 \ | [![](images/mou.png)\ Mou](http://25.io/mou/) | [![](images/brackets.png)\ Brackets](http://brackets.io/)
 \ | \ | [![](images/sublime.png)\ Sublime](https://www.sublimetext.com/)
+> - template for MD-formatted scientific texts & figures
+> - generates & publishes article website[^PN]
 
 ### Online editors
+[^PN]: [katrinleinweber.github.io/paper-now](https://katrinleinweber.github.io/paper-now/)
 
 - [![](images/sharelatex-fav.png)\ ShareLaTeX.com](https://www.authorea.com/)
 - [![](images/overleaf-fav.png)\ Overleaf.com](https://www.overleaf.com/)
@@ -164,7 +168,6 @@ Windows | Mac OS X | both + Linux
 
 
 - [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)
-- [Paper Now](https://github.com/PeerJ/paper-now#paper-now) by [PeerJ](https://peerj.com/)
 ![](images/funding.png)
 ### *Write in Word?* Save in Markdown! Publish in \LaTeX!
 
