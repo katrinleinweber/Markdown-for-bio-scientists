@@ -19,3 +19,8 @@ core:
 			README.md
 		latexmk -pdflatex="xelatex --shell-escape %O %S" -pdf markdown.tex
 		cp Markdown.pdf Markdown-core.pdf
+writage:
+	pandoc \
+		--from markdown \
+		--output markdown-Writage.pdf \
+		'Writage demo.md'

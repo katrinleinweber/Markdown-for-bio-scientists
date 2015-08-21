@@ -166,6 +166,24 @@ Windows | Mac OS X | both + Linux
 - [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)
 - [Paper Now](https://github.com/PeerJ/paper-now#paper-now) by [PeerJ](https://peerj.com/)
 ![](images/funding.png)
+### *Write in Word?* Save in Markdown! Publish in \LaTeX!
+
+> - [Writage.com](http://www.writage.com/) adds Markdown support into MS Word
+> - produces more command symbols than necessary
+> - renames media files & looses figure captions :-/
+
+![](images/writage)
+
+<!--suboptimal => go the whole way to writing Markdown yourself-->
+
+
+
+# Write in Word, \newline Save in Markdown, \newline Publish in \LaTeX
+
+
+
+# ~~Write in Word~~, \newline Write & Save in Markdown, \newline Publish in \LaTeX
+
 
 ### Thanks for your attention! Questions?
 
