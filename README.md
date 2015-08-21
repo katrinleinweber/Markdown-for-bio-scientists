@@ -59,8 +59,11 @@ license: CC-BY-4.0 for own content; image attributions in titles
 > - wider choice of software (any text editor)
 > - faster to type few commands than clicking buttons
 > - convertible into \LaTeX\, see [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown)
+### What is Markdown? Plain text.
 
 ### Markdown syntax
+> - small files load, save & sync faster
+> - large choice of editors & related software tools
 
 \ 				| Markdown    		| \LaTeX \ 
 ---------------:|-------------------|----------
@@ -70,6 +73,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 Headline 2      | `## Headline 2`   | `\subsection{Headline 2}`
 ...             | `### Headline 3`  | `\subsubsection{Headline 3}`
 ...             | ...               | ...
+![](images/filesizes.png)
 
 > - high ratio of function-to-character  
 > - more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
