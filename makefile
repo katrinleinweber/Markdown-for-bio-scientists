@@ -1,5 +1,5 @@
 clean:
-			--from markdown+table_captions+yaml_metadata_block \
+		--from markdown+yaml_metadata_block \
 	pandoc \
 		--slide-level 3 \
 		--to beamer \
@@ -10,15 +10,16 @@ clean:
 	cp Markdown.pdf Markdown-test.pdf
 
 core:
-			--from markdown+table_captions+yaml_metadata_block \
 	pandoc \
 		--slide-level 3 \
+		--from markdown+yaml_metadata_block \
 		--to beamer \
 		--include-in-header header.tex \
 		--output markdown.tex \
 		README.md
 	latexmk -pdflatex="xelatex --shell-escape %O %S" -pdf markdown.tex
 	cp Markdown.pdf Markdown-core.pdf
+
 writage:
 	pandoc \
 		--from markdown \
