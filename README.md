@@ -18,56 +18,46 @@ Me, and the organisers apparently as well, believe it is relevant to many aspect
 
 \begin{center}
     \smartdiagram[bubble diagram]{
-        SCIENCE,
-            review\\literature,
-            formulate\\hypotheses,
-            prepare\\lectures,
-            publish\\findings,
-            analyse\\data,
-            document\\observations,
-            conduct\\experiments
+        SCIENTIFIC\\WRITING,
+            brainstorming\\ideas,
+            reviewing\\literature,
+            preparing\\lectures,
+            preparing\\publications,
+            analysing\\data,
+            documenting\\experiments,
+            taking\\notes
         }
 \end{center}
 
+<!--
+Who uses Word, Markdown & LaTeX?
+Who likes \LaTeX?
+Who knows Markdown?
+-->
 
-> [...] a plain text formatting syntax [...] intended to be as easy-to-read and easy-to-write as is feasible.
-> 
-> -- John Gruber and Aaron Swartz (2004)[^1]
 
 # Markdown is one such modern way of writing.
-
-[^1]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
-[^at]: [alternativeto.net/tag/text-substitution](https://alternativeto.net/tag/text-substitution/)
-
-
-
-
-
-### What is Markdown? Plain text.
-
-> - small files load, save & sync faster
-> - large choice of editors & related software tools
-
-![](images/filesizes.png)
 
 
 ### What is Markdown? Markup language.
 
-- Humanities going digitally faster than natural sciences?
 \begin{center}
     \smartdiagram[sequence diagram]{
-        unformatted text,
-        markup / formatting,
-        presentable document
+        text \& figures,
+        add markup,
+        format / compile,
+        document
         }
 \end{center}
 
-> - separate content from display style ("marking up")
-> - but intermix markup tags/commands with text
-> - `.docx`, `.odt`, etc. also XML-based
+> - all modern document formats are markup
+> - Word processors just hide it & compile in real-time
+> - languages differ in ratio of text to syntax
 
 <!--
-all modern document formats are markup
+> - \LaTeX\, HTML but intermix markup tags/commands with text
+> - `.docx`, `.odt`, etc. also XML-based
+
 choice is: control the markup, or let the software control it?
 Markdown lets you control it.
 -->
@@ -75,85 +65,55 @@ Markdown lets you control it.
 ### What is Markdown? Markup language.
 
 \               | \LaTeX\                      | HTML                 
----------------:|----------------------------- |----------------------
-**bold**        | `\textbf{bold}`              | `<b>bold</b>`        
-*Species name*  | `\textit{Species name}`      | `<i>Species name</i>`
-**Heading 1**   | `\section{Heading 1}`        | `<h1>Heading 1</h1>`
-Heading 2       | `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`
-~~strike out~~  | `\sout{strike out}`          | `<strike>out</strike>`
+---------------:|----------------------------- |------------------------
+**bold**        | `\textbf{bold}`              | `<strong>bold</strong>`
+*Species name*  | `\emph{Species name}`        | `<i>Species name</i>`  
+**Heading 1**   | `\section{Heading 1}`        | `<h1>Heading 1</h1>`   
+Heading 2       | `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`   
+~~strike out~~  | `\sout{strike out}`          | `<strike>out</strike>` 
+
+> - only readable in compiled form (PDF, website)
+> - classes & style files determine compiled look
+> - editing those requires deeper knowledge of the language
 
 
-### What is Markdown? Minimalistic formatting syntax.
+### What is Markdown? Plain text markup language.
 
 \               | Markdown              
 ---------------:|-----------------
-**bold**        | `**bold**`      
-*Species name*  | `*Species name*`
+**bold**        | `**bold**` or `__bold__`
+*Species name*  | `*Species name*` or `_Species name_`
 **Heading 1**   | `# Heading 1`   
 Heading 2       | `## Heading 2`  
 ~~strike out~~  | `~~strike out~~`
 
-> - short commands = easier typing & reading
-> - tried & tested through decades of Internet communication
-> - interoperable across many editors & online services
-> - basis for powerful automation & conversion options
+> - minimalistic syntax = easier typing & reading
+> - derived from decades of email & forum conventions
+> - links, images, tables, footnotes, quotes available[^syntax]
 
 <!--
 evolutionary time spans on Internet
+> - interoperable across many editors & online services
 -->
 
-### Words of caution: Different dialects/flavors
-
-> - similar to \LaTeX\ templates, classes & styles
-> - any is fine for simple document
-
-![](images/MD-Venn.png)
+[^syntax]: more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples) & [pandoc.org/README.html](http://pandoc.org/README.html#pandocs-markdown)
 
 
-### Enables Open Science
-### Some software tools with Markdown support
+### Markdown developers: Gruber & Swartz (2004)[^df]
 
-<!--
-not something I have developed
-just passing along the message
--->
+![photos by [George Del Barrio (CC BY-SA 3.0 via Wikipedia)](https://en.wikipedia.org/wiki/File:John_Gruber.jpeg) and
+[Fred Benenson](http://www.flickr.com/photos/creativecommons/3111021669/) ([CC BY 2.0 via Wikimedia Commons)](https://commons.wikimedia.org/wiki/File:Aaron_Swartz_profile.jpg)
+](images/gruber_swartz.png)
 
-> - [![](images/sublime.png)\ Sublime Text](https://www.sublimetext.com/) 
-> - [Jens Erat's Scientific Markdown](https://github.com/JensErat/scientific-markdown) & [John MacFarlane's pandoc by ](http://pandoc.org/index.html) provide scientific writing environment (citations, figures, tables, bibliographies, formulas, etc.)
+> - primarily built for web publishing & technical docu
+> - also gaining traction in humanities
+> - natural sciences falling behind?
 
-#### [![](images/authorea-fav.png)\ Authorea.com](https://authorea.com/)
-
-> - collaborative manuscript preparation platform (also for \LaTeX)
-> - integrates Mendeley, EndNote & Zotero
-
-#### [![](images/peerj.png)\ PeerJ Paper Now](https://github.com/PeerJ/paper-now)
-
-> - template for MD-formatted scientific texts & figures
-> - generates & publishes article website[^PN]
-
-[^PN]: [katrinleinweber.github.io/paper-now](https://katrinleinweber.github.io/paper-now/)
+[^df]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 
 
 
-### Write in Word
 # Markdown use-case examples
-
-- exponentially increasing learning curve
-- [Writage add-in ](http://www.writage.com/) 
-
-### Words of caution: try with finished doc, or small new one!
-
-
-> - initially steep learning curve:
->     - memorising MD syntax
->     - set-up of text editor, automations & other tools
-> - but getting easier with time, regardless of document size
-
-\begin{figure}
-  \centering
-  \includegraphics[width=4cm]{images/dont-change-horses-in-middle-of-river.png}
-  \caption{\href{http://www.ishestar.is/}{Íshestar} via \href{http://www.equitrekking.com/articles/entry/iceland_horseback_riding_vacation_photo_journey/}{equitrekking.com}}
-\end{figure}
 
 
 ### Digital lab journalling
@@ -176,6 +136,45 @@ just passing along the message
 ![30min intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
 
 
+### Words of caution: try with finished doc, or small new one!
+
+> - invest time to memorise MD syntax & setting up text editor
+> - contrast to word processor: pays off later, esp. for large documents
+> - easy to get lost in optimisations, automations tools, etc.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=4cm]{images/dont-change-horses-in-middle-of-river.png}
+  \caption{\href{http://www.ishestar.is/}{Íshestar} via \href{http://www.equitrekking.com/articles/entry/iceland_horseback_riding_vacation_photo_journey/}{equitrekking.com}}
+\end{figure}
+
+
+### Some software tools with Markdown support
+
+<!--
+not something I have developed
+just passing along the message
+-->
+
+> - editors with live preview: [![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/) & [![](images/macdown.png)\ MacDown](http://macdown.uranusjr.com/)
+
+#### [![](images/authorea-fav.png)\ Authorea.com](https://authorea.com/)
+
+> - collaborative manuscript preparation platform (also for \LaTeX)
+> - integrates Mendeley, EndNote & Zotero
+
+#### [![](images/peerj.png)\ PeerJ Paper Now](https://github.com/PeerJ/paper-now)
+
+> - template for MD-formatted scientific texts & figures
+> - generates & publishes article website[^PN]
+
+[^PN]: [katrinleinweber.github.io/paper-now](https://katrinleinweber.github.io/paper-now/)
+
+
+
+# All of the above: easier collaboration & publication 
+
+
 ### *Write in Word?* Save in Markdown! Publish in \LaTeX!
 
 > - [Writage.com](http://www.writage.com/) adds Markdown support into MS Word
@@ -184,28 +183,24 @@ just passing along the message
 
 ![](images/writage)
 
-<!--suboptimal => go the whole way to writing Markdown yourself-->
-
 
 
 # Write in Word, \newline Save in Markdown, \newline Publish in \LaTeX
 
 
 
-# ~~Write in Word~~, \newline Write & Save in Markdown, \newline Publish in \LaTeX
+# ~~Write in Word~~, \newline Write & Save in Markdown, \newline Publish in \LaTeX (or Word)
 
 
 ### Thanks for your attention! Questions?
 
-- katrin.leinweber@uni.kn
-- Markdown questions on [![](images/stackoverflow.png)\ StackOverflow.com](https://stackoverflow.com/questions/tagged/markdown)
-- live demo: [commonmark.org/dingus](http://spec.commonmark.org/dingus/)
-- more syntax: [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
+- Markdown questions on [![](images/stackoverflow)\ StackOverflow.com](https://stackoverflow.com/questions/tagged/markdown)- live demo: [commonmark.org/dingus](http://spec.commonmark.org/dingus/)
 - recording will appear on [konscience.de/md](http://www.konscience.de/md) soon
 
 ##### Acknowledgements
 
 - Ralf, Sarah, Sina, Xiaohui, and all other retreat organisers
 - [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)
+- [pandoc by John MacFarlane](http://pandoc.org/index.html)
 
 ![](images/funding.png)
