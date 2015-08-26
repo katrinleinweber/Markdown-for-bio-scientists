@@ -1,10 +1,11 @@
 ---
-title: Write in Word, \newline Save in Markdown, \newline Publish in \LaTeX
+title: Write in Word, \newline \textbf{Save in Markdown}, \newline Publish in \LaTeX
 subtitle: May take some pain out of scientific writing.
-author: Katrin Leinweber \newline katrin.leinweber@uni.kn
+author: Katrin Leinweber
 date: 2015-Aug-31/-Sep-02
 license: CC-BY-4.0 for own content; image attributions in titles
 ---
+
 
 
 # This is not a scientific talk, but an introduction to a modern way of writing.
@@ -144,10 +145,6 @@ just passing along the message
 > - generates & publishes article website[^PN]
 > - no submission options (yet)
 
-
-
-
-# All of the above: easier collaboration & publication 
 [^PN]: [read-lab-confederation.github.io/nyc-subway-anthrax-study](https://read-lab-confederation.github.io/nyc-subway-anthrax-study/)
 
 
