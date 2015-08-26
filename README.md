@@ -70,7 +70,9 @@ Markdown lets you control it.
 *Species name*  | `\emph{Species name}`        | `<i>Species name</i>`  
 **Heading 1**   | `\section{Heading 1}`        | `<h1>Heading 1</h1>`   
 Heading 2       | `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`   
-~~strike out~~  | `\sout{strike out}`          | `<strike>out</strike>` 
+~~strike out~~  | `\sout{strike out}`          | `<strike>out</strike>`
+H~2~O           | `H\textsubscript{2}O`        | `H<sub>2</sub>O`
+Ca^2+^          | `Ca\textsuperscript{2+}`     | `Ca<sup>2+</sup>`
 
 > - only readable in compiled form (PDF, website)
 > - classes & style files determine compiled look
@@ -93,6 +95,8 @@ evolutionary time spans on Internet
 -->
 
 
+H_2_O           | `H~2~O`
+Ca^2+^          | `Ca^2+^`
 
 > - defined in 2004 by John Gruber[^df] & Aaron Swartz
 > - based on email conventions, built for web publishing
