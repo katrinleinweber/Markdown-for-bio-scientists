@@ -81,28 +81,27 @@ Heading 2       | `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`
 
 \               | Markdown              
 ---------------:|-----------------
-**bold**        | `**bold**` or `__bold__`
-*Species name*  | `*Species name*` or `_Species name_`
+**bold**        | `**bold**`
+*Species name*  | `*Species name*`
 **Heading 1**   | `# Heading 1`   
 Heading 2       | `## Heading 2`  
 ~~strike out~~  | `~~strike out~~`
-
-> - minimalistic syntax = easier typing & reading
-> - derived from decades of email & forum conventions
-> - links, images, tables, footnotes, quotes available[^syntax]
 
 <!--
 evolutionary time spans on Internet
 > - interoperable across many editors & online services
 -->
 
-[^syntax]: more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples) & [pandoc.org/README.html](http://pandoc.org/README.html#pandocs-markdown)
 
 
 > - defined in 2004 by John Gruber[^df] & Aaron Swartz
 > - based on email conventions, built for web publishing
+> - has links, images, tables, footnotes, quotes and more[^syntax]
+> - minimalistic, easy to type & read, interoperable
+> - accepts lazy users & works around them
 
 [^df]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
+[^syntax]: [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
 
 
 
