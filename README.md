@@ -158,17 +158,19 @@ just passing along the message
 
 > - collaborative manuscript preparation platform (also for \LaTeX)
 > - integrates Mendeley, EndNote & Zotero
+> - 1-click-formatting & submission available for several journals 
 
 #### [![](images/peerj.png)\ PeerJ Paper Now](https://github.com/PeerJ/paper-now)
 
-> - template for MD-formatted scientific texts & figures
+> - GitHub template for MD-formatted scientific texts & figures
 > - generates & publishes article website[^PN]
+> - no submission options (yet)
 
-[^PN]: [katrinleinweber.github.io/paper-now](https://katrinleinweber.github.io/paper-now/)
 
 
 
 # All of the above: easier collaboration & publication 
+[^PN]: [read-lab-confederation.github.io/nyc-subway-anthrax-study](https://read-lab-confederation.github.io/nyc-subway-anthrax-study/)
 
 
 ### *Write in Word?* Save in Markdown! Publish in \LaTeX!
