@@ -1,5 +1,5 @@
 clean:
-		--from markdown+yaml_metadata_block \
+		--from markdown \
 	pandoc \
 		--slide-level 3 \
 		--to beamer \
@@ -12,7 +12,7 @@ clean:
 core:
 	pandoc \
 		--slide-level 3 \
-		--from markdown+yaml_metadata_block \
+		--from markdown \
 		--to beamer \
 		--include-in-header header.tex \
 		--output markdown.tex \

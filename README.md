@@ -1,11 +1,13 @@
----
-title: Write in Word, \newline Save in Markdown, \newline Publish in \LaTeX
-subtitle: May take some pain out of scientific writing.
-author: Katrin Leinweber \newline katrin.leinweber@uni.kn
-date: 2015-Aug-31/-Sep-02
-license: CC-BY-4.0 for own content; image attributions in titles
----
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usebeamerfont{normalfont}
 
+
+\title{Write in Word, Save in Markdown, Publish in LaTeX}
+\titleCorporateDesign{Write in Word}{\textbf{Save in Markdown}}{Publish in \LaTeX}{}
+\author{Katrin Leinweber} 
+\date{2015-Aug-31/-Sep-02}
+\institute{University of Konstanz}
 
 # This is not a scientific talk, but an introduction to a modern way of writing.
 
