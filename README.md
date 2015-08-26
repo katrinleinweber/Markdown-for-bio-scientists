@@ -134,9 +134,11 @@ Ca^2+^          | `Ca^2+^`
 
 ### Words of caution: try with finished doc, or small new one!
 
-> - invest time to memorise MD syntax & setting up text editor
-> - contrast to word processor: pays off later, esp. for large documents
-> - easy to get lost in optimisations, automations tools, etc.
+> - initial time invest to learn syntax & install tools
+> - pays off later, esp. for large documents
+
+> - different variants have slightly different capabilities
+> - way back to MS Word is always possible
 
 \begin{figure}
   \centering
