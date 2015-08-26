@@ -77,7 +77,7 @@ Heading 2       | `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`
 > - editing those requires deeper knowledge of the language
 
 
-### What is Markdown? Plain text markup language.
+### What is Markdown? Plain text, formatting syntax.
 
 \               | Markdown              
 ---------------:|-----------------
@@ -99,15 +99,8 @@ evolutionary time spans on Internet
 [^syntax]: more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples) & [pandoc.org/README.html](http://pandoc.org/README.html#pandocs-markdown)
 
 
-### Markdown developers: Gruber & Swartz (2004)[^df]
-
-![photos by [George Del Barrio (CC BY-SA 3.0 via Wikipedia)](https://en.wikipedia.org/wiki/File:John_Gruber.jpeg) and
-[Fred Benenson](http://www.flickr.com/photos/creativecommons/3111021669/) ([CC BY 2.0 via Wikimedia Commons)](https://commons.wikimedia.org/wiki/File:Aaron_Swartz_profile.jpg)
-](images/gruber_swartz.png)
-
-> - primarily built for web publishing & technical docu
-> - also gaining traction in humanities
-> - natural sciences falling behind?
+> - defined in 2004 by John Gruber[^df] & Aaron Swartz
+> - based on email conventions, built for web publishing
 
 [^df]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 
@@ -202,6 +195,8 @@ just passing along the message
 ##### In reality:
 
 > - exploding in software development & web publishing
+> - gaining traction in humanities
+> - usable in natural sciences
 
 
 ### Thanks for your attention! Questions?
