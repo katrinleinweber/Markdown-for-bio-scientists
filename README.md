@@ -9,10 +9,6 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 # This is not a scientific talk, but an introduction to a modern way of writing.
 
-<!--
-http://www.chembiol.uni-konstanz.de/statement.html says "training programs that transcend traditional disciplines"
-Me, and the organisers apparently as well, believe it is relevant to many aspects of science
--->
 
 ### Any new way of writing may touch many aspects of science
 
@@ -29,11 +25,6 @@ Me, and the organisers apparently as well, believe it is relevant to many aspect
         }
 \end{center}
 
-<!--
-Who uses Word, Markdown & LaTeX?
-Who likes \LaTeX?
-Who knows Markdown?
--->
 
 
 # Markdown is one such modern way of writing.
@@ -54,13 +45,7 @@ Who knows Markdown?
 > - Word processors just hide it & compile in real-time
 > - languages differ in ratio of text to syntax
 
-<!--
-> - \LaTeX\, HTML but intermix markup tags/commands with text
-> - `.docx`, `.odt`, etc. also XML-based
 
-choice is: control the markup, or let the software control it?
-Markdown lets you control it.
--->
 
 ### What is Markdown? Markup language.
 
@@ -88,13 +73,6 @@ Ca^2+^          | `Ca\textsuperscript{2+}`     | `Ca<sup>2+</sup>`
 **Heading 1**   | `# Heading 1`   
 Heading 2       | `## Heading 2`  
 ~~strike out~~  | `~~strike out~~`
-
-<!--
-evolutionary time spans on Internet
-> - interoperable across many editors & online services
--->
-
-
 H_2_O           | `H~2~O`
 Ca^2+^          | `Ca^2+^`
 
