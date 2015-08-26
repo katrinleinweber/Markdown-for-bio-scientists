@@ -192,6 +192,18 @@ just passing along the message
 # ~~Write in Word~~, \newline Write & Save in Markdown, \newline Publish in \LaTeX (or Word)
 
 
+### Summary: easier collaboration & publication 
+
+##### Make a wish!
+
+> - simple formatting rules, templates from publishers
+> - version control & syncing instead of e-mailing files
+
+##### In reality:
+
+> - exploding in software development & web publishing
+
+
 ### Thanks for your attention! Questions?
 
 - Markdown questions on [![](images/stackoverflow)\ StackOverflow.com](https://stackoverflow.com/questions/tagged/markdown)- live demo: [commonmark.org/dingus](http://spec.commonmark.org/dingus/)
