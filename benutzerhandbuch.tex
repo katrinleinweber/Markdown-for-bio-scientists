@@ -1,0 +1,839 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       %
+% Benutzerhandbuch für das Konstanz Beamer Theme        %
+% Stand: 10.07.2015 - Michael Brendle (Version 0.3)     %
+%                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% *WICHTIG*
+% 1. Die Tex-Datei muss mittels XeLaTeX übersetzt werden, da somit
+%    u.a. die Arial Schriftart eingebunden werden kann.
+%    Bitte 2-mal übersetzten, damit auch das Inhaltsverzeichnis abgebildet wird.
+% 2. Achten Sie darauf, dass alle notwendigen Pakete installiert sind.
+%    Benötigte Pakete: xcolor, geometry, babel, fontenc, textpos, xunicode
+%                      soul, ulem, ifthen, keycommand, tikz, calc, cmbright, fontspec 
+%                      (siehe auch beamerthemeKonstanz.sty)
+% 3. Bei Fragen, Hinweisen und Anregungen können Sie mich unter
+%    michael.brendle@uni-konstanz.de kontaktieren.
+
+
+
+% rgb ist hier dringend notwendig, damit die definierten Farben 
+% des HSB Farbraums in den RGB Farbraum umgewandelt werden, da 
+% einige Pakete keinen HSB Farbraum unterstuetzen.
+\documentclass[rgb]{beamer}
+
+% Das neue Theme Konstanz verwenden
+\usetheme{Konstanz}
+
+% Nummerierungstiefe: 3 ist hier fuer sub sub
+\setcounter{secnumdepth}{3}
+
+
+% Anpassung des Seitenverhältnis:
+% Mögliche Eingabewerte: 
+%   169 fuer (16:9)
+%   43 fuer(4:3)
+%   1610 fuer (16:10)
+% 
+%   * weitere werden noch folgen
+%   * es wird noch an aspect Ratio des Beamer Themes angepasst
+\format{169}
+
+
+\begin{document}
+
+% Initialisierung der Schrift
+% Auf jeden Fall im Tex Dokument nach begin{document} belassen
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usebeamerfont{normalfont}
+
+
+% Wichtig: Den Titel ebenfalls noch auf die maximal 4 Abschnitte einteilen
+\title{Corporate Design: Benutzerhandbuch für das Beamer Paket}
+\titleCorporateDesign{Corporate Design:}{Benutzerhandbuch für das}{Beamer Paket.}{}
+\author{Michael Brendle} 
+\date{10.07.2015}
+\institute{Universität Konstanz}
+
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{Inhaltsverzeichnis}
+	\tableofcontents
+\end{frame}
+
+
+\section{Title, Section and Subsection Page}
+
+\begin{frame}[t]
+	\sectionpage
+	\usebeamerfont{frametitle}%
+		\textcolor{seeblau100}{Erzeugen der Titel Page}\\
+	\usebeamerfont{normalfont}%
+	\vskip 18pt
+	\texttt{\textbackslash title\{Hier ganz normal den Titel eintragen\}}\\
+	\texttt{\textbackslash titleCorporateDesign\{Hier den\}\{Titel in bis\}\{zu 4 Abschnitte\}\{aufteilen\}}\\
+	\vskip 18pt
+	\texttt{\textbackslash begin\{frame\} \textbackslash titlepage \textbackslash end\{frame\}}\\
+	\vskip 18pt
+	Es können zudem noch Formatierungsoptionen eingestellt werden. Mehr dazu im Abschnitt Markieren.
+	\vskip 18pt
+	\textit{Hinweis: Wenn der Titel in weniger als 4 Abschnitte aufgeteilt werden soll, dann die Argumente von vorne füllen und die Hinteren leer lassen.}
+	\vskip 18pt
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{Erzeugen der Section Page}
+	\vskip 18pt
+	\texttt{\textbackslash section\{Hier ganz normal den Titel eintragen\}}\\
+	\vskip 18pt
+	\texttt{\textbackslash begin\{frame\}}\\
+	\texttt{\textbackslash sectionpage }\\
+	\texttt{\textbackslash end\{frame\}}\\	\vskip 18pt
+\end{frame}
+
+\subsection{Subsection}
+\begin{frame}[t]
+	\subsectionpage
+	Erzeugen der Subsection Page:
+	\vskip 18pt
+	\texttt{\textbackslash subsection\{Hier ganz normal den Titel eintragen\}}\\
+	\vskip 18pt
+	\texttt{\textbackslash begin\{frame\}}\\
+	\texttt{\textbackslash subsectionpage }\\
+	\texttt{\textbackslash end\{frame\}}\\
+\end{frame}
+
+\section{Frame}
+
+\begin{frame}[t]
+	\sectionpage
+	Es kann natürlich direkt unter der \texttt{\textbackslash sectionpage} weitergeschrieben werden.
+\end{frame}
+
+\begin{frame}[t]
+	\frametitle{Dies ist ein beliebiger Frame Title}
+	\vskip 18pt
+	\texttt{\textbackslash frametitle\{Dies ist ein beliebiger Frame Title\}}\\
+	\vskip 18pt
+	Ein \texttt{\textbackslash framesubtitle} wird aktuell noch nicht unterstützt.
+\end{frame}
+
+
+\section{Corporate Design Elemente}
+
+\begin{frame}[t]
+	\sectionpage
+	Die vier Sättigungsstufen des \textbf{Seeblau} sind wie folgt definiert:\\
+	\vskip 12pt
+	\begin{beamercolorbox}[wd=0.5\textwidth, ht=3ex, dp=2ex, center]{seeblau100}
+		\texttt{seeblau100}
+	\end{beamercolorbox}
+	\vskip 12pt
+	\begin{beamercolorbox}[wd=0.5\textwidth, ht=3ex, dp=2ex, center]{seeblau65}
+		\texttt{seeblau65}
+	\end{beamercolorbox}
+	\vskip 12pt
+	\begin{beamercolorbox}[wd=0.5\textwidth, ht=3ex, dp=2ex, center]{seeblau35}
+		\texttt{seeblau35}
+	\end{beamercolorbox}
+	\vskip 12pt
+	\begin{beamercolorbox}[wd=0.5\textwidth, ht=3ex, dp=2ex, center]{seeblau20}
+		\texttt{seeblau20}
+	\end{beamercolorbox}
+\end{frame}
+
+
+\begin{frame}[t]
+	Analog dazu die vier Sättigungsstufen der SW-Umsetzung:\\
+	\vskip 12pt
+	\begin{beamercolorbox}[wd=0.5\textwidth, ht=3ex, dp=2ex, center]{schwarz60}
+		\texttt{schwarz60}
+	\end{beamercolorbox}
+	\vskip 12pt
+	\begin{beamercolorbox}[wd=0.5\textwidth, ht=3ex, dp=2ex, center]{schwarz40}
+		\texttt{schwarz40}
+	\end{beamercolorbox}
+	\vskip 12pt
+	\begin{beamercolorbox}[wd=0.5\textwidth, ht=3ex, dp=2ex, center]{schwarz20}
+		\texttt{schwarz20}
+	\end{beamercolorbox}
+	\vskip 12pt
+	\begin{beamercolorbox}[wd=0.5\textwidth, ht=3ex, dp=2ex, center]{schwarz10}
+		\texttt{schwarz10}
+	\end{beamercolorbox}
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{Schriftart}
+	Als Schriftart wird die frei verfügbare Systemschrift \textbf{Arial} verwendet.\\
+	\vskip 18pt
+	Die Schriftgrößen können mittels des Makro\\
+	\texttt{\textbackslash selectfontsize[baselinefaktor=<value>]\{<fontsize>\}}\\
+    oder\\
+    	\texttt{\textbackslash selectfontsize[baselinesize=<value>]\{<fontsize>\}}\\
+	angepasst werden.\\[\baselineskip]
+	Wird das optionale Argument weggelassen, wird automatisch der \texttt{baselinefaktor} 1.2 benutzt. Mehr dazu in der Tex und in der Style Datei.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Schriftgröße       %
+%%%%%%%%%%%%%%%%%%%%%%
+
+% Da innerhalb eines Plakates es meistens mehrere verschiedene Schriftgrößen
+% gibt, steht hier das Makro
+%
+%     \selectfontsize
+%
+% zur Verfügung.
+%
+% Dieses Makro besitzt ein unbedingt notwendiges Argument und ein optionales
+% Feld, indem Key-Value Pairs übergeben werden können.
+%
+%     \selectfontsize[<Key Value Pairs>]{<Schriftgröße>}
+%
+% Das Argument hat dabei folgende Bedeutung:
+% 
+%   1. Argument:         Hier wird die neue Schriftgröße angegeben, die verwendet werden
+%                        soll.
+% Die weiteren Formatierungsoptionen werden alle innerhalb des optionalen Argumentes mittels
+% Key-Value Pairs bestimmt.
+%
+% Dabei stehen folgende Optionen zur Verfügung:
+%
+%     baselineskip    Hier wird der baselineskip angegeben, welcher verwendet werden soll
+%                     Mögliche Werte:
+%                         0      Ist dieser 0, dann wird der baselinefaktor verwendet  
+%                         sonst
+%                    Standardwert: 0
+%
+%     baselinefaktor Hier wird der Faktor angegeben, der verwendet wird, um den neuen
+%                    baselineskip zu berechnen.
+%                    Dieser wird nur benutzt, falls der baselineskip 0 beträgt.
+%                    
+%                        baselineskip = baselinefaktor * #1
+%
+%                    Standardwert: 12/10
+%
+%                    Da hier keine Fließkommazahl in der Dezimalschreibweise angegeben werden
+%                    kann, müssen diese als Brüche repräsentiert werden, wie z.b. 12/10 anstatt
+%                    1.2.
+
+\begin{frame}[t]
+	\frametitle{Verschiedene Schriftgrößen}
+	Die standardmäßig eingestellten Schriftgrößen können auch in der \texttt{beamerthemeKonstanz.sty} verändert werden.\\[\baselineskip]
+	\selectfontsize{12pt} Ich bin eine sehr kleine Schriftgröße\\
+	\selectfontsize{20pt} Ich bin schon größer\\
+	\selectfontsize{28pt} Ich bin noch größer\\
+	\selectfontsize{36pt} Ich bin ziemlich groß\\
+	\selectfontsize{44pt} Ich bin rießig\\
+\end{frame}
+
+\subsection{Markieren}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% CD Element: Markieren %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Um einen Text mit Hilfe des Markieren Elements des Corporate Design hervorzuheben,
+% steht das Makro
+%
+%     \markieren
+%
+% zur Verfügung.
+%
+% Dieses Makro besitzt vier unbedingt notwendige Argumente und ein optionales
+% Feld, indem weitere EIgenschaften festgelegt werden könnnen..
+%
+%     \markieren[Optionen per Key-Value Pair]{<Zeile 1>}{<Zeile 2>}{<Zeile 3>}{<Zeile 4>}
+%
+% Die Argumente haben dabei folgende Bedeutung:
+%
+%   1. - 4. Argument:    Hier werden nun die eigentlichen Zeilen übergeben.
+%
+%                        Wichtig dabei ist es, dass die Aufteilung der Zeilen manuell erfolgen muss durch
+%                        die Argumente, da nur somit sichergestellt werden kann, dass bspw. Treppeneffekte
+%                        nicht auftreten und somit der Benutzer alle Freiheiten bei der Aufteilung besitzt.
+%
+%                        Sollten nicht alle Zeilen verwendet werden, dann müssen die hinteren Brackets
+%                        leer gelassen werden, wie beispielsweise bei der Headline
+%
+% Die wichtigen Formatierungsoptionen werden alle innerhalb des optionalen Argumentes mittels
+% Key-Value Pairs bestimmt.
+%
+% Dabei stehen folgende Optionen zur Verfügung:
+%
+%   align                Hier kann angegeben werden, ob das komplette Objekt
+%                        links- oder rechtsbündig angeordent werden soll.
+%                      
+%                        Der Standardwert ist "left" und somit linksbündig.
+%
+%                        Für eine rechtsbündige Anordnung muss hier der Wert "right" hinterlegt werden.
+%
+%   vertical             Hier wird angegeben, ob der Inhalt der Zeilen zentriert werden soll oder
+%                        überall an der gleichen Baseline ausgerichtet werden soll.
+%                       
+%                        Dies kann mittels der Wörter "center" und "base" eingestellt werden.
+%                        Dabei ist "center" als Standardwert festgelegt.
+%
+%                        Der Unterschied besteht darin, dass bei Zeilen die Buchstaben mit einer Tiefe
+%                        enthalten, wie g, p oder q, anders zentriert werden als welche ohne Buchstaben
+%                        mit einer Tiefe.
+%
+%                        Da dies ein wenig Geschmackssache ist, werden hier beide Varianten zur Verfügung
+%                        gestellt, wobei "center" primär verwendet werden soll, und "base" eher wenn
+%                        Buchstaben mit einer Tiefe in den Zeilen enthalten sind.
+
+\begin{frame}[t]
+	\subsectionpage
+	Das \textbf{Markieren-Element} kann neben der \texttt{\textbackslash titlepage} problemlos mit\\
+	\hskip 1cm \texttt{\textbackslash markieren[<Optionen>]\{<Zeile 1>\}\{<Zeile 2>\}\{<Zeile 3>\}\{<Zeile 4>\}}\\
+	eingesetzt werden.\\[\baselineskip]
+	Zudem stehen noch zwei optionale Argumente \texttt{align} und \texttt{vertical} zur Verfügung. Mittels \texttt{align} und den Werten \texttt{left} bzw. \texttt{right} kann die Ausrichtung des Markieren-Objektes festgelegt werden. Mit der Option \texttt{vertical} und den Werten \texttt{center} und \texttt{base} kann die Ausrichtung innerhalb der Zeilen festgelegt werden.
+	\vskip 18pt
+	\markieren{Ich bin}{eine}{Headline}{}\\
+
+\end{frame}
+
+\begin{frame}[t]
+	\frametitle{Hier sind noch mehr Markieren-Elemente}%
+	\vskip 18pt%
+	\selectfontsize{28pt}%
+	\begin{flushright}%
+	\markieren[align=right]{\textbf{Ich bin}}{\textbf{eine}}{\textbf{Headline}}{}%
+	\end{flushright}%
+	\markieren[vertical=base]{\textbf{Erste Zeile}}{\textbf{von einer}}{\textbf{vierzeiligen}}{\textbf{Headline}}%
+\end{frame}
+
+
+
+
+
+\subsection{Unterstreichen}
+
+%%%%%%%%%%%%%%%%&%%%%%%%%%%%%%%
+% CD Element: Unterstreichung %
+%%%%%%%%%%%%%%%%%&%%%%%%%%%%%%%
+
+% Um einen Text mit Hilfe des Unterstreichen Elements des Corporate Design hervorzuheben,
+% steht das bereits bekannte Makro
+%
+%     \underline
+%
+% zur Verfügung, welches an die Anforderungen des Corporate Designs angepasst wurde.
+%
+% Dieses Makro besitzt ein notwendiges Argument
+%
+%     \underline{1. Argument}
+%
+% Das Argument hat folgende Bedeutung:
+% 
+%   1. Argument: Hier wird der zu unterstreichende Text hinterlegt.
+%
+% Wichtig ist noch zu wissen, dass auch Textbrüche ohne Probleme durchgeführt werden können.
+%
+% Zudem können weitere Formatierungen, wie bold oder italic innerhalb des Argumentes angewendet
+% werden.
+%
+% Die Dicke der unterstrichenen Linie passt sich dabei der aktuell verwendeten Textgröße an.
+
+\begin{frame}[t]
+	\subsectionpage
+	Das \textbf{Unterstreichen-Element} wird wie gewohnt mittels\\
+	\hskip 1cm \texttt{\textbackslash underline\{<text>\}}\\
+	eingesetzt. Das Makro wurde dafür entsprechend angepasst. Möchte man einen fetten unterstrichenen Text haben kann der zu unterstreichende Text einfach mittels \texttt{\textbackslash textbf\{\ldots\}} ergänzt werden: \texttt{\textbackslash underline\{\textbackslash textbf\{Ich bin der Anfang von einem Fließtext mit Unterstreichen\}\}} \\
+	\vskip 18pt
+	\underline{\textbf{Ich bin eine Subline mit Unterstreichen}}\\
+	\vskip 18pt
+	\selectfontsize[baselinefaktor=16/10]{16pt}\underline{\textbf{Ich bin der Anfang von einem Fließtext mit Unterstreichen}} und ich bin der weiterführende Fließtext\ldots\\
+	\end{frame}
+
+
+\subsection{Merken}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% CD Element: Merken %
+%%%%%%%%%%%%%%%%%%%%%%
+
+% Um einen Text mit Hilfe des Merken Elements des Corporate Design hervorzuheben,
+% steht das Makro
+%
+%     \merken
+%
+% zur Verfügung.
+%
+% Dieses Makro besitzt drei unbedingt notwendige Argumente
+%
+%     \merken{1. Argument}{2. Argument}{3. Argument}
+%
+% Die Argumente haben dabei folgende Bedeutung:
+% 
+%   1. Argument: Hier wird die Breite des kompletten Objektes angegeben. Da das
+%                Merken Objekt quadratisch ist, wird hier sowohl die Breite als auch
+%                die Höhe angegeben.
+%
+%   2. Argument: Hier wird die Subline des Merken Elementes angegeben, die direkt unter der
+%                Zeile mit dem X folgt (siehe auch Corporate Design Manual).
+%
+%   3. Argument: Hier wird der eigentliche Inhalt angegeben. Wichtig hierbei ist es,
+%                dass dieser Inhalt an die untere Kante des Merken Elementes orientiert ist.
+%                Somit entgegen der Subline (2. Argument), welche an die obere Kante abzüglich
+%                der Zeile mit dem X orientiert ist.
+%
+% Hier folgt noch eine grafische Darstellung der Argumente:
+%
+%    |<------- 1. Argument ------->|    
+%
+%    -------------------------------    -
+%    |                           X |    ^
+%    | Subline (2. Argument)       |    |
+%    |                             |    1
+%    |                             |    .
+%    |                             |    A
+%    |                             |    r
+%    |                             |    g
+%    |                             |    u
+%    |                             |    m
+%    |                             |    e
+%    |                             |    n
+%    |                             |    t
+%    |                             |    |
+%    | Inhalt (3. Argument)        |    v
+%    -------------------------------    -
+%
+% Wichtig ist noch zu wissen, dass die Linienstärke und die Größe des X in der rechten oberen Ecke an die
+% Höhe / Breite des Merken Elements dynamisch angepasst ist. 
+
+
+\begin{frame}[t]
+	\subsectionpage
+	Das \textbf{Merken-Element} wird mit dem Makro\\
+	\hskip 1cm \texttt{\textbackslash merken\{<Breite/Höhe>\}\{<Subline>\}\{<Inhalt>\}}\\
+	eingesetzt. Da das Merken-Element quadratisch ist, muss nur eine Größe angegeben werden. Ist keine Subline oder Inhalt erwünscht, sollen die dafür vorgesehenen Brackets einfach leer gelassen werden.\\[\baselineskip]
+	\selectfontsize{12pt}\merken{5cm}{}{\textbf{Hier steht etwas,} dass ich mir unbedingt merken oder das ich gesondert hervorheben möchte.}
+\end{frame}
+
+\begin{frame}[t]
+	\frametitle{Hier sind noch mehr Beispiele}%
+	\vskip 18pt%
+	\selectfontsize{28pt}%
+	\merken{7.5cm}{\selectfontsize{12pt}Bachelorstudiengang}{\textbf{Politik- und\\Verwaltungs-\\wissenschaft}}\selectfontsize{10pt}%
+	\hskip 1cm\merken{6cm}{}{\textbf{Kontakt}\\[0.5\baselineskip]Prof. Dr. Guido Burkard\\Universität Konstanz\\Fachbereich Physik\\Universitätsstraße 10\\78464 Konstanz\\+49 7531 88-5256\\guido.burkard@uni-konstanz.de\\[0.5\baselineskip]\textbf{– uni-konstanz.de}}%
+	\hskip 1cm\merken{4.5cm}{}{Die Universität Konstanz ist seit 2007 in allen drei Förderlinien der Exzellenzinitiative erfolgreich.}%
+\end{frame}
+
+\subsection{Block}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% CD Element: Block  %
+%%%%%%%%%%%%%%%%%%%%%%
+
+% Mit dem Makro
+%
+%     \cdblock[Optionen per Key-Value Pair]{<Headline>}{<Spalte 1>}{<Spalte 2>}{<Spalte 3>}{<Spalte 4>}{<Spalte 5>}{<Spalte 6>}{<Spalte 7>}{<Spalte 8>}
+%
+% können Block-Elemente für z.B. wisschenschaftliche Inhalte erstellt werden.
+%
+% Dieses Makro besitzt 9 erforderliche Elemente, die bei jedem Aufruf angegeben werden müssen. Dabei 
+% ist es natürlich mögliche Argumente leer zu lassen, falls man diese nicht benötigt. Dies hat jedoch
+% keinen Einfluss auf die Anzahl an Spalten. Diese müssen separat im Optionenargument angegeben werden
+% mittels des Schlüssels columnnum (siehe weiter unten).
+%
+% Die Argumente haben dabei folgende Bedeutung:
+%
+%   1. Argument: Inhalt der Headline
+%   2. Argument: Inhalt der 1. Spalte
+%   3. Argument: Inhalt der 2. Spalte
+%   4. Argument: Inhalt der 3. Spalte
+%   5. Argument: Inhalt der 4. Spalte
+%   6. Argument: Inhalt der 5. Spalte
+%   7. Argument: Inhalt der 6. Spalte
+%   8. Argument: Inhalt der 7. Spalte
+%   9. Argument: Inhalt der 8. Spalte
+%
+%
+% Die wichtigen Formatierungsoptionen werden diesmal alle innerhalb des optionalen Argumentes mittels
+% Key-Value Pairs bestimmt.
+%
+% Dabei stehen folgende Optionen zur Verfügung:
+%
+%     thick          Hier wird die Dicke der Linie bestimmt.
+%                    Die Pfeile werden generell mit der doppelten Dicke gezeichnet!
+%                    Standardwert: \boxlinewidth
+%
+%     color          Hier wird die Farbe der Linie angegeben
+%                    Es sollten nur die folgenden Farben benutzt werden:
+%                        seeblau100
+%                        seeblau65
+%                        seeblau35
+%                        seeblau20
+%                        black
+%                        schwarz60
+%                        schwarz40
+%                        schwarz20
+%                        schwarz10
+%                    Standardwert: seeblau100
+%
+%     width          Hier wird die Breite des Blocks angegeben
+%                    Standardwert: \paperwidth
+%
+%     columnnum      Hier werden die Anzahl an Spalten definiert
+%                    Standardwert: 4
+%
+%     headlinesep    Hier wird der Abstand zwischen der Headline und den Spalten angegeben
+%                    Standardwert: Aktuelle Schriftgröße
+%
+%     columnspace    Hier wird der Abstand zwischen den Spalten angegeben
+%                    Standardwert: Doppelte Schriftgröße
+%
+%     block          Hier kann angegeben werden, ob man einen Rahmen um diesen Block haben möchte
+%                    Mögliche Werte: true, false
+%                    Standardwert: false
+%
+%     inner          Hier kann angegeben werden, ob zwischen den Spalten Trennlinien haben möchte
+%                    Mögliche Werte:
+%                        false    keine Trennlinien
+%                        short    Trennlinien, die so lange sind, wie der längste Nachbar (entweder der
+%                                 linke oder rechte Nachbar
+%                        long     Trennlinien, die bis nach ganz unten gehen. Sie sind also so lang
+%                                 wie die längste Spalte
+%                    Standardwert: false
+%
+%     inner1,        Hier kann für jeden Zwischenraum der Spalte exakt angegeben werden, ob Trennlinien
+%     inner2,        existieren sollen und falls ja, wie lang sie sein sollen. Diese Werte werden jedoch
+%     inner3,        nur berücksichtigt, wenn inner=false ist. Ansonsten ist inner stärker.
+%     inner4,        Mögliche Werte:
+%     inner5,           false    keine Trennlinien
+%     inner6,           short    Trennlinien, die so lange sind, wie der längste Nachbar (entweder der
+%     inner7,                    linke oder rechte Nachbar
+%                       long     Trennlinien, die bis nach ganz unten gehen. Sie sind also so lang
+%                                wie die längste Spalte
+%                    Standardwert: false
+%
+%     outerleft,     Hier kann angegeben werden, ob links (rechts) der ersten Spalte eine Trennlinie existieren soll.
+%     outerright     Mögliche Werte
+%                        false    keine Trennlinien
+%                        short    Trennlinien, die so lange sind, wie der direkte Nachbar (bei outerleft die 1. Spalte
+%                                 und bei outerright die letzte Spalte
+%                        long     Trennlinien, die bis nach ganz unten gehen. Sie sind also so lang
+%                                 wie die längste Spalte
+%                        verylong Trennlinie geht von oben nach unten, sowie ein halber columnspace nach innen.
+%                    Standardwert: false
+%
+%     outertop,      Hier kann angegeben werden, ob oberhalb (unterhalb) des Blocks eine Trennlinie, oder ein Pfeil existieren soll.
+%     outerbottom    Mögliche Werte
+%                        false    keine Trennlinien
+%                        long     Trennlinien, die von links nach rechts geht
+%                        verylong Trennlinie, die von links nach rechts geht, sowie ein halber columnspace nach oben (unten).
+%                        arrow    Pfeil, der aus der Trenlinie verylong besteht und in der Mitte einen Pfeil nach oben (unten)
+%                                 besitzt.
+%                    Standardwert: false
+%
+%     arrowtop1left, Hier kann angegeben werden, ob zwei Spalten oberhalb des Blocks mittels eines Doppelpfeils verbunden werden
+%     arrowtop1right sollen. Da es maximal 8 Spalten sind, können auch nur maximal 4 Paare bestimmt werden.
+%     arrowtop2left  Ein Paar besteht somit aus einer linken und einer rechten Spalte.
+%     arrowtop2right Mögliche Werte:
+%     arrowtop3left      0   Keine Auswahl
+%     arrowtop3right     1-8 Auswahl einer Spalte von 1 bis 8
+%     arrowtop4left  Standardwert: 0
+%     arrowtop4right Sollte der linke Wert nicht kleiner als der rechte Wert sein, so werden keine Pfeile gezeichnet. Das gleiche
+%                    gilt für Werte, die außerhalb des Bereichs liegen.
+% 
+%
+% Wichtig ist noch zu wissen, wie die Breite letztendlich berechnet wird:
+% Da es auch links und rechts der Spalten Trennlinien oder Pfeile geben kann, ist links der 1. und rechts der
+% letzten Spalte ebenfalls ein columnspace vorgesehen.
+% Somit wird die Spaltenbreite wie folgt berechnet
+%
+%     blockcolumnwidth = (width - (columnspace * (columnnum + 1))) / columnnum
+%
+
+
+\begin{frame}[t]
+\subsectionpage%
+Das \textbf{Block-Element} welches vor allem auf Plakaten vorkommt, kann mit dem Makro\\%
+\hskip 1cm \texttt{\textbackslash cdblock[<Optionen>]\{<Headline>\}\{<Spalte 1>\}\ldots\{<Spalte 8>\}}\\%
+eingesetzt werden. Die ganzen Optionen können in der Tex und in der Style Datei nachgelesen werden.\\[\baselineskip]%
+\selectfontsize{14pt}\cdblock[width=\textwidth-1cm, columnnum=4, columnspace=1cm, outerbottom=arrow, outertop=verylong, inner=long]{}{\textcolor{seeblau100}{\textbf{Spalte 1}}\\[\baselineskip]Dies ist die erste Spalte und hier kann eigentlich so alles mögliche stehen.}{\textcolor{seeblau100}{\textbf{Spalte 2}}\\[\baselineskip]Dies ist die zweite Spalte und hier kann auch wieder eine ganze Menge stehen}{\textcolor{seeblau100}{\textbf{Spalte 3}}\\[\baselineskip]Auch hier kann das ein oder andere wichtige stehen, oder sogar sehr wichtiges}{\textcolor{seeblau100}{\textbf{Spalte 4}}\\[\baselineskip]Und auch in der vierten Spalte findet man sicherlich einiges}{}{}{}{}%
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Weitere Beispiele}
+\vskip 18pt
+\selectfontsize{14pt}\cdblock[width=\textwidth-1cm, columnnum=1, columnspace=1cm, outerleft=verylong, outerright=verylong]{\selectfontsize{18pt}\textcolor{seeblau100}{\textbf{Beweis}}}{Dieses Block-Element kann natürlich für Beweise und Beispiele sehr gut eingesetzt werden. Dabei sollte es vor allem dem Block-Element des Beamer Paketes vorgezogen werden.}{}{}{}{}{}{}{}\\[2\baselineskip]%
+\cdblock[width=\textwidth-1cm, columnnum=1, columnspace=1cm, block=true]{\selectfontsize{18pt}\textcolor{seeblau100}{\textbf{Beispiel}}}{Dieses Beispiel hat einen kompletten Rahmen}{}{}{}{}{}{}{}%
+\end{frame}
+
+\subsection{Linien und Pfeile}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CD Element: Linie (mit optionalen Pfeilen) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Mit dem Makro
+%
+%     \cdline[Optionen per Key-Value Pair]{<Länge der Linie>}
+%
+% kann eine Linie mit einer bestimmten Länge erstellt werden.
+%
+% Dieses Makro besitzt 1 erforderliches Element, welches bei jedem Aufruf mit angegeben
+% werden muss.
+%
+% Das Argument hat dabei folgende Bedeutung.
+%
+%   1. Argument: Länge der erzeugten Linie
+%
+%
+% Die wichtigen Formatierungsoptionen werden alle innerhalb des optionalen Argumentes mittels
+% Key-Value Pairs bestimmt.
+%
+% Dabei stehen folgende Optionen zur Verfügung:
+%
+%     thick          Hier wird die Dicke der Linie bestimmt
+%                    Standardwert: \boxlinewidth
+%
+%     mode           Hier wird angegeben, ob die Linie horizontal oder vertikal ausgerichtet werden soll
+%                    Mögliche Werte
+%                        horizontal
+%                        vertical
+%                    Standardwert: horizontal
+%
+%     color          Hier wird die Farbe der Linie angegeben
+%                    Es sollten nur die folgenden Farben benutzt werden:
+%                        seeblau100
+%                        seeblau65
+%                        seeblau35
+%                        seeblau20
+%                        black
+%                        schwarz60
+%                        schwarz40
+%                        schwarz20
+%                        schwarz10
+%                    Standardwert: seeblau100
+%
+%     arrowleft      Hier wird angegeben, die Linie am linken (vertical: oberen) Ende mit einem Pfeil enden soll
+%                    Mögliche Werte:
+%                        true
+%                        false
+%                    Standardwert: false
+%
+%     arrowright     Hier wird angegeben, die Linie am rechten (vertical: unteren) Ende mit einem Pfeil enden soll
+%                    Mögliche Werte:
+%                        true
+%                        false
+%                    Standardwert: false
+
+
+\begin{frame}[t]
+\subsectionpage%
+Die \textbf{Linien-Elemente} welche vor allem auf Plakaten vorkommen, können mit dem Makro\\%
+\hskip 1cm \texttt{\textbackslash cdline[<Optionen>]\{<Länge>\}}\\%
+eingesetzt werden. Mit den Optionen, welche Sie in der Tex und Style Datei finden, kann die Linienstärke, Ausrichtung, Farbe und die Pfeile angepasst werden.\\[\baselineskip]%
+\cdline[thick=8pt, arrowleft=true, arrowright=true]{10cm}\\
+\cdline[color=seeblau20, thick=8pt, mode=vertical]{1cm} \hskip 1cm \cdline[color=seeblau35, thick=8pt, mode=vertical]{1.5cm} \hskip 1cm \cdline[color=seeblau65, thick=8pt, mode=vertical]{2cm} \hskip 1cm \cdline[thick=8pt, mode=vertical]{2.5cm} \hskip 1cm \cdline[color=seeblau65, thick=8pt, mode=vertical]{2cm} \hskip 1cm \cdline[color=seeblau35, thick=8pt, mode=vertical]{1.5cm} \hskip 1cm \cdline[color=seeblau20, thick=8pt, mode=vertical]{1cm} \hskip 1cm \cdline[color=schwarz10, thick=8pt, mode=vertical]{1cm} \hskip 1cm \cdline[color=schwarz20, thick=8pt, mode=vertical]{1.5cm} \hskip 1cm \cdline[color=schwarz40, thick=8pt, mode=vertical]{2cm} \hskip 1cm \cdline[color=schwarz60, thick=8pt, mode=vertical]{2.5cm} \hskip 1cm \cdline[color=schwarz40, thick=8pt, mode=vertical]{2cm} \hskip 1cm \cdline[color=schwarz20, thick=8pt, mode=vertical]{1.5cm} \hskip 1cm \cdline[color=schwarz10, thick=8pt, mode=vertical]{1cm}
+\end{frame}
+
+\subsection{Klammern}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CD Element: Klammer (mit optionalen Pfeilen) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Mit dem Makro
+%
+%     \cdbracket[Optionen per Key-Value Pair]{<Breite des Klammer>}{<Höhe des Klammer>}
+%
+% kann eine Klammer mit einer bestimmten Breite und Höhe gezeichnet werden.
+%
+% Dieses Makro besitzt 2 erforderliche Elemente, welche bei jedem Aufruf mit angegeben
+% werden müssen.
+%
+% Die Argumente haben dabei folgende Bedeutung.
+%
+%   1. Argument: Breite der erzeugten Klammer
+%   2. Argument: Höhe der erzeugten Klammer
+%
+%
+% Die wichtigen Formatierungsoptionen werden alle innerhalb des optionalen Argumentes mittels
+% Key-Value Pairs bestimmt.
+%
+% Dabei stehen folgende Optionen zur Verfügung:
+%
+%     thick          Hier wird die Dicke der Linien bestimmt
+%                    Standardwert: \boxlinewidth
+%
+%     mode           Hier wird die Ausrichtung der Klammer angegeben
+%                    Mögliche Werte
+%                        left    linke Klammer
+%                        top     obere Klammer
+%                        right   rechte Klammer
+%                        bottom  untere Klammer
+%                    Standardwert: left
+%
+%     color          Hier wird die Farbe der Linie angegeben
+%                    Es sollten nur die folgenden Farben benutzt werden:
+%                        seeblau100
+%                        seeblau65
+%                        seeblau35
+%                        seeblau20
+%                        black
+%                        schwarz60
+%                        schwarz40
+%                        schwarz20
+%                        schwarz10
+%                    Standardwert: seeblau100
+%
+%     arrowleft      Hier wird angegeben, ob die Klammer am linken (oberen) Ende mit einem Pfeil enden soll
+%                    Mögliche Werte:
+%                        true
+%                        false
+%                    Standardwert: false
+%
+%     arrowright     Hier wird angegeben, ob die Klammer am rechten (unteren) Ende mit einem Pfeil enden soll
+%                    Mögliche Werte:
+%                        true
+%                        false
+%                    Standardwert: false
+%
+%     arrowmiddle    Hier wird angegeben, ob die Klammer in der Mitte einen weiteren Pfeil besitzen soll der in die
+%                    andere Richtung der Klammer zeigt (wie beim Makro \block mit der Optione arrow bei outerbottom / outertop)
+%                    Mögliche Werte:
+%                        true
+%                        false
+%                    Standardwert: false
+
+\begin{frame}[t]
+\subsectionpage%
+Die \textbf{Klammer-Elemente} welche ebenfalls auf Plakaten verwendet werden, können mit dem Makro\\%
+\hskip 1cm \texttt{\textbackslash cdbracket[<Optionen>]\{<Breite>\}\{<Höhe>\}}\\%
+eingesetzt werden. Mit den Optionen, welche Sie in der Tex und Style Datei finden, können wieder Formatierungen vorgenommen werden.\\[\baselineskip]%
+\centering\cdbracket[thick=8pt, mode=bottom, arrowleft=true, arrowright=true, arrowmiddle=true]{10cm}{2cm}\\[2cm]%
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Weitere Klammern}
+\vskip 18pt
+\begin{minipage}{0.245\textwidth}
+\cdbracket[mode=left]{2cm}{8cm}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+\centering\cdbracket[thick=4pt, mode=top, arrowleft=true, arrowright=true]{8cm}{2cm}
+\end{minipage}%
+\begin{minipage}{0.245\textwidth}
+\hfill\cdbracket[mode=right]{2cm}{8cm}
+\end{minipage}%
+
+\end{frame}
+
+
+
+\section{Aufzählungen}
+\subsection{Itemize}
+
+\begin{frame}[t]
+\sectionpage
+\subsectionpage
+	\begin{itemize}
+		\item Ich bin das erste Item
+		\item Ich bin das zweite Item
+		\begin{itemize}
+			\item Ich bin das erste Sub-Item des zweiten Items
+			\item Ich bin das erste Sub-Item des zweiten Items
+			\begin{itemize}
+				\item Ich bin das erste Sub-Sub-Item des zweiten Sub-Items und bin auch gaaaaaaaanz laaaaaaaaang
+				\item Ich bin das zweite Sub-Sub-Item des zweiten Sub-Items
+			\end{itemize}
+		\end{itemize}
+	\item Ich bin das dritte Item
+	\item u.s.w.
+\end{itemize}
+\end{frame}
+
+\subsection{Enumerate}
+\begin{frame}[t]
+\subsectionpage
+	\begin{enumerate}
+		\item Ich bin das erste Item
+		\item Ich bin das zweite Item
+		\begin{enumerate}
+			\item Ich bin das erste Sub-Item des zweiten Items
+			\item Ich bin das erste Sub-Item des zweiten Items
+			\begin{enumerate}
+				\item Ich bin das erste Sub-Sub-Item des zweiten Sub-Items
+				\item Ich bin das zweite Sub-Sub-Item des zweiten Sub-Items
+			\end{enumerate}
+		\end{enumerate}
+		\item Ich bin das dritte Item
+		\item u.s.w.
+	\end{enumerate}
+\end{frame}
+
+
+
+
+\section{Weitere Hinweise}
+
+\begin{frame}[t]
+	\sectionpage
+	\begin{itemize}
+		\item Zum Übersetzen muss \texttt{XeLaTeX} verwendet werden, da somit die Systemschrift Arial eingebunden werden kann.
+		\item Das Seitenverhältnis sollte nicht über \texttt{aspectratio}, sondern mittels \texttt{\textbackslash format} in der Präambel angepasst werden. Nur dadurch kann die richtige Auswahl der Schriftgrößen und die Platzierung der Elemente gewährleistet werden. Mehr dazu in den Dateien \texttt{benutzerhandbuch.tex} und \texttt{beamerthemeKonstanz.tex}. Dies wird jedoch in eine der nächsten Version an \texttt{aspectratio} von Beamer angepasst.	
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{Zusätzlich benötigte Pakete}
+	\begin{itemize}
+	    \item beamer
+	    \item xcolor
+		\item textpos
+		\item soul
+		\item ulem
+		\item cmbright
+		\item fontspec
+		\item calc
+		\item tikz
+		\item keycommand
+		\item ifthen
+	\end{itemize}
+\end{frame}
+
+% Alle benötigten Pakete:
+%  - beamer
+%  - xcolor
+%  - geometry
+%  - babel
+%  - fontenc
+%  - textpos
+%  - xunicode
+%  - soul
+%  - ulem
+%  - ifthen
+%  - keycommand
+%  - tikz
+%  - calc
+%  - cmbright
+%  - fontspec
+
+\section{ToDo}
+
+\begin{frame}[t]
+	\sectionpage
+	\begin{itemize}
+		\item Zweitlogo bzw. Unterlogo
+		\item Anpassung der \texttt{geometry} an \texttt{aspectratio}
+		\item Weitere Beispiele (Tabellen, Biblografie, \ldots)
+	\end{itemize}
+\end{frame}
+
+\end{document}

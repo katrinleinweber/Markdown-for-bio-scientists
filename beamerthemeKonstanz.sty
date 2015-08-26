@@ -1,0 +1,1472 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       %
+% Beamer Theme Uni Konstanz                             %
+% Stand: 10.07.2015 - Michael Brendle (Version 0.3)     %
+%                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mode<presentation>
+
+% Sollte bereits durch Beamer importiert werden
+\usepackage{xcolor}
+
+%%%%%%%% Wird seit Version 0.3 nicht mehr benötigt
+% \usepackage{tcolorbox}
+
+% 16:9 Initialisierung
+% Benutzer kann es mittels \format aendern (siehe unten)
+\geometry{paperheight=14.3cm, paperwidth=24.4cm, left=1cm, right=1cm, headheight=1cm, headsep=1cm, top=1cm}
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+% Absolute Positionierung des Uni Konstanz Logos
+\usepackage[absolute, overlay]{textpos}
+
+% Unicode XeTeX
+\usepackage{xunicode}
+
+%%%%%%%% NEU: Wird seit Version 0.3 benötigt
+% Fuer das Merken und Markieren Element
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta}
+
+%%%%%%%% NEU: Wird seit Version 0.3 benötigt
+% Fuer If-Then-Else
+\usepackage{ifthen}
+
+%%%%%%%% NEU: Wird seit Version 0.3 benötigt
+% Fur Makros mit Key-Value-Pairs
+\usepackage{keycommand}
+
+% Unterstreichungen (Anpassen der Dicke und der Farbe)
+\usepackage{soul}
+\usepackage{ulem}
+
+% http://www.techques.com/question/31-48501/soul:-broken-highlighting-with-xcolor-when-using-%5Cselectcolormodel
+% Problem von soul beheben, da Farben in RGB konvertiert werden. Konvertierung ist notwendig, da z.b. tcolorbox
+% kein HSB Model unterstuetzt.
+\newdimen\SOUL@dimen %new
+\def\SOUL@ulunderline#1{{%
+    \setbox\z@\hbox{#1}%
+    %\dimen@=\wd\z@
+    \SOUL@dimen=\wd\z@ %new
+    \dimen@i=\SOUL@uloverlap
+    \advance\SOUL@dimen2\dimen@i %\dimen@ exchanged too
+    \rlap{%
+        \null
+        \kern-\dimen@i
+        %\SOUL@ulcolor{\SOUL@ulleaders\hskip\dimen@}%
+        \SOUL@ulcolor{\SOUL@ulleaders\hskip\SOUL@dimen}% new
+    }%
+    \unhcopy\z@
+}}
+
+% Laengenberechnung
+\usepackage{calc}
+
+% Schriften 1. Teil
+\usepackage{cmbright}
+\usefonttheme{professionalfonts}
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+
+
+% Farben Definition des CD der Uni Konstanz mit dem HSB Modell
+% Dadurch direkte Repraesentation der Saettigung
+\xdefinecolor{seeblau100}{hsb}{0.5409, 1, 0.8784}
+\xdefinecolor{seeblau65}{hsb}{0.5409, 0.65, 0.8784}
+\xdefinecolor{seeblau35}{hsb}{0.5409, 0.35, 0.8784}
+\xdefinecolor{seeblau20}{hsb}{0.5409, 0.2, 0.8784}
+\xdefinecolor{schwarz60}{hsb}{0.0, 0.0, 0.4}
+\xdefinecolor{schwarz40}{hsb}{0.0, 0.0, 0.6}
+\xdefinecolor{schwarz20}{hsb}{0.0, 0.0, 0.8}
+\xdefinecolor{schwarz10}{hsb}{0.0, 0.0, 0.9}
+
+% rgb für tcolorbox - Nur im Notfall verwenden
+%\xdefinecolor{seeblau100rgb}{RGB}{0, 154, 209}
+%\xdefinecolor{seeblau65rgb}{RGB}{89, 182, 220}
+%\xdefinecolor{seeblau35rgb}{RGB}{160, 211, 230}
+%\xdefinecolor{seeblau20rgb}{RGB}{200, 229, 239}
+
+% Schriften 2. Teil - Arial
+\newfontfamily\arialfamily{Arial}
+
+
+% Anpassung der Schrift der einzelnen Beamer Elemente
+\setbeamerfont{frametitle}{family=\arialfamily, series=\normalfont, size*={20.00}{20.00}}
+
+\setbeamerfont{headline}{family=\arialfamily, series=\normalfont, size*={10.00}{10.00}}
+\setbeamerfont{footline}{family=\arialfamily, series=\normalfont,size*={8.00}{8.00}}
+
+\setbeamerfont{normalfont}{family=\arialfamily, series=\normalfont,size*={16.00}{20.00}}
+
+\setbeamerfont{title page}{family=\arialfamily, series=\bfseries, size*={35.00}{35.00}}
+\setbeamerfont{section page}{family=\arialfamily, series=\normalfont, size*={30.00}{45.00}}
+\setbeamerfont{subsection page}{family=\arialfamily, series=\normalfont, size*={20.00}{20.00}}
+
+\setbeamerfont{titlepageauthor}{family=\arialfamily, series=\bfseries, size*={20.00}{24.00}}
+\setbeamerfont{titlepagenormal}{family=\arialfamily, series=\normalfont, size*={20.00}{24.00}}
+\setbeamerfont{default}{family=\arialfamily, series=\normalfont,size*={16.00}{16.00}}
+\setbeamerfont{abstract}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{projected text}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+
+\setbeamerfont{section in toc}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{subsection in toc}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{subsubsection in toc}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+
+\setbeamerfont{block title}{family=\arialfamily, series=\bfseries,size*={16.00}{18.00}}
+\setbeamerfont{block body}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+
+\setbeamerfont{itemize item}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{itemize subitem}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{itemize subsubitem}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+
+\setbeamerfont{enumerate item}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{enumerate subitem}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{enumerate subsubitem}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+
+\setbeamerfont{itemize/enumerate body}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{itemize/enumerate subbody}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{itemize/enumerate subsubbody}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+
+\setbeamerfont{item}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{subitem}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{subsubitem}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+
+\setbeamerfont{item projected}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{subitem projected}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+\setbeamerfont{subsubitem projected}{family=\arialfamily, series=\normalfont,size*={16.00}{18.00}}
+
+
+\setbeamerfont{testfont}{family=\arialfamily, series=\normalfont,size*={16.00}{16.00}}
+\setbeamerfont{testfont2}{family=\arialfamily, series=\normalfont,size*={16.00}{20.00}}
+\setbeamerfont{testfont3}{family=\arialfamily, series=\normalfont,size*={16.00}{32.00}}
+
+
+% Anpassung der Farben an das CD der Uni Konstanz
+\setbeamercolor*{seeblau100}{fg=black, bg=seeblau100}
+\setbeamercolor*{seeblau65}{fg=black, bg=seeblau65}
+\setbeamercolor*{seeblau35}{fg=black, bg=seeblau35}
+\setbeamercolor*{seeblau20}{fg=black, bg=seeblau20}
+
+\setbeamercolor*{schwarz60}{fg=black, bg=schwarz60}
+\setbeamercolor*{schwarz40}{fg=black, bg=schwarz40}
+\setbeamercolor*{schwarz20}{fg=black, bg=schwarz20}
+\setbeamercolor*{schwarz10}{fg=black, bg=schwarz10}
+
+\setbeamercolor*{section in toc}{fg=black,bg=white}
+\setbeamercolor*{subsection in toc}{fg=black,bg=white}
+\setbeamercolor*{subsubsection in toc}{fg=black,bg=white}
+\setbeamercolor*{section in toc shaded}{fg=schwarz60,bg=white}
+\setbeamercolor*{subsection in toc shaded}{fg=schwarz60,bg=white}
+\setbeamercolor*{subsubsection in toc shaded}{fg=schwarz60,bg=white}
+
+\setbeamercolor*{itemize item}{fg=seeblau100,bg=seeblau100}
+\setbeamercolor*{itemize subitem}{fg=seeblau100,bg=seeblau100}
+\setbeamercolor*{itemize subsubitem}{fg=seeblau100,bg=seeblau100}
+
+\setbeamercolor*{item}{fg=seeblau100,bg=seeblau100}
+\setbeamercolor*{subitem}{fg=seeblau100,bg=seeblau100}
+\setbeamercolor*{subsubitem}{fg=seeblau100,bg=seeblau100}
+
+\setbeamercolor*{enumerate item}{fg=black,bg=white}
+\setbeamercolor*{enumerate subitem}{fg=black,bg=white}
+\setbeamercolor*{enumerate subsubitem}{fg=black,bg=white}
+
+\setbeamercolor*{item projected}{fg=black,bg=white}
+\setbeamercolor*{subitem projected}{fg=black,bg=white}
+\setbeamercolor*{subsubitem projected}{fg=black,bg=white}
+
+\setbeamercolor*{itemize/enumerate body}{fg=black,bg=white}
+\setbeamercolor*{itemize/enumerate subbody}{fg=black,bg=white}
+\setbeamercolor*{itemize/enumerate subsubbody}{fg=black,bg=white}
+
+\setbeamercolor*{block title}{fg=black,bg=seeblau100}
+\setbeamercolor*{block body}{fg=black,bg=seeblau20}
+
+\setbeamercolor*{block title example}{fg=white,bg=schwarz60}
+\setbeamercolor*{block body example}{fg=black,bg=schwarz10}
+
+\setbeamercolor*{block title alerted}{fg=white,bg=seeblau100}
+\setbeamercolor*{block body alerted}{fg=black,bg=seeblau20}
+
+\setbeamercolor*{subsection page}{fg=seeblau100,bg=white}
+
+\setbeamercolor{normal text}{fg=black, bg=white}
+\setbeamercolor{titlelike}{fg=black, bg=seeblau100}
+
+% ToDo: Noch an die restlichen Beamer Elemente anpassen
+
+
+% Laengendefinitionen
+\newlength{\mylengthwidth}%
+\newlength{\mylengthheigth}%
+\newlength{\mylengthdepth}%
+\newlength{\mylengthwidthl}%
+\newlength{\mylengthheigthl}%
+\newlength{\mylengthdepthg}%
+\newlength{\mylengthdepthtest}%
+\newlength{\mylengthComplete}%
+\newlength{\headlength}%
+\newlength{\footspace}%
+\newlength{\heightspace}%
+\newlength{\oldbaseline}%
+\newlength{\currentfontsize}%
+\newlength{\logoheight}%
+\newlength{\merkenlength}%
+\newlength{\lengthfirst}%
+\newlength{\lengthsecond}%
+\newlength{\lengththird}%
+\newlength{\lengthfourth}%
+\newlength{\blskip}%
+\newlength{\underlinewidth}%
+% Setzen von Laengen
+\setlength{\footspace}{\paperwidth - \textwidth}
+\setlength{\heightspace}{\paperheight - \textheight}
+\setlength{\currentfontsize}{\f@size pt}
+
+\newlength{\blockcolumnwidth}%
+\newlength{\spacewidth}%
+\newlength{\blockwidth}%
+\newlength{\templength}%
+
+\newlength{\argonelength}%
+\newlength{\argtwolength}%
+\newlength{\argthreelength}%
+\newlength{\argfourlength}%
+\newlength{\argfivelength}%
+
+\newlength{\boxlinewidth}%
+\setlength{\boxlinewidth}{1.5pt}
+
+\newcommand{\getfontsize}{\setlength{\currentfontsize}{\f@size pt}\the\currentfontsize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Seitenformat / Foliengroesse %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Einstellungen des Formates inklusive Foliengroesse.
+% Dadurch koennen die exkaten Schriftgroessen des Corporate Designs verwendet werden
+% Werte aus der Power Point Praesentation uebernommen.
+%    169 (16:9)
+%    43 (4:3)
+%    1610 (16:10)
+%    sonst: wird 16:9 eingestellt
+\newcommand{\format}[1]{%
+	\ifnum #1=169%
+		\geometry{paperheight=14.3cm, paperwidth=24.4cm, left=1cm, right=1cm, headheight=1cm, headsep=1cm, top=1cm}%
+	\else%
+		\ifnum #1=43%
+			\geometry{paperheight=19.05cm, paperwidth=24.4cm, left=1cm, right=1cm, headheight=1cm, headsep=1cm, top=1cm}%
+		\else%
+			\ifnum #1=1610%
+				\geometry{paperheight=15.87cm, paperwidth=24.4cm, left=1cm, right=1cm, headheight=1cm, headsep=1cm, top=1cm}%
+			\else%
+				\geometry{paperheight=14.3cm, paperwidth=24.4cm, left=1cm, right=1cm, headheight=1cm, headsep=1cm, top=1cm}%
+			\fi%		
+		\fi%
+	\fi%
+}%
+
+% ToDo: An Aaspect Ratio anpassen
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% CD Element: Markieren %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Um einen Text mit Hilfe des Markieren Elements des Corporate Design hervorzuheben,
+% steht das Makro
+%
+%     \markieren
+%
+% zur Verfügung.
+%
+% Dieses Makro besitzt vier unbedingt notwendige Argumente und ein optionales
+% Feld, indem weitere EIgenschaften festgelegt werden könnnen..
+%
+%     \markieren[Optionen per Key-Value Pair]{<Zeile 1>}{<Zeile 2>}{<Zeile 3>}{<Zeile 4>}
+%
+% Die Argumente haben dabei folgende Bedeutung:
+%
+%   1. - 4. Argument:    Hier werden nun die eigentlichen Zeilen übergeben.
+%
+%                        Wichtig dabei ist es, dass die Aufteilung der Zeilen manuell erfolgen muss durch
+%                        die Argumente, da nur somit sichergestellt werden kann, dass bspw. Treppeneffekte
+%                        nicht auftreten und somit der Benutzer alle Freiheiten bei der Aufteilung besitzt.
+%
+%                        Sollten nicht alle Zeilen verwendet werden, dann müssen die hinteren Brackets
+%                        leer gelassen werden, wie beispielsweise bei der Headline
+%
+% Die wichtigen Formatierungsoptionen werden alle innerhalb des optionalen Argumentes mittels
+% Key-Value Pairs bestimmt.
+%
+% Dabei stehen folgende Optionen zur Verfügung:
+%
+%   align                Hier kann angegeben werden, ob das komplette Objekt
+%                        links- oder rechtsbündig angeordent werden soll.
+%                      
+%                        Der Standardwert ist "left" und somit linksbündig.
+%
+%                        Für eine rechtsbündige Anordnung muss hier der Wert "right" hinterlegt werden.
+%
+%   vertical             Hier wird angegeben, ob der Inhalt der Zeilen zentriert werden soll oder
+%                        überall an der gleichen Baseline ausgerichtet werden soll.
+%                       
+%                        Dies kann mittels der Wörter "center" und "base" eingestellt werden.
+%                        Dabei ist "center" als Standardwert festgelegt.
+%
+%                        Der Unterschied besteht darin, dass bei Zeilen die Buchstaben mit einer Tiefe
+%                        enthalten, wie g, p oder q, anders zentriert werden als welche ohne Buchstaben
+%                        mit einer Tiefe.
+%
+%                        Da dies ein wenig Geschmackssache ist, werden hier beide Varianten zur Verfügung
+%                        gestellt, wobei "center" primär verwendet werden soll, und "base" eher wenn
+%                        Buchstaben mit einer Tiefe in den Zeilen enthalten sind.
+
+%%%%%%%% UPDATE: Seit Version 0.3 geändert
+\newkeycommand{\markieren}[align=left, vertical=center][4]{\headline{\commandkey{align}}{\commandkey{vertical}}{#1}{#2}{#3}{#4}}%
+
+
+%%%%%%%% UPDATE: Seit Version 0.3 geändert
+\newcommand{\titleCDHelp}{\headline{}{}{}{}{}{}}%
+\newkeycommand{\titleCorporateDesign}[align=left, vertical=center][4]{\renewcommand{\titleCDHelp}[0]{\headline{\commandkey{align}}{\commandkey{vertical}}{#1}{#2}{#3}{#4}}}%
+
+
+%%%%%%%% UPDATE: Seit Version 0.3 geändert
+\newcommand{\sectionCorporateDesignHelp}{\headline{}{}{}{}{}{}}%
+\newkeycommand{\sectionCorporateDesign}[align=left, vertical=center][4]{\renewcommand{\sectionCorporateDesignHelp}[0]{\headline{\commandkey{align}}{\commandkey{vertical}}{\insertsectionnumber\hspace*{0.5ex}#1}{#2}{#3}{#4}}}%
+
+
+%%%%%%%% UPDATE: Seit Version 0.3 geändert
+\newcommand{\headline}[6]{%
+\def\markierenalign{#1}%
+\def\markierenanchor{#2}%
+%%%%% Laenge von l bestimmen, für links und rechts vom Text nach Benutzerhandbuch	
+	\settowidth{\mylengthwidthl}{l}%
+%%%%% Da das l noch links und rechts etwas "Platz" hat wird es auf die Haelfte begrenzt	
+	\setlength{\mylengthwidthl}{0.5\mylengthwidthl}%
+%%%%% Die Hoehe von l wird benoetigt, da die Gesamthoehe 1.5 * l nach CD betragen soll
+	\settoheight{\mylengthheigthl}{l}%
+\settowidth{\lengthfirst}{#3}%
+\settowidth{\lengthsecond}{#4}%
+\settowidth{\lengththird}{#5}%
+\settowidth{\lengthfourth}{#6}%
+%%%%% Verwendet wird nun tikz um die Makrierten Zeilen zu erstellen, sowie anhand
+%%%%% der Argumente die Andordnung der Elemente innerhalb der Zeilen zu realisieren.
+
+% WICHTIG:
+%
+% EINE KOMMENTIERUNG DER FOLGENDEN ZEILEN FOLGT AUS ZEITLICHEN GRÜNDEN
+% ERST IN DER NÄCHSTEN VERSION
+\begin{tikzpicture}
+\tikzstyle{nodestylenormal}=[anchor=west, color=black, inner sep=0mm]%
+\tikzstyle{nodestyleright}=[anchor=east, color=black, inner sep=0mm]%
+\tikzstyle{nodestylenormalbase}=[anchor=base west, color=black, inner sep=0mm]%
+\tikzstyle{nodestylerightbase}=[anchor=base east, color=black, inner sep=0mm]%
+\ifthenelse{\equal{\markierenanchor}{base}}{%
+\ifthenelse{\equal{\markierenalign}{right}}{%
+\ifx &#6&%
+  \ifx &#5&%
+    \ifx &#4&%
+      \ifx &#3&%
+	  \else%
+        \draw [seeblau100, fill=seeblau100] (0,0) -- (-1 * \lengthfirst - 2 * \mylengthwidthl,0) -- (-1 * \lengthfirst - 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylerightbase] at (-1 * \mylengthwidthl,0.37\mylengthheigthl) {#3};	
+	  \fi%
+	\else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (-1 * \lengthsecond - 2 * \mylengthwidthl,0) -- (-1 * \lengthsecond - 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylerightbase] at (-1 * \mylengthwidthl,0.37\mylengthheigthl) {#4};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (-1 * \lengthfirst - 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (-1 * \lengthfirst - 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestylerightbase] at (-1 * \mylengthwidthl,1.87\mylengthheigthl) {#3};
+	\fi%
+  \else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (-1 * \lengththird - 2 * \mylengthwidthl,0) -- (-1 * \lengththird - 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylerightbase] at (-1 * \mylengthwidthl,0.37\mylengthheigthl) {#5};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (-1 * \lengthsecond - 2 * \mylengthwidthl,1.5\mylengthheigthl) -- (-1 * \lengthsecond - 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestylerightbase] at (-1 * \mylengthwidthl,1.87\mylengthheigthl) {#4};
+	    \draw [seeblau35, fill=seeblau35, line width=0mm] (0,3\mylengthheigthl) -- (-\lengthfirst - 2 * \mylengthwidthl,3\mylengthheigthl) -- (-1 * \lengthfirst - 2 * \mylengthwidthl, 4.5\mylengthheigthl) -- (0, 4.5\mylengthheigthl) -- (0,3\mylengthheigthl);
+		\node [nodestylerightbase] at (-1 * \mylengthwidthl,3.37\mylengthheigthl) {#3};
+  \fi%
+\else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (-1 * \lengthfourth - 2 * \mylengthwidthl,0) -- (-1 * \lengthfourth - 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylerightbase] at (-1 * \mylengthwidthl,0.37\mylengthheigthl) {#6};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (-1 * \lengththird - 2 * \mylengthwidthl,1.5\mylengthheigthl) -- (-1 * \lengththird - 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestylerightbase] at (-1 * \mylengthwidthl,1.87\mylengthheigthl) {#5};
+	    \draw [seeblau35, fill=seeblau35, line width=0mm] (0,3\mylengthheigthl) -- (-1 * \lengthsecond - 2 * \mylengthwidthl,3\mylengthheigthl) -- (-1 * \lengthsecond - 2 * \mylengthwidthl, 4.5\mylengthheigthl) -- (0, 4.5\mylengthheigthl) -- (0,3\mylengthheigthl);
+		\node [nodestylerightbase] at (-1 * \mylengthwidthl,3.37\mylengthheigthl) {#4};
+		\draw [seeblau20, fill=seeblau20, line width=0mm] (0,4.5\mylengthheigthl) -- (-1 * \lengthfirst - 2 * \mylengthwidthl,4.5\mylengthheigthl) -- (-1 * \lengthfirst - 2 * \mylengthwidthl, 6\mylengthheigthl) -- (0, 6\mylengthheigthl) -- (0,4.5\mylengthheigthl);
+		\node [nodestylerightbase] at (-1 * \mylengthwidthl,4.87\mylengthheigthl) {#3};
+\fi%
+}{%
+\ifx &#6&%
+  \ifx &#5&%
+    \ifx &#4&%
+      \ifx &#3&%
+	  \else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (\lengthfirst + 2 * \mylengthwidthl,0) -- (\lengthfirst + 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylenormalbase] at (\mylengthwidthl,0.37\mylengthheigthl) {#3};	
+	  \fi%
+	\else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (\lengthsecond + 2 * \mylengthwidthl,0) -- (\lengthsecond + 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylenormalbase] at (\mylengthwidthl,0.37\mylengthheigthl) {#4};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl,1.5\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestylenormalbase] at (\mylengthwidthl,1.87\mylengthheigthl) {#3};
+	\fi%
+  \else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (\lengththird + 2 * \mylengthwidthl,0) -- (\lengththird + 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylenormalbase] at (\mylengthwidthl,0.37\mylengthheigthl) {#5};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (\lengthsecond + 2 * \mylengthwidthl,1.5\mylengthheigthl) -- (\lengthsecond + 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestylenormalbase] at (\mylengthwidthl,1.87\mylengthheigthl) {#4};
+	    \draw [seeblau35, fill=seeblau35, line width=0mm] (0,3\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl,3\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl, 4.5\mylengthheigthl) -- (0, 4.5\mylengthheigthl) -- (0,3\mylengthheigthl);
+		\node [nodestylenormalbase] at (\mylengthwidthl,3.37\mylengthheigthl) {#3};
+  \fi%
+\else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (\lengthfourth + 2 * \mylengthwidthl,0) -- (\lengthfourth + 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylenormalbase] at (\mylengthwidthl,0.37\mylengthheigthl) {#6};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (\lengththird + 2 * \mylengthwidthl,1.5\mylengthheigthl) -- (\lengththird + 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestylenormalbase] at (\mylengthwidthl,1.87\mylengthheigthl) {#5};
+	    \draw [seeblau35, fill=seeblau35, line width=0mm] (0,3\mylengthheigthl) -- (\lengthsecond + 2 * \mylengthwidthl,3\mylengthheigthl) -- (\lengthsecond + 2 * \mylengthwidthl, 4.5\mylengthheigthl) -- (0, 4.5\mylengthheigthl) -- (0,3\mylengthheigthl);
+		\node [nodestylenormalbase] at (\mylengthwidthl,3.37\mylengthheigthl) {#4};
+		\draw [seeblau20, fill=seeblau20, line width=0mm] (0,4.5\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl,4.5\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl, 6\mylengthheigthl) -- (0, 6\mylengthheigthl) -- (0,4.5\mylengthheigthl);
+		\node [nodestylenormalbase] at (\mylengthwidthl,4.87\mylengthheigthl) {#3};
+\fi%
+}}{%
+\ifthenelse{\equal{\markierenalign}{right}}{
+\ifx &#6&%
+  \ifx &#5&%
+    \ifx &#4&%
+      \ifx &#3&%
+	  \else%
+        \draw [seeblau100, fill=seeblau100] (0,0) -- (-1 * \lengthfirst - 2 * \mylengthwidthl,0) -- (-1 * \lengthfirst - 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestyleright] at (-1 * \mylengthwidthl,0.75\mylengthheigthl) {#3};	
+	  \fi%
+	\else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (-1 * \lengthsecond - 2 * \mylengthwidthl,0) -- (-1 * \lengthsecond - 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestyleright] at (-1 * \mylengthwidthl,0.75\mylengthheigthl) {#4};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (-1 * \lengthfirst - 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (-1 * \lengthfirst - 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestyleright] at (-1 * \mylengthwidthl,2.25\mylengthheigthl) {#3};
+	\fi%
+  \else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (-1 * \lengththird - 2 * \mylengthwidthl,0) -- (-1 * \lengththird - 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestyleright] at (-1 * \mylengthwidthl,0.75\mylengthheigthl) {#5};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (-1 * \lengthsecond - 2 * \mylengthwidthl,1.5\mylengthheigthl) -- (-1 * \lengthsecond - 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestyleright] at (-1 * \mylengthwidthl,2.25\mylengthheigthl) {#4};
+	    \draw [seeblau35, fill=seeblau35, line width=0mm] (0,3\mylengthheigthl) -- (-\lengthfirst - 2 * \mylengthwidthl,3\mylengthheigthl) -- (-1 * \lengthfirst - 2 * \mylengthwidthl, 4.5\mylengthheigthl) -- (0, 4.5\mylengthheigthl) -- (0,3\mylengthheigthl);
+		\node [nodestyleright] at (-1 * \mylengthwidthl,3.75\mylengthheigthl) {#3};
+  \fi%
+\else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (-1 * \lengthfourth - 2 * \mylengthwidthl,0) -- (-1 * \lengthfourth - 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestyleright] at (-1 * \mylengthwidthl,0.75\mylengthheigthl) {#6};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (-1 * \lengththird - 2 * \mylengthwidthl,1.5\mylengthheigthl) -- (-1 * \lengththird - 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestyleright] at (-1 * \mylengthwidthl,2.25\mylengthheigthl) {#5};
+	    \draw [seeblau35, fill=seeblau35, line width=0mm] (0,3\mylengthheigthl) -- (-1 * \lengthsecond - 2 * \mylengthwidthl,3\mylengthheigthl) -- (-1 * \lengthsecond - 2 * \mylengthwidthl, 4.5\mylengthheigthl) -- (0, 4.5\mylengthheigthl) -- (0,3\mylengthheigthl);
+		\node [nodestyleright] at (-1 * \mylengthwidthl,3.75\mylengthheigthl) {#4};
+		\draw [seeblau20, fill=seeblau20, line width=0mm] (0,4.5\mylengthheigthl) -- (-1 * \lengthfirst - 2 * \mylengthwidthl,4.5\mylengthheigthl) -- (-1 * \lengthfirst - 2 * \mylengthwidthl, 6\mylengthheigthl) -- (0, 6\mylengthheigthl) -- (0,4.5\mylengthheigthl);
+		\node [nodestyleright] at (-1 * \mylengthwidthl,5.25\mylengthheigthl) {#3};
+\fi%
+}{%
+\ifx &#6&%
+  \ifx &#5&%
+    \ifx &#4&%
+      \ifx &#3&%
+	  \else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (\lengthfirst + 2 * \mylengthwidthl,0) -- (\lengthfirst + 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylenormal] at (\mylengthwidthl,0.75\mylengthheigthl) {#3};	
+	  \fi%
+	\else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (\lengthsecond + 2 * \mylengthwidthl,0) -- (\lengthsecond + 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylenormal] at (\mylengthwidthl,0.75\mylengthheigthl) {#4};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl,1.5\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestylenormal] at (\mylengthwidthl,2.25\mylengthheigthl) {#3};
+	\fi%
+  \else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (\lengththird + 2 * \mylengthwidthl,0) -- (\lengththird + 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylenormal] at (\mylengthwidthl,0.75\mylengthheigthl) {#5};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (\lengthsecond + 2 * \mylengthwidthl,1.5\mylengthheigthl) -- (\lengthsecond + 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestylenormal] at (\mylengthwidthl,2.25\mylengthheigthl) {#4};
+	    \draw [seeblau35, fill=seeblau35, line width=0mm] (0,3\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl,3\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl, 4.5\mylengthheigthl) -- (0, 4.5\mylengthheigthl) -- (0,3\mylengthheigthl);
+		\node [nodestylenormal] at (\mylengthwidthl,3.75\mylengthheigthl) {#3};
+  \fi%
+\else%
+        \draw [seeblau100, fill=seeblau100, line width=0mm] (0,0) -- (\lengthfourth + 2 * \mylengthwidthl,0) -- (\lengthfourth + 2 * \mylengthwidthl, 1.5\mylengthheigthl) -- (0, 1.5\mylengthheigthl) -- (0,0);
+		\node [nodestylenormal] at (\mylengthwidthl,0.75\mylengthheigthl) {#6};
+        \draw [seeblau65, fill=seeblau65, line width=0mm] (0,1.5\mylengthheigthl) -- (\lengththird + 2 * \mylengthwidthl,1.5\mylengthheigthl) -- (\lengththird + 2 * \mylengthwidthl, 3\mylengthheigthl) -- (0, 3\mylengthheigthl) -- (0,1.5\mylengthheigthl);
+		\node [nodestylenormal] at (\mylengthwidthl,2.25\mylengthheigthl) {#5};
+	    \draw [seeblau35, fill=seeblau35, line width=0mm] (0,3\mylengthheigthl) -- (\lengthsecond + 2 * \mylengthwidthl,3\mylengthheigthl) -- (\lengthsecond + 2 * \mylengthwidthl, 4.5\mylengthheigthl) -- (0, 4.5\mylengthheigthl) -- (0,3\mylengthheigthl);
+		\node [nodestylenormal] at (\mylengthwidthl,3.75\mylengthheigthl) {#4};
+		\draw [seeblau20, fill=seeblau20, line width=0mm] (0,4.5\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl,4.5\mylengthheigthl) -- (\lengthfirst + 2 * \mylengthwidthl, 6\mylengthheigthl) -- (0, 6\mylengthheigthl) -- (0,4.5\mylengthheigthl);
+		\node [nodestylenormal] at (\mylengthwidthl,5.25\mylengthheigthl) {#3};
+\fi}}%
+\end{tikzpicture}%
+}%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%&%%%%%%%%%%%%%%
+% CD Element: Unterstreichung %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Definition der Unterstreichung beim Frame und Section Title mittels des Paketes ulem
+\newcommand{\seeblauuline}[1]{%
+\setlength{\currentfontsize}{\f@size pt}%
+\bgroup\markoverwith{\textcolor{seeblau100}{\rule[-0.62ex]{#1}{0.08\currentfontsize}}}\ULon%
+}%
+\newcommand{\seeblauunder}[1]{%
+\settowidth{\headlength}{#1}%
+\seeblauuline{\headlength}{#1}%
+}%
+
+
+% Um einen Text mit Hilfe des Unterstreichen Elements des Corporate Design hervorzuheben,
+% steht das bereits bekannte Makro
+%
+%     \underline
+%
+% zur Verfügung, welches an die Anforderungen des Corporate Designs angepasst wurde.
+%
+% Dieses Makro besitzt ein notwendiges Argument
+%
+%     \underline{1. Argument}
+%
+% Das Argument hat folgende Bedeutung:
+% 
+%   1. Argument: Hier wird der zu unterstreichende Text hinterlegt.
+%
+% Wichtig ist noch zu wissen, dass auch Textbrüche ohne Probleme durchgeführt werden können.
+%
+% Zudem können weitere Formatierungen, wie bold oder italic innerhalb des Argumentes angewendet
+% werden.
+%
+% Die Dicke der unterstrichenen Linie passt sich dabei der aktuell verwendeten Textgröße an.
+
+% Definition der normalen Unterstreichung mittels des Paketes soul
+% Ueberschreibe den bisherigen Befehl \underline
+\renewcommand{\underline}[1]{%
+\setulcolor{seeblau100}%
+\setlength{\currentfontsize}{\f@size pt}%
+% Hier wird die Tiefe und Dicke der Unterstreichung anhand der 
+% aktuellen Schriftgröße ausgewählt
+\setul{0.62ex}{0.08\currentfontsize}%
+\ul{#1}%
+}%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% CD Element: Merken %
+%%%%%%%%%%%%%%%%%%%%%%
+
+% Um einen Text mit Hilfe des Merken Elements des Corporate Design hervorzuheben,
+% steht das Makro
+%
+%     \merken
+%
+% zur Verfügung.
+%
+% Dieses Makro besitzt drei unbedingt notwendige Argumente
+%
+%     \merken{1. Argument}{2. Argument}{3. Argument}
+%
+% Die Argumente haben dabei folgende Bedeutung:
+% 
+%   1. Argument: Hier wird die Breite des kompletten Objektes angegeben. Da das
+%                Merken Objekt quadratisch ist, wird hier sowohl die Breite als auch
+%                die Höhe angegeben.
+%
+%   2. Argument: Hier wird die Subline des Merken Elementes angegeben, die direkt unter der
+%                Zeile mit dem X folgt (siehe auch Corporate Design Manual).
+%
+%   3. Argument: Hier wird der eigentliche Inhalt angegeben. Wichtig hierbei ist es,
+%                dass dieser Inhalt an die untere Kante des Merken Elementes orientiert ist.
+%                Somit entgegen der Subline (2. Argument), welche an die obere Kante abzüglich
+%                der Zeile mit dem X orientiert ist.
+%
+% Hier folgt noch eine grafische Darstellung der Argumente:
+%
+%    |<------- 1. Argument ------->|    
+%
+%    -------------------------------    -
+%    |                           X |    ^
+%    | Subline (2. Argument)       |    |
+%    |                             |    1
+%    |                             |    .
+%    |                             |    A
+%    |                             |    r
+%    |                             |    g
+%    |                             |    u
+%    |                             |    m
+%    |                             |    e
+%    |                             |    n
+%    |                             |    t
+%    |                             |    |
+%    | Inhalt (3. Argument)        |    v
+%    -------------------------------    -
+%
+% Wichtig ist noch zu wissen, dass die Linienstärke und die Größe des X in der rechten oberen Ecke an die
+% Höhe / Breite des Merken Elements dynamisch angepasst ist. 
+
+\newcommand{\merken}[3]{%
+\setlength{\merkenlength}{#1}%
+\begin{tikzpicture}%
+\tikzstyle{nodestyle}=[align=left, color=white, overlay, inner sep=0mm]%
+\draw [seeblau100, fill=seeblau100] (0,\merkenlength) -- (\merkenlength,\merkenlength) -- (\merkenlength,0) -- (0,0) -- (0,\merkenlength);%
+\draw [white, line width = 0.007\merkenlength] (0.985\merkenlength,0.985\merkenlength) -- (0.885\merkenlength,0.885\merkenlength);%
+\draw [white, line width = 0.007\merkenlength] (0.885\merkenlength,0.985\merkenlength) -- (0.985\merkenlength,0.885\merkenlength);%
+\node [nodestyle, anchor=north west, text width=0.9\merkenlength] at (0.05\merkenlength,0.87\merkenlength) {#2};%
+\node [nodestyle, anchor=south west, text width=0.9\merkenlength] at (0.05\merkenlength,0.05\merkenlength) {#3};%
+\end{tikzpicture}%
+}%
+
+
+%%%%%%%% NEU: Seit Version 0.3
+
+%%%%%%%%%%%%%%%%%%%%%%
+% CD Element: Block  %
+%%%%%%%%%%%%%%%%%%%%%%
+
+% Mit dem Makro
+%
+%     \block[Optionen per Key-Value Pair]{<Headline>}{<Spalte 1>}{<Spalte 2>}{<Spalte 3>}{<Spalte 4>}{<Spalte 5>}{<Spalte 6>}{<Spalte 7>}{<Spalte 8>}
+%
+% können Block-Elemente für z.B. wisschenschaftliche Inhalte erstellt werden.
+%
+% Dieses Makro besitzt 9 erforderliche Elemente, die bei jedem Aufruf angegeben werden müssen. Dabei 
+% ist es natürlich mögliche Argumente leer zu lassen, falls man diese nicht benötigt. Dies hat jedoch
+% keinen Einfluss auf die Anzahl an Spalten. Diese müssen separat im Optionenargument angegeben werden
+% mittels des Schlüssels columnnum (siehe weiter unten).
+%
+% Die Argumente haben dabei folgende Bedeutung:
+%
+%   1. Argument: Inhalt der Headline
+%   2. Argument: Inhalt der 1. Spalte
+%   3. Argument: Inhalt der 2. Spalte
+%   4. Argument: Inhalt der 3. Spalte
+%   5. Argument: Inhalt der 4. Spalte
+%   6. Argument: Inhalt der 5. Spalte
+%   7. Argument: Inhalt der 6. Spalte
+%   8. Argument: Inhalt der 7. Spalte
+%   9. Argument: Inhalt der 8. Spalte
+%
+%
+% Die wichtigen Formatierungsoptionen werden diesmal alle innerhalb des optionalen Argumentes mittels
+% Key-Value Pairs bestimmt.
+%
+% Dabei stehen folgende Optionen zur Verfügung:
+%
+%     thick          Hier wird die Dicke der Linie bestimmt.
+%                    Die Pfeile werden generell mit der doppelten Dicke gezeichnet!
+%                    Standardwert: \boxlinewidth
+%
+%     color          Hier wird die Farbe der Linie angegeben
+%                    Es sollten nur die folgenden Farben benutzt werden:
+%                        seeblau100
+%                        seeblau65
+%                        seeblau35
+%                        seeblau20
+%                        black
+%                        schwarz60
+%                        schwarz40
+%                        schwarz20
+%                        schwarz10
+%                    Standardwert: seeblau100
+%
+%     width          Hier wird die Breite des Blocks angegeben
+%                    Standardwert: \paperwidth
+%
+%     columnnum      Hier werden die Anzahl an Spalten definiert
+%                    Standardwert: 4
+%
+%     headlinesep    Hier wird der Abstand zwischen der Headline und den Spalten angegeben
+%                    Standardwert: Aktuelle Schriftgröße
+%
+%     columnspace    Hier wird der Abstand zwischen den Spalten angegeben
+%                    Standardwert: Doppelte Schriftgröße
+%
+%     block          Hier kann angegeben werden, ob man einen Rahmen um diesen Block haben möchte
+%                    Mögliche Werte: true, false
+%                    Standardwert: false
+%
+%     inner          Hier kann angegeben werden, ob zwischen den Spalten Trennlinien haben möchte
+%                    Mögliche Werte:
+%                        false    keine Trennlinien
+%                        short    Trennlinien, die so lange sind, wie der längste Nachbar (entweder der
+%                                 linke oder rechte Nachbar
+%                        long     Trennlinien, die bis nach ganz unten gehen. Sie sind also so lang
+%                                 wie die längste Spalte
+%                    Standardwert: false
+%
+%     inner1,        Hier kann für jeden Zwischenraum der Spalte exakt angegeben werden, ob Trennlinien
+%     inner2,        existieren sollen und falls ja, wie lang sie sein sollen. Diese Werte werden jedoch
+%     inner3,        nur berücksichtigt, wenn inner=false ist. Ansonsten ist inner stärker.
+%     inner4,        Mögliche Werte:
+%     inner5,           false    keine Trennlinien
+%     inner6,           short    Trennlinien, die so lange sind, wie der längste Nachbar (entweder der
+%     inner7,                    linke oder rechte Nachbar
+%                       long     Trennlinien, die bis nach ganz unten gehen. Sie sind also so lang
+%                                wie die längste Spalte
+%                    Standardwert: false
+%
+%     outerleft,     Hier kann angegeben werden, ob links (rechts) der ersten Spalte eine Trennlinie existieren soll.
+%     outerright     Mögliche Werte
+%                        false    keine Trennlinien
+%                        short    Trennlinien, die so lange sind, wie der direkte Nachbar (bei outerleft die 1. Spalte
+%                                 und bei outerright die letzte Spalte
+%                        long     Trennlinien, die bis nach ganz unten gehen. Sie sind also so lang
+%                                 wie die längste Spalte
+%                        verylong Trennlinie geht von oben nach unten, sowie ein halber columnspace nach innen.
+%                    Standardwert: false
+%
+%     outertop,      Hier kann angegeben werden, ob oberhalb (unterhalb) des Blocks eine Trennlinie, oder ein Pfeil existieren soll.
+%     outerbottom    Mögliche Werte
+%                        false    keine Trennlinien
+%                        long     Trennlinien, die von links nach rechts geht
+%                        verylong Trennlinie, die von links nach rechts geht, sowie ein halber columnspace nach oben (unten).
+%                        arrow    Pfeil, der aus der Trenlinie verylong besteht und in der Mitte einen Pfeil nach oben (unten)
+%                                 besitzt.
+%                    Standardwert: false
+%
+%     arrowtop1left, Hier kann angegeben werden, ob zwei Spalten oberhalb des Blocks mittels eines Doppelpfeils verbunden werden
+%     arrowtop1right sollen. Da es maximal 8 Spalten sind, können auch nur maximal 4 Paare bestimmt werden.
+%     arrowtop2left  Ein Paar besteht somit aus einer linken und einer rechten Spalte.
+%     arrowtop2right Mögliche Werte:
+%     arrowtop3left      0   Keine Auswahl
+%     arrowtop3right     1-8 Auswahl einer Spalte von 1 bis 8
+%     arrowtop4left  Standardwert: 0
+%     arrowtop4right Sollte der linke Wert nicht kleiner als der rechte Wert sein, so werden keine Pfeile gezeichnet. Das gleiche
+%                    gilt für Werte, die außerhalb des Bereichs liegen.
+% 
+%
+% Wichtig ist noch zu wissen, wie die Breite letztendlich berechnet wird:
+% Da es auch links und rechts der Spalten Trennlinien oder Pfeile geben kann, ist links der 1. und rechts der
+% letzten Spalte ebenfalls ein columnspace vorgesehen.
+% Somit wird die Spaltenbreite wie folgt berechnet
+%
+%     blockcolumnwidth = (width - (columnspace * (columnnum + 1))) / columnnum
+%
+
+% WICHTIG:
+%
+% EINE KOMMENTIERUNG DER FOLGENDEN ZEILEN FOLGT AUS ZEITLICHEN GRÜNDEN
+% ERST IN DER NÄCHSTEN VERSION
+
+\newcounter{parnum}
+
+\newcounter{cnt}
+\newcounter{maxcolumn}
+
+\newcounter{arrowtoponeleft}
+\newcounter{arrowtoponeright}
+\newcounter{arrowtest}
+
+\newlength{\maximumdepth}
+\newlength{\headsouthwestx}
+\newlength{\headsouthwesty}
+\newlength{\colonesoutheastx}
+\newlength{\colonesoutheasty}
+\newlength{\coltwosoutheastx}
+\newlength{\coltwosoutheasty}
+\newlength{\colthreesoutheastx}
+\newlength{\colthreesoutheasty}
+\newlength{\colfoursoutheastx}
+\newlength{\colfoursoutheasty}
+\newlength{\colfivesoutheastx}
+\newlength{\colfivesoutheasty}
+\newlength{\colsixsoutheastx}
+\newlength{\colsixsoutheasty}
+\newlength{\colsevensoutheastx}
+\newlength{\colsevensoutheasty}
+\newlength{\coleightsoutheastx}
+\newlength{\coleightsoutheasty}
+\newlength{\headlinesep}
+\newlength{\argheadlinesep}
+\newlength{\tempboxthick}
+
+
+
+
+\newcounter{columnnumber}%
+\newcounter{tempnumber}%
+\newcounter{argonecounter}%
+\newcounter{argtwocounter}%
+\newcounter{argthreecounter}%
+\newcounter{argfourcounter}%
+\newcounter{argfivecounter}%
+
+\def\argtrue{true}
+\def\argfalse{false}
+\def\argshort{short}
+\def\arglong{long}
+\def\argverylong{verylong}
+\def\argarrow{arrow}
+
+% WICHTIG:
+%
+% EINE KOMMENTIERUNG DER FOLGENDEN ZEILEN FOLGT AUS ZEITLICHEN GRÜNDEN
+% ERST IN DER NÄCHSTEN VERSION
+
+\newkeycommand{\cdblock}[thick=\boxlinewidth, color=seeblau100, width=\paperwidth ,columnnum=4, headlinesep=\f@size pt, columnspace=\f@size pt + \f@size pt, block=false, inner=false, inner1=false, inner2=false, inner3=false, inner4=false, inner5=false, inner6=false, inner7=false, outerleft=false, outerright=false, outerbottom=false, outertop=false, arrowtop1left=0, arrowtop1right=0, arrowtop2left=0, arrowtop2right=0, arrowtop3left=0, arrowtop3right=0, arrowtop4left=0, arrowtop4right=0][9]{%
+\setlength{\argonelength}{\commandkey{width}}%
+\ifdim\templength<0cm%
+  \setlength{\blockwidth}{\paperwidth}%
+\else%
+  \setlength{\blockwidth}{\argonelength}%
+\fi%
+\setcounter{argtwocounter}{\commandkey{columnnum}}%
+\ifnum\value{argtwocounter}<1%
+  \setcounter{columnnumber}{4}%
+\else%
+  \ifnum\value{argtwocounter}>8%
+    \setcounter{columnnumber}{8}%
+  \else%
+    \setcounter{columnnumber}{\value{argtwocounter}}%
+  \fi%
+\fi%
+\setlength{\argthreelength}{\commandkey{columnspace}}%
+\ifdim\argthreelength<0cm%
+  \setlength{\spacewidth}{0cm}%
+\else%
+  \setlength{\spacewidth}{\argthreelength}%
+\fi%
+\setlength{\argheadlinesep}{\commandkey{headlinesep}}%
+\ifdim\argheadlinesep<0cm%
+  \setlength{\headlinesep}{0cm}%
+\else%
+  \setlength{\headlinesep}{\argheadlinesep}%
+\fi%
+\setcounter{tempnumber}{\value{columnnumber} + 1}%
+\setlength{\templength}{\spacewidth * \value{tempnumber}}% da links und rechts auch noch einmal ein Space ist
+\setlength{\blockcolumnwidth}{\blockwidth - \templength}%
+\setlength{\blockcolumnwidth}{\blockcolumnwidth / \value{columnnumber}}%
+\setlength{\tempboxthick}{\commandkey{thick}}%
+\begin{tikzpicture}%
+\tikzstyle{nodestyle}=[align=left, overlay, inner sep=0mm, anchor=north west]%
+\tikzstyle{arrowstyle}=[arrows={-Straight Barb[]}]%
+\tikzstyle{arrowstyletwo}=[arrows={Straight Barb[]-Straight Barb[]}]%
+\def\tmp{#1}%
+\ifx\tmp\@empty%
+\setlength{\headsouthwestx}{\spacewidth}%
+\setlength{\headsouthwesty}{\headlinesep}%
+\else%
+\node[nodestyle, text width=\blockwidth - 2\spacewidth] (head) at (\spacewidth,0) {#1};%
+\pgfextractx{\headsouthwestx}{\pgfpointanchor{head}{south west}}%
+\pgfextracty{\headsouthwesty}{\pgfpointanchor{head}{south west}}%
+\fi%
+\node[nodestyle, text width=\blockcolumnwidth] (col1) at (\spacewidth, \headsouthwesty - \headlinesep){#2};%
+\pgfextractx{\colonesoutheastx}{\pgfpointanchor{col1}{south east}}%
+\pgfextracty{\colonesoutheasty}{\pgfpointanchor{col1}{south east}}%
+\setlength{\maximumdepth}{\colonesoutheasty}%
+\ifnum\value{columnnumber}>1%
+\node[nodestyle, text width=\blockcolumnwidth] (col2) at (\blockcolumnwidth + 2\spacewidth, \headsouthwesty - \headlinesep) {#3};%
+\pgfextractx{\coltwosoutheastx}{\pgfpointanchor{col2}{south east}}%
+\pgfextracty{\coltwosoutheasty}{\pgfpointanchor{col2}{south east}}%
+\ifdim\maximumdepth>\coltwosoutheasty%
+\setlength{\maximumdepth}{\coltwosoutheasty}%
+\fi%
+\fi%
+\ifnum\value{columnnumber}>2%
+\node[nodestyle, text width=\blockcolumnwidth] (col3) at (2\blockcolumnwidth + 3\spacewidth, \headsouthwesty - \headlinesep) {#4};%
+\pgfextractx{\colthreesoutheastx}{\pgfpointanchor{col3}{south east}}%
+\pgfextracty{\colthreesoutheasty}{\pgfpointanchor{col3}{south east}}%
+\ifdim\maximumdepth>\colthreesoutheasty%
+\setlength{\maximumdepth}{\colthreesoutheasty}%
+\fi%
+\fi%
+\ifnum\value{columnnumber}>3%
+\node[nodestyle, text width=\blockcolumnwidth] (col4) at (3\blockcolumnwidth + 4\spacewidth, \headsouthwesty - \headlinesep) {#5};%
+\pgfextractx{\colfoursoutheastx}{\pgfpointanchor{col4}{south east}}%
+\pgfextracty{\colfoursoutheasty}{\pgfpointanchor{col4}{south east}}%
+\ifdim\maximumdepth>\colfoursoutheasty%
+\setlength{\maximumdepth}{\colfoursoutheasty}%
+\fi%
+\fi%
+\ifnum\value{columnnumber}>4%
+\node[nodestyle, text width=\blockcolumnwidth] (col5) at (4\blockcolumnwidth + 5\spacewidth, \headsouthwesty - \headlinesep) {#6};%
+\pgfextractx{\colfivesoutheastx}{\pgfpointanchor{col5}{south east}}%
+\pgfextracty{\colfivesoutheasty}{\pgfpointanchor{col5}{south east}}%
+\ifdim\maximumdepth>\colfivesoutheasty%
+\setlength{\maximumdepth}{\colfivesoutheasty}%
+\fi%
+\fi%
+\ifnum\value{columnnumber}>5%
+\node[nodestyle, text width=\blockcolumnwidth] (col6) at (5\blockcolumnwidth + 6\spacewidth, \headsouthwesty - \headlinesep) {#7};%
+\pgfextractx{\colsixsoutheastx}{\pgfpointanchor{col6}{south east}}%
+\pgfextracty{\colsixsoutheasty}{\pgfpointanchor{col6}{south east}}%
+\ifdim\maximumdepth>\colsixsoutheasty%
+\setlength{\maximumdepth}{\colsixsoutheasty}%
+\fi%
+\fi%
+\ifnum\value{columnnumber}>6%
+\node[nodestyle, text width=\blockcolumnwidth] (col7) at (6\blockcolumnwidth + 7\spacewidth, \headsouthwesty - \headlinesep) {#8};%
+\pgfextractx{\colsevensoutheastx}{\pgfpointanchor{col7}{south east}}%
+\pgfextracty{\colsevensoutheasty}{\pgfpointanchor{col7}{south east}}%
+\ifdim\maximumdepth>\colsevensoutheasty%
+\setlength{\maximumdepth}{\colsevensoutheasty}%
+\fi%
+\fi%
+\ifnum\value{columnnumber}>7%
+\node[nodestyle, text width=\blockcolumnwidth] (col8) at (7\blockcolumnwidth + 8\spacewidth, \headsouthwesty - \headlinesep) {#9};%
+\pgfextractx{\coleightsoutheastx}{\pgfpointanchor{col8}{south east}}%
+\pgfextracty{\coleightsoutheasty}{\pgfpointanchor{col8}{south east}}%
+\ifdim\maximumdepth>\coleightsoutheasty%
+\setlength{\maximumdepth}{\coleightsoutheasty}%
+\fi%
+\fi%
+\ifnum\value{columnnumber}>1%
+\ifthenelse{\equal{\commandkey{inner}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colonesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colonesoutheastx + 0.5\spacewidth,\minof{\colonesoutheasty}{\coltwosoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colonesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colonesoutheastx + 0.5\spacewidth,\maximumdepth);}{\ifthenelse{\equal{\commandkey{inner1}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colonesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colonesoutheastx + 0.5\spacewidth,\minof{\colonesoutheasty}{\coltwosoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner1}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colonesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colonesoutheastx + 0.5\spacewidth,\maximumdepth);}{}}}}%
+\fi%
+\ifnum\value{columnnumber}>2%
+\ifthenelse{\equal{\commandkey{inner}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\coltwosoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\coltwosoutheastx + 0.5\spacewidth,\minof{\coltwosoutheasty}{\colthreesoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\coltwosoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\coltwosoutheastx + 0.5\spacewidth,\maximumdepth);}{\ifthenelse{\equal{\commandkey{inner2}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\coltwosoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\coltwosoutheastx + 0.5\spacewidth,\minof{\coltwosoutheasty}{\colthreesoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner2}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\coltwosoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\coltwosoutheastx + 0.5\spacewidth,\maximumdepth);}{}}}}%
+\fi%
+\ifnum\value{columnnumber}>3%
+\ifthenelse{\equal{\commandkey{inner}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colthreesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colthreesoutheastx + 0.5\spacewidth,\minof{\colthreesoutheasty}{\colfoursoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colthreesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colthreesoutheastx + 0.5\spacewidth,\maximumdepth);}{\ifthenelse{\equal{\commandkey{inner3}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colthreesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colthreesoutheastx + 0.5\spacewidth,\minof{\colthreesoutheasty}{\colfoursoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner3}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colthreesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colthreesoutheastx + 0.5\spacewidth,\maximumdepth);}{}}}}%
+\fi%
+\ifnum\value{columnnumber}>4%
+\ifthenelse{\equal{\commandkey{inner}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colfoursoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colfoursoutheastx + 0.5\spacewidth,\minof{\colfoursoutheasty}{\colfivesoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colfoursoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colfoursoutheastx + 0.5\spacewidth,\maximumdepth);}{\ifthenelse{\equal{\commandkey{inner4}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colfoursoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colfoursoutheastx + 0.5\spacewidth,\minof{\colfoursoutheasty}{\colfivesoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner4}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colfoursoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colfoursoutheastx + 0.5\spacewidth,\maximumdepth);}{}}}}%
+\fi%
+\ifnum\value{columnnumber}>5%
+\ifthenelse{\equal{\commandkey{inner}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colfivesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colfivesoutheastx + 0.5\spacewidth,\minof{\colfivesoutheasty}{\colsixsoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colfivesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colfivesoutheastx + 0.5\spacewidth,\maximumdepth);}{\ifthenelse{\equal{\commandkey{inner5}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colfivesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colfivesoutheastx + 0.5\spacewidth,\minof{\colfivesoutheasty}{\colsixsoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner5}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colfivesoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colfivesoutheastx + 0.5\spacewidth,\maximumdepth);}{}}}}%
+\fi%
+\ifnum\value{columnnumber}>6%
+\ifthenelse{\equal{\commandkey{inner}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colsixsoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colsixsoutheastx + 0.5\spacewidth,\minof{\colsixsoutheasty}{\colsevensoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colsixsoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colsixsoutheastx + 0.5\spacewidth,\maximumdepth);}{\ifthenelse{\equal{\commandkey{inner6}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colsixsoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colsixsoutheastx + 0.5\spacewidth,\minof{\colsixsoutheasty}{\colsevensoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner6}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colsixsoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colsixsoutheastx + 0.5\spacewidth,\maximumdepth);}{}}}}%
+\fi%
+\ifnum\value{columnnumber}>7%
+\ifthenelse{\equal{\commandkey{inner}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colsevensoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colsevensoutheastx + 0.5\spacewidth,\minof{\colsevensoutheasty}{\coleightsoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colsevensoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colsevensoutheastx + 0.5\spacewidth,\maximumdepth);}{\ifthenelse{\equal{\commandkey{inner7}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colsevensoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colsevensoutheastx + 0.5\spacewidth,\minof{\colsevensoutheasty}{\coleightsoutheasty});}{%
+\ifthenelse{\equal{\commandkey{inner7}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\colsevensoutheastx + 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\colsevensoutheastx + 0.5\spacewidth,\maximumdepth);}{}}}}%
+\fi%
+\ifthenelse{\equal{\commandkey{block}}{\argtrue}}{%
+\draw[seeblau100, line width=\tempboxthick] (0.5\blockwidth,0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,\maximumdepth - 0.5\spacewidth) --  (0.5\spacewidth,\maximumdepth - 0.5\spacewidth) -- (0.5\spacewidth,0.5\spacewidth) -- (0.5\blockwidth,0.5\spacewidth);%
+}{\ifthenelse{\equal{\commandkey{outerleft}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (0.5\spacewidth,\headsouthwesty - \headlinesep) -- (0.5\spacewidth,\colonesoutheasty);%
+}{\ifthenelse{\equal{\commandkey{outerleft}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (0.5\spacewidth,\headsouthwesty - \headlinesep) -- (0.5\spacewidth,\maximumdepth);%
+}{\ifthenelse{\equal{\commandkey{outerleft}}{\argverylong}}{%
+\draw[seeblau100, line width=\tempboxthick] (1.5\spacewidth,0.5\spacewidth) -- (0.5\spacewidth,0.5\spacewidth) -- (0.5\spacewidth,\maximumdepth - 0.5\spacewidth) -- (1.5\spacewidth,\maximumdepth - 0.5\spacewidth);%
+}{}}}%
+\ifthenelse{\equal{\commandkey{outerright}}{\argshort}}{%
+\draw[seeblau100, line width=\tempboxthick] (\blockwidth - 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\blockwidth - 0.5\spacewidth,\colonesoutheasty);%
+}{\ifthenelse{\equal{\commandkey{outerright}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\blockwidth - 0.5\spacewidth,\headsouthwesty - \headlinesep) -- (\blockwidth - 0.5\spacewidth,\maximumdepth);%
+}{\ifthenelse{\equal{\commandkey{outerright}}{\argverylong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\blockwidth - 1.5\spacewidth,0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,\maximumdepth - 0.5\spacewidth) -- (\blockwidth - 1.5\spacewidth,\maximumdepth - 0.5\spacewidth);%
+}{}}}
+\ifthenelse{\equal{\commandkey{outerbottom}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\spacewidth,\maximumdepth - 0.5\spacewidth) -- (\blockwidth - \spacewidth,\maximumdepth - 0.5\spacewidth);%
+}{\ifthenelse{\equal{\commandkey{outerbottom}}{\argverylong}}{%
+\draw[seeblau100, line width=\tempboxthick] (0.5\spacewidth,\maximumdepth + 0.5\spacewidth) -- (0.5\spacewidth,\maximumdepth - 0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,\maximumdepth - 0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,\maximumdepth + 0.5\spacewidth);%
+}{\ifthenelse{\equal{\commandkey{outerbottom}}{\argarrow}}{%
+\draw[seeblau100, line width=2\tempboxthick] (0.5\spacewidth,\maximumdepth + 0.5\spacewidth) -- (0.5\spacewidth,\maximumdepth - 0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,\maximumdepth - 0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,\maximumdepth + 0.5\spacewidth);%
+\draw[seeblau100, line width=2\tempboxthick, arrowstyle] (0.5\blockwidth, \maximumdepth - 0.5\spacewidth) -- (0.5\blockwidth, \maximumdepth - 1.5\spacewidth);%
+}{}}}%
+\ifthenelse{\equal{\commandkey{outertop}}{\arglong}}{%
+\draw[seeblau100, line width=\tempboxthick] (\spacewidth,0.5\spacewidth) -- (\blockwidth - \spacewidth,0.5\spacewidth);%
+}{\ifthenelse{\equal{\commandkey{outertop}}{\argverylong}}{%
+\draw[seeblau100, line width=\tempboxthick] (0.5\spacewidth,-0.5\spacewidth) -- (0.5\spacewidth,0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,-0.5\spacewidth);%
+}{\ifthenelse{\equal{\commandkey{outertop}}{\argarrow}}{%
+\draw[seeblau100, line width=2\tempboxthick] (0.5\spacewidth,-0.5\spacewidth) -- (0.5\spacewidth,0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,0.5\spacewidth) -- (\blockwidth - 0.5\spacewidth,-0.5\spacewidth);%
+\draw[seeblau100, line width=2\tempboxthick, arrowstyle] (0.5\blockwidth,0.5\spacewidth) -- (0.5\blockwidth,1.5\spacewidth);%
+}{}}}%
+\setcounter{arrowtest}{\value{columnnumber} + 1}%
+\setcounter{arrowtoponeleft}{\commandkey{arrowtop1left}}%
+\setcounter{arrowtoponeright}{\commandkey{arrowtop1right}}%
+\ifnum\value{arrowtoponeleft}>0%
+\ifnum\value{arrowtoponeleft}<\value{arrowtest}%
+\ifnum\value{arrowtoponeright}>0%
+\ifnum\value{arrowtoponeright}<\value{arrowtest}%
+\ifnum\value{arrowtoponeleft}<\value{arrowtoponeright}%
+\draw[seeblau100, line width=2\tempboxthick, arrowstyletwo] (\spacewidth * \value{arrowtoponeleft} + \value{arrowtoponeleft} * \blockcolumnwidth - 0.5\blockcolumnwidth, 0.5\spacewidth) -- (\spacewidth * \value{arrowtoponeleft} + \value{arrowtoponeleft} * \blockcolumnwidth - 0.5\blockcolumnwidth, 1.5\spacewidth) -- (\spacewidth * \value{arrowtoponeright} + \value{arrowtoponeright} * \blockcolumnwidth - 0.5\blockcolumnwidth, 1.5\spacewidth) -- (\spacewidth * \value{arrowtoponeright} + \value{arrowtoponeright} * \blockcolumnwidth - 0.5\blockcolumnwidth, 0.5\spacewidth);%
+\fi%
+\fi%
+\fi%
+\fi%
+\fi%
+\setcounter{arrowtoponeleft}{\commandkey{arrowtop2left}}%
+\setcounter{arrowtoponeright}{\commandkey{arrowtop2right}}%
+\ifnum\value{arrowtoponeleft}>0%
+\ifnum\value{arrowtoponeleft}<\value{arrowtest}%
+\ifnum\value{arrowtoponeright}>0%
+\ifnum\value{arrowtoponeright}<\value{arrowtest}%
+\ifnum\value{arrowtoponeleft}<\value{arrowtoponeright}%
+\draw[seeblau100, line width=2\tempboxthick, arrowstyletwo] (\spacewidth * \value{arrowtoponeleft} + \value{arrowtoponeleft} * \blockcolumnwidth - 0.5\blockcolumnwidth, 0.5\spacewidth) -- (\spacewidth * \value{arrowtoponeleft} + \value{arrowtoponeleft} * \blockcolumnwidth - 0.5\blockcolumnwidth, 1.5\spacewidth) -- (\spacewidth * \value{arrowtoponeright} + \value{arrowtoponeright} * \blockcolumnwidth - 0.5\blockcolumnwidth, 1.5\spacewidth) -- (\spacewidth * \value{arrowtoponeright} + \value{arrowtoponeright} * \blockcolumnwidth - 0.5\blockcolumnwidth, 0.5\spacewidth);%
+\fi%
+\fi%
+\fi%
+\fi%
+\fi%
+\setcounter{arrowtoponeleft}{\commandkey{arrowtop3left}}%
+\setcounter{arrowtoponeright}{\commandkey{arrowtop3right}}%
+\ifnum\value{arrowtoponeleft}>0%
+\ifnum\value{arrowtoponeleft}<\value{arrowtest}%
+\ifnum\value{arrowtoponeright}>0%
+\ifnum\value{arrowtoponeright}<\value{arrowtest}%
+\ifnum\value{arrowtoponeleft}<\value{arrowtoponeright}%
+\draw[seeblau100, line width=2\tempboxthick, arrowstyletwo] (\spacewidth * \value{arrowtoponeleft} + \value{arrowtoponeleft} * \blockcolumnwidth - 0.5\blockcolumnwidth, 0.5\spacewidth) -- (\spacewidth * \value{arrowtoponeleft} + \value{arrowtoponeleft} * \blockcolumnwidth - 0.5\blockcolumnwidth, 1.5\spacewidth) -- (\spacewidth * \value{arrowtoponeright} + \value{arrowtoponeright} * \blockcolumnwidth - 0.5\blockcolumnwidth, 1.5\spacewidth) -- (\spacewidth * \value{arrowtoponeright} + \value{arrowtoponeright} * \blockcolumnwidth - 0.5\blockcolumnwidth, 0.5\spacewidth);%
+\fi%
+\fi%
+\fi%
+\fi%
+\fi%
+\setcounter{arrowtoponeleft}{\commandkey{arrowtop4left}}%
+\setcounter{arrowtoponeright}{\commandkey{arrowtop4right}}%
+\ifnum\value{arrowtoponeleft}>0%
+\ifnum\value{arrowtoponeleft}<\value{arrowtest}%
+\ifnum\value{arrowtoponeright}>0%
+\ifnum\value{arrowtoponeright}<\value{arrowtest}%
+\ifnum\value{arrowtoponeleft}<\value{arrowtoponeright}%
+\draw[seeblau100, line width=2\tempboxthick, arrowstyletwo] (\spacewidth * \value{arrowtoponeleft} + \value{arrowtoponeleft} * \blockcolumnwidth - 0.5\blockcolumnwidth, 0.5\spacewidth) -- (\spacewidth * \value{arrowtoponeleft} + \value{arrowtoponeleft} * \blockcolumnwidth - 0.5\blockcolumnwidth, 1.5\spacewidth) -- (\spacewidth * \value{arrowtoponeright} + \value{arrowtoponeright} * \blockcolumnwidth - 0.5\blockcolumnwidth, 1.5\spacewidth) -- (\spacewidth * \value{arrowtoponeright} + \value{arrowtoponeright} * \blockcolumnwidth - 0.5\blockcolumnwidth, 0.5\spacewidth);%
+\fi%
+\fi%
+\fi%
+\fi%
+\fi%
+}%
+\draw (0,0) -- (0,0);%
+\draw (\blockwidth,0) -- (\blockwidth,0);%
+\end{tikzpicture}%
+}%
+
+
+%%%%%%%% NEU: Seit Version 0.3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CD Element: Linie (mit optionalen Pfeilen) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Mit dem Makro
+%
+%     \cdline[Optionen per Key-Value Pair]{<Länge der Linie>}
+%
+% kann eine Linie mit einer bestimmten Länge erstellt werden.
+%
+% Dieses Makro besitzt 1 erforderliches Element, welches bei jedem Aufruf mit angegeben
+% werden muss.
+%
+% Das Argument hat dabei folgende Bedeutung.
+%
+%   1. Argument: Länge der erzeugten Linie
+%
+%
+% Die wichtigen Formatierungsoptionen werden alle innerhalb des optionalen Argumentes mittels
+% Key-Value Pairs bestimmt.
+%
+% Dabei stehen folgende Optionen zur Verfügung:
+%
+%     thick          Hier wird die Dicke der Linie bestimmt
+%                    Standardwert: \boxlinewidth
+%
+%     mode           Hier wird angegeben, ob die Linie horizontal oder vertikal ausgerichtet werden soll
+%                    Mögliche Werte
+%                        horizontal
+%                        vertical
+%                    Standardwert: horizontal
+%
+%     color          Hier wird die Farbe der Linie angegeben
+%                    Es sollten nur die folgenden Farben benutzt werden:
+%                        seeblau100
+%                        seeblau65
+%                        seeblau35
+%                        seeblau20
+%                        black
+%                        schwarz60
+%                        schwarz40
+%                        schwarz20
+%                        schwarz10
+%                    Standardwert: seeblau100
+%
+%     arrowleft      Hier wird angegeben, die Linie am linken (vertical: oberen) Ende mit einem Pfeil enden soll
+%                    Mögliche Werte:
+%                        true
+%                        false
+%                    Standardwert: false
+%
+%     arrowright     Hier wird angegeben, die Linie am rechten (vertical: unteren) Ende mit einem Pfeil enden soll
+%                    Mögliche Werte:
+%                        true
+%                        false
+%                    Standardwert: false
+
+% WICHTIG:
+%
+% EINE KOMMENTIERUNG DER FOLGENDEN ZEILEN FOLGT AUS ZEITLICHEN GRÜNDEN
+% ERST IN DER NÄCHSTEN VERSION
+
+\newkeycommand{\cdline}[color=seeblau100, thick=\boxlinewidth, mode=horizontal, arrowleft=false, arrowright=false][1]{%
+\begin{tikzpicture}%
+\tikzstyle{linestyle}=[color=\commandkey{color}, line width=\commandkey{thick}]%
+\ifthenelse{\equal{\commandkey{arrowleft}}{true}}{%
+\ifthenelse{\equal{\commandkey{arrowright}}{true}}{%
+\tikzstyle{arrowstyle}=[arrows={Straight Barb[]-Straight Barb[]}]%
+}{\tikzstyle{arrowstyle}=[arrows={Straight Barb[]-}]%
+}%
+}{\ifthenelse{\equal{\commandkey{arrowright}}{true}}{%
+\tikzstyle{arrowstyle}=[arrows={-Straight Barb[]}]%
+}{\tikzstyle{arrowstyle}=[]}}%
+\ifthenelse{\equal{\commandkey{mode}}{horizontal}}{%
+\draw[linestyle, arrowstyle] (0,0) -- (#1,0);%
+}{\ifthenelse{\equal{\commandkey{mode}}{vertical}}{%
+\draw[linestyle, arrowstyle] (0,#1) -- (0,0);%
+}{}}%
+\end{tikzpicture}%
+}%
+
+
+%%%%%%%% NEU: Seit Version 0.3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CD Element: Klammer (mit optionalen Pfeilen) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Mit dem Makro
+%
+%     \cdbracket[Optionen per Key-Value Pair]{<Breite des Klammer>}{<Höhe des Klammer>}
+%
+% kann eine Klammer mit einer bestimmten Breite und Höhe gezeichnet werden.
+%
+% Dieses Makro besitzt 2 erforderliche Elemente, welche bei jedem Aufruf mit angegeben
+% werden müssen.
+%
+% Die Argumente haben dabei folgende Bedeutung.
+%
+%   1. Argument: Breite der erzeugten Klammer
+%   2. Argument: Höhe der erzeugten Klammer
+%
+%
+% Die wichtigen Formatierungsoptionen werden alle innerhalb des optionalen Argumentes mittels
+% Key-Value Pairs bestimmt.
+%
+% Dabei stehen folgende Optionen zur Verfügung:
+%
+%     thick          Hier wird die Dicke der Linien bestimmt
+%                    Standardwert: \boxlinewidth
+%
+%     mode           Hier wird die Ausrichtung der Klammer angegeben
+%                    Mögliche Werte
+%                        left    linke Klammer
+%                        top     obere Klammer
+%                        right   rechte Klammer
+%                        bottom  untere Klammer
+%                    Standardwert: left
+%
+%     color          Hier wird die Farbe der Linie angegeben
+%                    Es sollten nur die folgenden Farben benutzt werden:
+%                        seeblau100
+%                        seeblau65
+%                        seeblau35
+%                        seeblau20
+%                        black
+%                        schwarz60
+%                        schwarz40
+%                        schwarz20
+%                        schwarz10
+%                    Standardwert: seeblau100
+%
+%     arrowleft      Hier wird angegeben, ob die Klammer am linken (oberen) Ende mit einem Pfeil enden soll
+%                    Mögliche Werte:
+%                        true
+%                        false
+%                    Standardwert: false
+%
+%     arrowright     Hier wird angegeben, ob die Klammer am rechten (unteren) Ende mit einem Pfeil enden soll
+%                    Mögliche Werte:
+%                        true
+%                        false
+%                    Standardwert: false
+%
+%     arrowmiddle    Hier wird angegeben, ob die Klammer in der Mitte einen weiteren Pfeil besitzen soll der in die
+%                    andere Richtung der Klammer zeigt (wie beim Makro \block mit der Optione arrow bei outerbottom / outertop)
+%                    Mögliche Werte:
+%                        true
+%                        false
+%                    Standardwert: false
+
+% WICHTIG:
+%
+% EINE KOMMENTIERUNG DER FOLGENDEN ZEILEN FOLGT AUS ZEITLICHEN GRÜNDEN
+% ERST IN DER NÄCHSTEN VERSION
+
+\newkeycommand{\cdbracket}[color=seeblau100, thick=\boxlinewidth, mode=left, arrowleft=false, arrowright=false, arrowmiddle=false][2]{%
+\begin{tikzpicture}%
+\tikzstyle{linestyle}=[color=\commandkey{color}, line width=\commandkey{thick}]%
+\ifthenelse{\equal{\commandkey{arrowleft}}{true}}{%
+\ifthenelse{\equal{\commandkey{arrowright}}{true}}{%
+\tikzstyle{arrowstyle}=[arrows={Straight Barb[]-Straight Barb[]}]%
+}{\tikzstyle{arrowstyle}=[arrows={Straight Barb[]-}]%
+}%
+}{\ifthenelse{\equal{\commandkey{arrowright}}{true}}{%
+\tikzstyle{arrowstyle}=[arrows={-Straight Barb[]}]%
+}{\tikzstyle{arrowstyle}=[]}}%
+\ifthenelse{\equal{\commandkey{mode}}{left}}{%
+\draw[linestyle, arrowstyle] (#1,#2) -- (0,#2) -- (0,0) -- (#1,0);%
+\ifthenelse{\equal{\commandkey{arrowmiddle}}{true}}{%
+\draw[linestyle, arrows={-Straight Barb[]}] (0,#2 * 0.5) -- (#1 * -1,#2 * 0.5);%
+}{}%
+}{\ifthenelse{\equal{\commandkey{mode}}{top}}{%
+\draw[linestyle, arrowstyle] (0,0) -- (0,#2) -- (#1,#2) -- (#1,0);%
+\ifthenelse{\equal{\commandkey{arrowmiddle}}{true}}{%
+\draw[linestyle, arrows={-Straight Barb[]}] (#1 * 0.5,#2) -- (#1 * 0.5,#2 * 2);%
+}{}%
+}{}\ifthenelse{\equal{\commandkey{mode}}{right}}{%
+\draw[linestyle, arrowstyle] (0,#2) -- (#1,#2) -- (#1,0) -- (0,0);%
+\ifthenelse{\equal{\commandkey{arrowmiddle}}{true}}{%
+\draw[linestyle, arrows={-Straight Barb[]}] (#1,#2 * 0.5) -- (#1 * 2,#2 * 0.5);%
+}{}%
+}{}\ifthenelse{\equal{\commandkey{mode}}{bottom}}{%
+\draw[linestyle, arrowstyle] (0,#2) -- (0,0) -- (#1,0) -- (#1,#2);%
+\ifthenelse{\equal{\commandkey{arrowmiddle}}{true}}{%
+\draw[linestyle, arrows={-Straight Barb[]}] (#1 * 0.5,0) -- (#1 * 0.5,#2 * -1);%
+}{}%
+}{}}%
+\end{tikzpicture}%
+}%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Schriftgröße       %
+%%%%%%%%%%%%%%%%%%%%%%
+
+% Da innerhalb eines Plakates es meistens mehrere verschiedene Schriftgrößen
+% gibt, steht hier das Makro
+%
+%     \selectfontsize
+%
+% zur Verfügung.
+%
+% Dieses Makro besitzt ein unbedingt notwendiges Argument und ein optionales
+% Feld, indem Key-Value Pairs übergeben werden können.
+%
+%     \selectfontsize[<Key Value Pairs>]{<Schriftgröße>}
+%
+% Das Argument hat dabei folgende Bedeutung:
+% 
+%   1. Argument:         Hier wird die neue Schriftgröße angegeben, die verwendet werden
+%                        soll.
+% Die weiteren Formatierungsoptionen werden alle innerhalb des optionalen Argumentes mittels
+% Key-Value Pairs bestimmt.
+%
+% Dabei stehen folgende Optionen zur Verfügung:
+%
+%     baselineskip    Hier wird der baselineskip angegeben, welcher verwendet werden soll
+%                     Mögliche Werte:
+%                         0      Ist dieser 0, dann wird der baselinefaktor verwendet  
+%                         sonst
+%                    Standardwert: 0
+%
+%     baselinefaktor Hier wird der Faktor angegeben, der verwendet wird, um den neuen
+%                    baselineskip zu berechnen.
+%                    Dieser wird nur benutzt, falls der baselineskip 0 beträgt.
+%                    
+%                        baselineskip = baselinefaktor * #1
+%
+%                    Standardwert: 12/10
+%
+%                    Da hier keine Fließkommazahl in der Dezimalschreibweise angegeben werden
+%                    kann, müssen diese als Brüche repräsentiert werden, wie z.b. 12/10 anstatt
+%                    1.2.
+
+\newkeycommand{\selectfontsize}[baselineskip=0, baselinefaktor=12/10][1]{%
+\ifthenelse{\equal{\commandkey{baselineskip}}{0}}{%
+\setlength{\blskip}{#1 * \commandkey{baselinefaktor}}%
+\fontsize{#1}{\blskip}\selectfont}%
+{\setlength{\blskip}{\commandkey{baselineskip}}%
+\fontsize{#1}{\blskip}\selectfont}}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Anpassung der einzelnen Beamer Templates %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Keine Navigationssymbole
+\setbeamertemplate{navigation symbols}{}%
+
+
+% Titel Seite mit Logo, Titel, Autor, Institut und Datum
+\setbeamertemplate{title page}{
+	\begin{textblock*}{\paperwidth}(0pt, 0pt)%
+%%%%%%%%% Dadurch bekommt das Uni Logo eine Hoehe von 20mm und besitzt den optimalen Schutzraum 	
+		\hfill\includegraphics[height=45mm]{graphics/UniKonstanz_Logo_Optimum.pdf}%
+	\end{textblock*}%
+	\vfill%
+	\titleCDHelp%
+	\vfill%
+	\usebeamerfont{titlepageauthor}\seeblauunder{\insertauthor}%
+		\\[4pt]%
+	\usebeamerfont{titlepagenormal}\insertinstitute, \insertdate
+	\vfill%
+}
+
+
+%% Section Seite mit Titel
+%\setbeamertemplate{section page}{%
+%	\sectionCorporateDesignHelp%
+%	\vskip 18pt%
+%}%
+
+% Section Seite mit Titel
+\setbeamertemplate{section page}{%
+\vskip -18pt\seeblauunder{\insertsectionnumber\hspace*{0.5ex}\insertsection}%	
+\vskip 18pt%
+}%
+
+
+% Subsection Seite mit Titel
+\setbeamertemplate{subsection page}{%
+	\insertsectionnumber.\insertsubsectionnumber\hspace*{0.5ex}\insertsubsection%
+	\vskip 18pt%
+}%
+
+
+% Frametitle einfuegen (Unterstreichung mittels \seeblauunder)
+\setbeamertemplate{frametitle}{%
+	\seeblauunder{\insertframetitle}%
+}%
+
+
+% Headline: Wenn vorhanden: Section (mit Nummer) - Subsection (mit Nummer) - Subsubsection
+\setbeamertemplate{headline}{%
+	\ifx \insertsection\@empty%
+	\else%
+		\hspace*{0.5\footspace}\textbf{\insertsectionnumber\hspace*{0.5ex}\insertsection}%
+		\ifx \insertsubsection\@empty%
+		\else%
+			\textcolor{schwarz60}{\textbf{\hspace*{1ex}-\hspace*{1ex}\insertsectionnumber.\insertsubsectionnumber\hspace*{0.5ex}\insertsubsection}}%
+			\ifx \insertsubsubsection\@empty%
+			\else%
+				\textcolor{schwarz40}{\textbf{\hspace*{1ex}-\hspace*{1ex}\insertsubsubsection}}%
+			\fi%
+		\fi%
+	\fi%
+}%
+
+
+
+% Footline:
+% TitelSeite: Nur die seeblaue Linie
+% Rest: Seite / Gesamtanzahl    Datum    Titel der Praesentation    Autor
+\setbeamertemplate{footline}{%
+	\vskip 3.5cm%
+	\ifnum \insertpagenumber=1%
+		\begin{textblock*}{\linewidth}(0.5\footspace, \paperheight - 1cm)%
+		\textcolor{seeblau100}{\rule{\linewidth}{1pt}}%
+		\end{textblock*}%
+	\else%
+		\begin{textblock*}{\linewidth}(0.5\footspace, \paperheight - 1cm)%
+			\textcolor{seeblau100}{\rule{\linewidth}{1pt}}%
+			\vskip 6pt%
+			\leavevmode%
+			\hbox{%
+  				\begin{beamercolorbox}[wd=0.1\textwidth, left]{footline}%
+    					\insertframenumber{} / \inserttotalframenumber%
+  				\end{beamercolorbox}%
+  				\begin{beamercolorbox}[wd=0.1\textwidth ,left]{footline}%
+    					\insertdate%
+  				\end{beamercolorbox}%
+  				\begin{beamercolorbox}[wd=0.6\textwidth, center]{footline}%
+   					\inserttitle%
+  				\end{beamercolorbox}%
+  				\begin{beamercolorbox}[wd=0.2\textwidth, right]{footline}%
+   					\insertauthor%
+  				\end{beamercolorbox}%
+  			}%
+		\end{textblock*}%
+\fi%
+}
+
+
+% Table of Contents
+\setbeamertemplate{section in toc}{\leavevmode\leftskip=2em\rlap{\hskip-2em\inserttocsectionnumber}\inserttocsection\par}%
+\setbeamertemplate{subsection in toc}{\leavevmode\leftskip=5em\rlap{\hskip-3em\inserttocsectionnumber.\inserttocsubsectionnumber}\inserttocsubsection\par}%
+\setbeamertemplate{subsubsection in toc}{\leavevmode\leftskip=9em\rlap{\hskip-4em\inserttocsectionnumber.\inserttocsubsectionnumber.\inserttocsubsubsectionnumber}\inserttocsubsubsection\par}%
+
+
+% Items
+
+\setbeamertemplate{itemize item}{\leavevmode -}
+\setbeamertemplate{itemize subitem}{\leavevmode -}
+\setbeamertemplate{itemize subsubitem}{\leavevmode -}
+
+\setlength\leftmargini  {0.5\footspace}
+\setlength\leftmarginii  {3.8em}
+\setlength\leftmarginiii  {5.1em}
+\setlength \labelsep  {1.5em}
+\setlength \labelwidth{4em}
+
+
+\def\@listi{\leftmargin\leftmargini
+            \topsep 0\p@ 
+            \parsep 3\p@
+            \itemsep 0\p@
+            }
+\let\@listI\@listi
+\def\@listii{\leftmargin\leftmarginii
+              \topsep    0\p@
+              \parsep    3\p@
+              \itemsep   0\p@}
+\def\@listiii{\leftmargin\leftmarginiii
+              \topsep    0\p@
+              \parsep    3\p@
+              \itemsep   0\p@}
+
+\mode%
+<all>%
+
+
+% TODO
+% - oversize bei proofs, exmaples, ... - Überschreiben durch neues CD Block-Element
+% - Zweitlogo bzw. Unterlogo etc.
+% - Foliennummern angeben in denen keinen Fusszeile vorkommen soll
+% - Biblography
+% - Beispiel mit textcolor in der Farbe
+% - Tabellenbeispiel bzw. Umgebung setzen
+% - Anpassung der geometry an aspectratio
