@@ -91,27 +91,24 @@ Heading 2       | `## Heading 2`
 
 > - minimalistic syntax = easier typing & reading
 > - derived from decades of email & forum conventions
-> - links, images, tables, footnotes, quotes available[^syntax]
+> - links, images, tables, footnotes, quotes available
+> - more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples) & [pandoc.org/README.html](http://pandoc.org/README.html#pandocs-markdown)
 
 <!--
 evolutionary time spans on Internet
 > - interoperable across many editors & online services
 -->
 
-[^syntax]: more at [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples) & [pandoc.org/README.html](http://pandoc.org/README.html#pandocs-markdown)
-
-
-### Markdown developers: Gruber & Swartz (2004)[^df]
+### Markdown developers: Gruber & Swartz (2004)
 
 ![photos by [George Del Barrio (CC BY-SA 3.0 via Wikipedia)](https://en.wikipedia.org/wiki/File:John_Gruber.jpeg) and
 [Fred Benenson](http://www.flickr.com/photos/creativecommons/3111021669/) ([CC BY 2.0 via Wikimedia Commons)](https://commons.wikimedia.org/wiki/File:Aaron_Swartz_profile.jpg)
 ](images/gruber_swartz.png)
 
+> - [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 > - primarily built for web publishing & technical docu
 > - also gaining traction in humanities
 > - natural sciences falling behind?
-
-[^df]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 
 
 
@@ -168,9 +165,7 @@ just passing along the message
 #### [![](images/peerj.png)\ PeerJ Paper Now](https://github.com/PeerJ/paper-now)
 
 > - template for MD-formatted scientific texts & figures
-> - generates & publishes article website[^PN]
-
-[^PN]: [katrinleinweber.github.io/paper-now](https://katrinleinweber.github.io/paper-now/)
+> - generates & publishes article website => [DEMO](https://katrinleinweber.github.io/paper-now/)
 
 
 
