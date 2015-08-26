@@ -182,11 +182,11 @@ just passing along the message
 
 
 
-# Write in Word, \newline Save in Markdown, \newline Publish in \LaTeX
+# Write in Word, Save in Markdown, Publish in \LaTeX
 
 
 
-# ~~Write in Word~~, \newline Write & Save in Markdown, \newline Publish in \LaTeX (or Word)
+# ~~Write in Word~~, Write & Save in Markdown, Publish in \LaTeX (or Word)
 
 
 ### Thanks for your attention! Questions?
