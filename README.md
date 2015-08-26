@@ -36,15 +36,13 @@ license: CC-BY-4.0 for own content; image attributions in titles
     \smartdiagram[sequence diagram]{
         text \& figures,
         add markup,
-        format / compile,
-        document
+        typeset,
+        presentable document
         }
 \end{center}
 
-> - all modern document formats are markup
-> - Word processors just hide it & compile in real-time
-> - languages differ in ratio of text to syntax
-
+> - most modern document formats (`.docx`, `.odt`) are markup
+> - word processors just hide it & typeset continuously
 
 
 ### What is Markdown? Markup language.
@@ -59,9 +57,9 @@ Heading 2       | `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`
 H~2~O           | `H\textsubscript{2}O`        | `H<sub>2</sub>O`
 Ca^2+^          | `Ca\textsuperscript{2+}`     | `Ca<sup>2+</sup>`
 
-> - only readable in compiled form (PDF, website)
-> - classes & style files determine compiled look
-> - editing those requires deeper knowledge of the language
+> - lots of formatting commands/syntax
+> - even weirder headers
+> - only really readable in compiled form (PDF, website)
 
 
 ### What is Markdown? Plain text, formatting syntax.
