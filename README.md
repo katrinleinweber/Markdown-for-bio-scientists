@@ -7,17 +7,11 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ---
 
 
-
-# This is not a scientific talk, but an introduction to a modern way of writing.
-
-
-### Any new way of writing may touch many aspects of science
+### Markdown is a modern way of writing; has potential to modernise...
 
 \begin{center}
     \smartdiagram[bubble diagram]{
         SCIENTIFIC\\WRITING,
-            brainstorming\\ideas,
-            reviewing\\literature,
             preparing\\lectures,
             preparing\\publications,
             analysing\\data,
@@ -25,10 +19,6 @@ license: CC-BY-4.0 for own content; image attributions in titles
             taking\\notes
         }
 \end{center}
-
-
-
-# Markdown is one such modern way of writing.
 
 
 ### What is Markdown? Markup language.
