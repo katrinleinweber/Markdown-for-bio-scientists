@@ -109,10 +109,15 @@ Ca^2+^          | `Ca^2+^`
 ![30min intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
 
 
+### Don't TeX. Let [pandoc.org](http://pandoc.org/index.html) TeX for you!
 
+> - "universal document converter" by [John MacFarlane](http://johnmacfarlane.net/)
 
+> - extends MD with figure & table captions, citations, math, etc.
 
+> - usable in mixture with \LaTeX\ with [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)[^SMJE]
 
+[^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown)
 
 ### Some software tools with Markdown support
 
@@ -177,7 +182,6 @@ just passing along the message
 ##### Acknowledgements
 
 - Ralf, Sarah, Sina, Xiaohui, and all other retreat organisers
-- [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)
-- [pandoc by John MacFarlane](http://pandoc.org/index.html)
 
 ![](images/funding.png)
+- Jens Erat for [Scientific Markdown](https://github.com/JensErat/scientific-markdown)
