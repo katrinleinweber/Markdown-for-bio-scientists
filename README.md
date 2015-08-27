@@ -21,7 +21,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 \end{center}
 
 
-### What is Markdown? Markup language.
+### Background: Markup languages
 
 \begin{center}
     \smartdiagram[sequence diagram]{
@@ -32,11 +32,12 @@ license: CC-BY-4.0 for own content; image attributions in titles
         }
 \end{center}
 
+> - goal: concentrate on content, not appearance
 > - most modern document formats (`.docx`, `.odt`) are markup
 > - word processors just hide it & typeset continuously
 
 
-### What is Markdown? Markup language.
+### Background: Markup languages
 
 \               | \LaTeX\                      | HTML                 
 ---------------:|----------------------------- |------------------------
@@ -49,11 +50,10 @@ H~2~O           | `H\textsubscript{2}O`        | `H<sub>2</sub>O`
 Ca^2+^          | `Ca\textsuperscript{2+}`     | `Ca<sup>2+</sup>`
 
 > - lots of formatting commands/syntax
-> - even weirder headers
 > - only really readable in compiled form (PDF, website)
 
 
-### What is Markdown? Plain text, formatting syntax.
+### What is Markdown? Minimalistic markup language!
 
 \               | Markdown              
 ---------------:|-----------------
@@ -62,14 +62,13 @@ Ca^2+^          | `Ca\textsuperscript{2+}`     | `Ca<sup>2+</sup>`
 **Heading 1**   | `# Heading 1`   
 Heading 2       | `## Heading 2`  
 ~~strike out~~  | `~~strike out~~`
-H_2_O           | `H~2~O`
+H~2~O           | `H~2~O`
 Ca^2+^          | `Ca^2+^`
 
+> - fast to type & easy to read, in many different programs
 > - defined in 2004 by John Gruber[^df] & Aaron Swartz
 > - based on email conventions, built for web publishing
 > - has links, images, tables, footnotes, quotes and more[^syntax]
-> - minimalistic, easy to type & read, interoperable
-> - accepts lazy users & works around them
 
 [^df]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 [^syntax]: [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
