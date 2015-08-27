@@ -78,26 +78,6 @@ Ca^2+^          | `Ca^2+^`
 # Markdown use-case examples
 
 
-### Digital lab journalling
-
-![(Check)lists, hyperlinks, images](images/lab-journal.png)
-
-
-### Experiment summaries
-
-![[RMarkdown.RStudio.com](http://rmarkdown.rstudio.com/)](images/rmarkdown.jpg)
-
-
-### Better document versioning than this:
-
-![](images/versions-win-explorer.png)
-
-
-### Plain text version control with Git:
-
-![30min intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
-
-
 ### Words of caution: try with finished doc, or small new one!
 
 > - initial time invest to learn syntax & install tools
@@ -111,6 +91,27 @@ Ca^2+^          | `Ca^2+^`
   \includegraphics[width=4cm]{images/dont-change-horses-in-middle-of-river.png}
   \caption{\href{http://www.ishestar.is/}{Íshestar} via \href{http://www.equitrekking.com/articles/entry/iceland_horseback_riding_vacation_photo_journey/}{equitrekking.com}}
 \end{figure}
+
+
+### Digital lab journalling
+
+![(Check)lists, hyperlinks, images](images/lab-journal.png)
+
+### Better document versioning than this:
+
+![](images/versions-win-explorer.png)
+### Experiment summaries
+
+![[RMarkdown.RStudio.com](https://rmarkdown.rstudio.com/)](images/rmarkdown.jpg)
+
+### Plain text version control with Git:
+
+![30min intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
+
+
+
+
+
 
 
 ### Some software tools with Markdown support
