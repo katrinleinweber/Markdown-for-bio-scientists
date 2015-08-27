@@ -97,14 +97,13 @@ Ca^2+^          | `Ca^2+^`
 
 ![(Check)lists, hyperlinks, images](images/lab-journal.png)
 
-### Better document versioning than this:
 
-![](images/versions-win-explorer.png)
 ### Experiment summaries
 
 ![[RMarkdown.RStudio.com](https://rmarkdown.rstudio.com/)](images/rmarkdown.jpg)
 
-### Plain text version control with Git:
+
+### Proper document version control with Git
 
 ![30min intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
 
@@ -119,12 +118,8 @@ Ca^2+^          | `Ca^2+^`
 
 [^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown)
 
-### Some software tools with Markdown support
 
-<!--
-not something I have developed
-just passing along the message
--->
+### Some software tools with Markdown support
 
 > - editors with live preview: [![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/) & [![](images/macdown.png)\ MacDown](http://macdown.uranusjr.com/)
 
@@ -157,17 +152,14 @@ just passing along the message
 
 
 
-# ~~Write in Word~~, \newline Write & Save in Markdown, \newline Publish in \LaTeX (or Word)
+# ~~Write in Word~~, \newline Write & Save in Markdown, \newline Publish in \LaTeX\ (or Word)
 
 
 ### Summary: easier collaboration & publication 
 
-##### Make a wish!
-
-> - simple formatting rules, templates from publishers
+> - simple formatting rules
 > - version control & syncing instead of e-mailing files
-
-##### In reality:
+> - templates from publishers?
 
 > - exploding in software development & web publishing
 > - gaining traction in humanities
@@ -176,12 +168,11 @@ just passing along the message
 
 ### Thanks for your attention! Questions?
 
-- Markdown questions on [![](images/stackoverflow)\ StackOverflow.com](https://stackoverflow.com/questions/tagged/markdown)- live demo: [commonmark.org/dingus](http://spec.commonmark.org/dingus/)
-- recording will appear on [konscience.de/md](http://www.konscience.de/md) soon
+- Markdown questions on [![](images/stackoverflow)\ StackOverflow.com](https://stackoverflow.com/questions/tagged/markdown)
+- live demo: [commonmark.org/dingus](http://spec.commonmark.org/dingus/)
+- slides & recording (will appear) on [konscience.de/md](http://www.konscience.de/md)
 
 ##### Acknowledgements
 
 - Ralf, Sarah, Sina, Xiaohui, and all other retreat organisers
-
-![](images/funding.png)
 - Jens Erat for [Scientific Markdown](https://github.com/JensErat/scientific-markdown)
