@@ -128,10 +128,10 @@ license: CC-BY-4.0 for own content; image attributions in titles
 [^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown/master/presentation.pdf)
 
 
-### *Write in Word?* Save in Markdown! Publish in \LaTeX!
+### **Write in Word?** Save in Markdown! Publish in \LaTeX!
 
-> - [Writage.com](http://www.writage.com/) adds Markdown support into MS Word
-> - messy plain text, renames media files & looses figure captions :-/
+> - [Writage.com](http://www.writage.com/) adds Markdown support in Word
+> - messy plain text, renamed media files & lost figure captions
 
 ![](images/writage)
 
