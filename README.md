@@ -39,39 +39,40 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ### Background: Markup languages
 
-\               | \LaTeX\                      | HTML                 
----------------:|----------------------------- |------------------------
-**bold**        | `\textbf{bold}`              | `<strong>bold</strong>`
-*Species name*  | `\emph{Species name}`        | `<i>Species name</i>`  
-**Heading 1**   | `\section{Heading 1}`        | `<h1>Heading 1</h1>`   
-Heading 2       | `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`   
-~~strike out~~  | `\sout{strike out}`          | `<strike>out</strike>`
-H~2~O           | `H\textsubscript{2}O`        | `H<sub>2</sub>O`
-Ca^2+^          | `Ca\textsuperscript{2+}`     | `Ca<sup>2+</sup>`
+\LaTeX\ (1985)[^latex]       | HTML (1992)[^html]     | \
+-----------------------------|------------------------|-
+`\textbf{bold}`              | `<strong>bold</strong>`| **bold**
+`\emph{Species name}`        | `<i>Species name</i>`  | *Species name*
+`\section{Heading 1}`        | `<h1>Heading 1</h1>`   | **Heading 1**
+`\subsection{Heading 2}`     | `<h2>Heading 2</h2>`   | Heading 2
+`\sout{strike out}`          | `<strike>out</strike>` | ~~strike out~~
+`H\textsubscript{2}O`        | `H<sub>2</sub>O`       | H~2~O
+`Ca\textsuperscript{2+}`     | `Ca<sup>2+</sup>`      | Ca^2+^
 
 > - lots of formatting commands/syntax
 > - only really readable in compiled form (PDF, website)
 
+[^latex]: [latex-project.org](http://latex-project.org/)
+[^html]: [w3.org/html](http://www.w3.org/html/)
+
 
 ### What is Markdown? Minimalistic markup language!
 
-\               | Markdown              
----------------:|-----------------
-**bold**        | `**bold**`
-*Species name*  | `*Species name*`
-**Heading 1**   | `# Heading 1`   
-Heading 2       | `## Heading 2`  
-~~strike out~~  | `~~strike out~~`
-H~2~O           | `H~2~O`
-Ca^2+^          | `Ca^2+^`
+---               ---
+`**bold**`        **bold**
+`*Species name*`  *Species name*
+`# Heading 1`     **Heading 1** 
+`## Heading 2`    Heading 2
+`~~strike out~~`  ~~strike out~~
+`H~2~O`           H~2~O
+`Ca^2+^`          Ca^2+^
+---               ---
 
 > - fast to type & easy to read, in many different programs
 > - defined in 2004 by John Gruber[^df] & Aaron Swartz
-> - based on email conventions, built for web publishing
-> - has links, images, tables, footnotes, quotes and more[^syntax]
+> - built for online communication
 
-[^df]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
-[^syntax]: [guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown/#examples)
+[^md]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 
 
 
