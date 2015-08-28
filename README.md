@@ -76,8 +76,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ### Words of caution: try with finished doc, or small new one!
 
 > - initial time investment to learn syntax & install tools
-> - pays off later, esp. for large documents
-> - different Markdown variants/flavours
+> - styles & templates need to support Markdown
 > - return to `.docx` is possible in any case
 
 \begin{figure}
