@@ -28,19 +28,19 @@ license: CC-BY-4.0 for own content; image attributions in titles
     \smartdiagram[sequence diagram]{
         text \& figures,
         markup,
-        typeset,
-        presentable document
+        typesetting,
+        document
         }
 \end{center}
 
-> - goal: concentrate on content, not appearance
+> - design philosophy: separate content from presentation
 > - most modern document formats are markup (`.docx` also)
 > - Word just hide it & typesets continuously
 
 
 ### Background: Markup languages
 
-\LaTeX\ (1985)[^latex]       | HTML (1992)[^html]     | \ 
+\LaTeX\ (1985)               | HTML (1992)            | \ 
 -----------------------------|------------------------|---
 `\textbf{bold}`              | `<strong>bold</strong>`| **bold**
 `\emph{Species name}`        | `<i>Species name</i>`  | *Species name*
@@ -50,9 +50,6 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 > - lots of formatting commands/syntax
 > - only really readable in compiled form (PDF, website)
-
-[^latex]: [latex-project.org](http://latex-project.org/)
-[^html]: [w3.org/html](http://www.w3.org/html/)
 
 
 ### What is Markdown? Minimalistic markup language!
@@ -65,9 +62,9 @@ license: CC-BY-4.0 for own content; image attributions in titles
 `~~strike out~~`  ~~strike out~~
 ---               ---
 
-> - fast to type & easy to read, in many different programs
-> - defined in 2004 by John Gruber[^df] & Aaron Swartz
-> - built for online communication
+> - fast to type & easy to read; like plain text email
+> - defined by John Gruber[^df] & Aaron Swartz in 2004
+> - has links, images, lists, quotes, etc.
 
 [^df]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 
