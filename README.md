@@ -100,7 +100,10 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ### Use-case: documenting data analysis
 
-![[RMarkdown.RStudio.com](https://rmarkdown.rstudio.com/)](images/rmarkdown.jpg)
+![
+[![](images/rstudio.png)\ RMarkdown.RStudio.com
+](https://rmarkdown.rstudio.com/)
+](images/rmarkdown.jpg)
 
 
 ### Use-case: plain text version control with Git
