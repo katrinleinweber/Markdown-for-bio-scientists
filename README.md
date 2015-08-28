@@ -28,7 +28,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
     \smartdiagram[sequence diagram]{
         text \& figures,
         markup,
-        typesetter,
+        typeset,
         presentable document
         }
 \end{center}
@@ -40,8 +40,8 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ### Background: Markup languages
 
-\LaTeX\ (1985)[^latex]       | HTML (1992)[^html]     | \
------------------------------|------------------------|-
+\LaTeX\ (1985)[^latex]       | HTML (1992)[^html]     | \ 
+-----------------------------|------------------------|---
 `\textbf{bold}`              | `<strong>bold</strong>`| **bold**
 `\emph{Species name}`        | `<i>Species name</i>`  | *Species name*
 `\section{Heading 1}`        | `<h1>Heading 1</h1>`   | **Heading 1**
@@ -73,7 +73,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 > - defined in 2004 by John Gruber[^df] & Aaron Swartz
 > - built for online communication
 
-[^md]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
+[^df]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/syntax)
 
 
 
@@ -82,11 +82,11 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ### Words of caution: try with finished doc, or small new one!
 
-> - initial time invest to learn syntax & install tools
+> - initial time investment to learn syntax & install tools
 > - pays off later, esp. for large documents
 
-> - different variants have slightly different capabilities
 > - emergency exit back to Word available: MD converts to `.docx`
+> - different Markdown variants/flavours
 
 \begin{figure}
   \centering
@@ -123,7 +123,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 > - Don't TeX. Let software TeX for you!
 
-[^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown/blob/master/presentation.pdf)
+[^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown/master/presentation.pdf)
 
 
 ### MD use-case: collaborating on publications
@@ -167,5 +167,5 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ##### Acknowledgements
 
-- Ralf, Sarah, Sina, Xiaohui, and all other retreat organisers
+- Ralf, Sarah, Sina, Xiaohui & all other retreat organisers
 - [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown)
