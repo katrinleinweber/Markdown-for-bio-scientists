@@ -148,10 +148,11 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ### Thanks for your attention! Questions?
 
-- slides & recording (will appear) on [konscience.de/md](http://www.konscience.de/md)
-- Markdown questions on [![](images/stackoverflow)\ StackOverflow.com](https://stackoverflow.com/questions/tagged/markdown)
+> slides will appear on konscience.de/md
 
 ##### Acknowledgements
 
 - Ralf, Sarah, Sina, Xiaohui & all other retreat organisers
 - [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown)
+
+![Actual lab work was conducted as well ;-)](images/funding.png)
