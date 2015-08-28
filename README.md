@@ -47,8 +47,6 @@ license: CC-BY-4.0 for own content; image attributions in titles
 `\section{Heading 1}`        | `<h1>Heading 1</h1>`   | **Heading 1**
 `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`   | Heading 2
 `\sout{strike out}`          | `<strike>out</strike>` | ~~strike out~~
-`H\textsubscript{2}O`        | `H<sub>2</sub>O`       | H~2~O
-`Ca\textsuperscript{2+}`     | `Ca<sup>2+</sup>`      | Ca^2+^
 
 > - lots of formatting commands/syntax
 > - only really readable in compiled form (PDF, website)
@@ -65,8 +63,6 @@ license: CC-BY-4.0 for own content; image attributions in titles
 `# Heading 1`     **Heading 1** 
 `## Heading 2`    Heading 2
 `~~strike out~~`  ~~strike out~~
-`H~2~O`           H~2~O
-`Ca^2+^`          Ca^2+^
 ---               ---
 
 > - fast to type & easy to read, in many different programs
