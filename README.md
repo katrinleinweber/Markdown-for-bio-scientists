@@ -84,7 +84,7 @@ Ca^2+^          | `Ca^2+^`
 > - pays off later, esp. for large documents
 
 > - different variants have slightly different capabilities
-> - emergency exit back to ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Microsoft_Word_2013_logo.svg/200px-Microsoft_Word_2013_logo.svg.png)Word available: MD converts to `.docx`
+> - emergency exit back to Word available: MD converts to `.docx`
 
 \begin{figure}
   \centering
