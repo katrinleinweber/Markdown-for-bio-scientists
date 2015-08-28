@@ -103,18 +103,6 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ](images/rmarkdown.jpg)
 
 
-### Use-case: plain text version control with Git
-
-![30min intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
-
-
-### Use-case: writing thesis in Scientific Markdown[^SMJE] & \LaTeX
-
-![toolset for citations, table & figure captions, formulas, footnotes, etc.](images\scientific-markdown.png)
-
-[^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown/master/presentation.pdf)
-
-
 ### Use-case: easier collaboration on manuscripts
 
 ##### [![](images/authorea-fav.png)\ Authorea.com](https://authorea.com/)
@@ -126,6 +114,18 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 > - Git-based template & generator for article websites
 > - no submission options (yet)
+
+
+### Use-case: plain text version control with Git
+
+![30min intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
+
+
+### Use-case: writing thesis in Scientific Markdown[^SMJE] & \LaTeX
+
+![toolset for citations, table & figure captions, formulas, footnotes, etc.](images\scientific-markdown.png)
+
+[^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown/master/presentation.pdf)
 
 
 ### *Write in Word?* Save in Markdown! Publish in \LaTeX!
