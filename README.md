@@ -77,16 +77,15 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 
 
-# Scientific use-case examples for Markdown (MD)
+# Use-case examples
 
 
 ### Words of caution: try with finished doc, or small new one!
 
 > - initial time investment to learn syntax & install tools
 > - pays off later, esp. for large documents
-
-> - emergency exit back to Word available: MD converts to `.docx`
 > - different Markdown variants/flavours
+> - return to `.docx` is possible in any case
 
 \begin{figure}
   \centering
@@ -95,7 +94,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 \end{figure}
 
 
-### MD use-case: digital lab journalling
+### Use-case: digital lab journalling
 
 ![editors with live preview:
 [![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/),
@@ -103,42 +102,33 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ](images/lab-journal.png)
 
 
-### MD use-case: annotating data analysis
+### Use-case: documenting data analysis
 
 ![[RMarkdown.RStudio.com](https://rmarkdown.rstudio.com/)](images/rmarkdown.jpg)
 
 
-### MD use-case: version control with Git
+### Use-case: plain text version control with Git
 
 ![30min intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
 
 
-### MD use-case: universal document conversion
+### Use-case: writing thesis in Scientific Markdown[^SMJE] & \LaTeX
 
-> - toolset: [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)[^SMJE]
-
-> - makes figure & table captions, citations, formulas, etc. available
-
-> - bridges Markdown to \LaTeX
-
-> - Don't TeX. Let software TeX for you!
+![toolset for citations, table & figure captions, formulas, footnotes, etc.](images\scientific-markdown.png)
 
 [^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown/master/presentation.pdf)
 
 
-### MD use-case: collaborating on publications
+### Use-case: easier collaboration on manuscripts
 
 ##### [![](images/authorea-fav.png)\ Authorea.com](https://authorea.com/)
 
-> - collaborative manuscript preparation platform
-> - integrates Mendeley, EndNote & Zotero
-> - 1-click-formatting & submission available for several journals 
+> - academic text editor with citations, formulas, figures, commenting, etc.
+> - 1-click-formatting & journal submission
 
+##### [![](images/peerj.png)\ Paper Now: github.com/PeerJ/paper-now](https://github.com/PeerJ/paper-now)
 
-##### [![](images/peerj.png)\ PeerJ Paper Now](https://github.com/PeerJ/paper-now)
-
-> - GitHub template for MD-formatted scientific texts & figures
-> - generates & publishes article website[^PN]
+> - Git-based template & generator for article websites
 > - no submission options (yet)
 
 
