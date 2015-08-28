@@ -7,14 +7,15 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ---
 
 
-### Markdown is a modern way of writing; has potential to modernise...
+### Markdown can help you with...
 
 \begin{center}
     \smartdiagram[bubble diagram]{
-        SCIENTIFIC\\WRITING,
+        Scientific\\Writing,
+            publishing\\online,
             preparing\\lectures,
-            preparing\\publications,
-            analysing\\data,
+            writing\\manuscripts,
+            reporting\\data,
             documenting\\experiments,
             taking\\notes
         }
@@ -26,15 +27,15 @@ license: CC-BY-4.0 for own content; image attributions in titles
 \begin{center}
     \smartdiagram[sequence diagram]{
         text \& figures,
-        add markup,
-        typeset,
+        markup,
+        typesetter,
         presentable document
         }
 \end{center}
 
 > - goal: concentrate on content, not appearance
-> - most modern document formats (`.docx`, `.odt`) are markup
-> - word processors just hide it & typeset continuously
+> - most modern document formats are markup (`.docx` also)
+> - Word just hide it & typesets continuously
 
 
 ### Background: Markup languages
