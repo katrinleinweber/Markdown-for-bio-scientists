@@ -75,7 +75,7 @@ Ca^2+^          | `Ca^2+^`
 
 
 
-# Markdown use-case examples
+# Scientific use-case examples for Markdown (MD)
 
 
 ### Words of caution: try with finished doc, or small new one!
@@ -84,7 +84,7 @@ Ca^2+^          | `Ca^2+^`
 > - pays off later, esp. for large documents
 
 > - different variants have slightly different capabilities
-> - way back to MS Word is always possible
+> - emergency exit back to ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Microsoft_Word_2013_logo.svg/200px-Microsoft_Word_2013_logo.svg.png)Word available: MD converts to `.docx`
 
 \begin{figure}
   \centering
@@ -93,49 +93,51 @@ Ca^2+^          | `Ca^2+^`
 \end{figure}
 
 
-### Digital lab journalling
+### MD use-case: digital lab journalling
 
-![(Check)lists, hyperlinks, images](images/lab-journal.png)
+![editors with live preview:
+[![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/),
+[![](images/macdown.png)\ MacDown](http://macdown.uranusjr.com/), etc.
+](images/lab-journal.png)
 
 
-### Experiment summaries
+### MD use-case: annotating data analysis
 
 ![[RMarkdown.RStudio.com](https://rmarkdown.rstudio.com/)](images/rmarkdown.jpg)
 
 
-### Proper document version control with Git
+### MD use-case: version control with Git
 
 ![30min intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
 
 
-### Don't TeX. Let [pandoc.org](http://pandoc.org/index.html) TeX for you!
+### MD use-case: universal document conversion
 
-> - "universal document converter" by [John MacFarlane](http://johnmacfarlane.net/)
+> - toolset: [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)[^SMJE]
 
-> - extends MD with figure & table captions, citations, math, etc.
+> - makes figure & table captions, citations, formulas, etc. available
 
-> - usable in mixture with \LaTeX\ with [Scientific Markdown by Jens Erat](https://github.com/JensErat/scientific-markdown)[^SMJE]
+> - bridges Markdown to \LaTeX
 
-[^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown)
+> - Don't TeX. Let software TeX for you!
+
+[^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown/blob/master/presentation.pdf)
 
 
-### Some software tools with Markdown support
+### MD use-case: collaborating on publications
 
-> - editors with live preview: [![](images/markdownpad.png)\ MarkdownPad](https://markdownpad.com/) & [![](images/macdown.png)\ MacDown](http://macdown.uranusjr.com/)
+##### [![](images/authorea-fav.png)\ Authorea.com](https://authorea.com/)
 
-#### [![](images/authorea-fav.png)\ Authorea.com](https://authorea.com/)
-
-> - collaborative manuscript preparation platform (also for \LaTeX)
+> - collaborative manuscript preparation platform
 > - integrates Mendeley, EndNote & Zotero
 > - 1-click-formatting & submission available for several journals 
 
-#### [![](images/peerj.png)\ PeerJ Paper Now](https://github.com/PeerJ/paper-now)
+
+##### [![](images/peerj.png)\ PeerJ Paper Now](https://github.com/PeerJ/paper-now)
 
 > - GitHub template for MD-formatted scientific texts & figures
 > - generates & publishes article website[^PN]
 > - no submission options (yet)
-
-[^PN]: [read-lab-confederation.github.io/nyc-subway-anthrax-study](https://read-lab-confederation.github.io/nyc-subway-anthrax-study/)
 
 
 ### *Write in Word?* Save in Markdown! Publish in \LaTeX!
