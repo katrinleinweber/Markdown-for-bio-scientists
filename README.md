@@ -154,27 +154,16 @@ Ca^2+^          | `Ca^2+^`
 
 
 
-# ~~Write in Word~~, \newline Write & Save in Markdown, \newline Publish in \LaTeX\ (or Word)
+# ~~Write in Word,~~ \newline Use Markdown wherever possible, \newline Convert to whatever is necessary.
 
-
-### Summary: easier collaboration & publication 
-
-> - simple formatting rules
-> - version control & syncing instead of e-mailing files
-> - templates from publishers?
-
-> - exploding in software development & web publishing
-> - gaining traction in humanities
-> - usable in natural sciences
 
 
 ### Thanks for your attention! Questions?
 
-- Markdown questions on [![](images/stackoverflow)\ StackOverflow.com](https://stackoverflow.com/questions/tagged/markdown)
-- live demo: [commonmark.org/dingus](http://spec.commonmark.org/dingus/)
 - slides & recording (will appear) on [konscience.de/md](http://www.konscience.de/md)
+- Markdown questions on [![](images/stackoverflow)\ StackOverflow.com](https://stackoverflow.com/questions/tagged/markdown)
 
 ##### Acknowledgements
 
 - Ralf, Sarah, Sina, Xiaohui, and all other retreat organisers
-- Jens Erat for [Scientific Markdown](https://github.com/JensErat/scientific-markdown)
+- [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown)
