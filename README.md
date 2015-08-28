@@ -131,8 +131,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ### *Write in Word?* Save in Markdown! Publish in \LaTeX!
 
 > - [Writage.com](http://www.writage.com/) adds Markdown support into MS Word
-> - produces more command symbols than necessary
-> - renames media files & looses figure captions :-/
+> - messy plain text, renames media files & looses figure captions :-/
 
 ![](images/writage)
 
