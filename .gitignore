@@ -8,10 +8,11 @@
 *.toc
 *.vrb
 *.xcf
-*.pdf
 markdown.tex
 *ippets*
 images/dont-change-horses-in-middle-of-river.png
 test.md
 *.sublime-project
 *.sublime-workspace
+Markdown-*.pdf
+markdown.pdf
