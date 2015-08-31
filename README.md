@@ -33,10 +33,11 @@ license: CC-BY-4.0 for own content; image attributions in titles
         }
 \end{center}
 
-> - design philosophy: separate content from presentation
-> - most modern document formats are markup (`.docx` also)
-> - Word just hide it & typesets continuously
+> - design philosophy[^dp]: separate content from presentation
+> - most modern document formats are markup
+> - word processors just typeset continuously
 
+[^dp]: [en.wikipedia.org/wiki/Separation_of_presentation_and_content](https://en.wikipedia.org/wiki/Separation_of_presentation_and_content)
 
 ### Background: Markup languages
 
@@ -50,6 +51,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 > - a lot of formatting commands
 > - only really readable in typeset form (PDF, website)
+> - but machine-readable
 
 
 ### What is Markdown? Minimalistic markup language!
@@ -62,7 +64,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 `~~strike out~~`  ~~strike out~~
 ---               ---
 
-> - fast to type & easy to read
+> - fast to type & easy to read (for both human & machine)
 > - defined in 2004 by John Gruber[^df] & Aaron Swartz
 > - designed for web publishing => converts to HTML
 > - has links, images, lists, quotes, etc.
