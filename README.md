@@ -130,10 +130,6 @@ license: CC-BY-4.0 for own content; image attributions in titles
 [^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown/master/presentation.pdf)
 
 
-
-# Poll: Who is using \LaTeX\ already? And do you like it?
-
-
 ### **Write in Word?** Save in Markdown! Publish in \LaTeX!
 
 > - [Writage.com](http://www.writage.com/) adds Markdown support in Word
