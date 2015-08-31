@@ -123,9 +123,9 @@ license: CC-BY-4.0 for own content; image attributions in titles
 > - 1-click-formatting & journal submission
 
 
-### Use-case: bridging Scientific Markdown[^SMJE] to \LaTeX
+### Use-case: offline Scientific Markdown[^SMJE]
 
-![toolset for citations, table & figure captions, formulas, footnotes, etc.](images\scientific-markdown.png)
+![toolset for bridging MD to \LaTeX](images\scientific-markdown.png)
 
 [^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown/master/presentation.pdf)
 
