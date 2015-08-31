@@ -2,7 +2,7 @@
 title: Write in Word, \newline \textbf{Save in Markdown}, \newline Publish in \LaTeX
 subtitle: May take some pain out of scientific writing.
 author: Katrin Leinweber
-date: 2015-Aug-31/-Sep-02
+date: 2015-Aug-31
 license: CC-BY-4.0 for own content; image attributions in titles
 ---
 
@@ -40,9 +40,9 @@ license: CC-BY-4.0 for own content; image attributions in titles
         }
 \end{center}
 
-> - design philosophy[^dp]: separate content from presentation
-> - most modern document formats are markup
-> - word processors just typeset continuously
+- design philosophy[^dp]: separate content from presentation
+- most modern document formats are markup
+- word processors just typeset continuously
 
 [^dp]: [en.wikipedia.org/wiki/Separation_of_presentation_and_content](https://en.wikipedia.org/wiki/Separation_of_presentation_and_content)
 
@@ -56,9 +56,9 @@ license: CC-BY-4.0 for own content; image attributions in titles
 `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`   | Heading 2
 `\sout{strike out}`          | `<strike>out</strike>` | ~~strike out~~
 
-> - a lot of formatting commands
-> - only really readable in typeset form (PDF, website)
-> - but machine-readable
+- a lot of formatting commands
+- only really readable in typeset form (PDF, website)
+- but machine-readable
 
 
 ### What is Markdown? Minimalistic markup language!
@@ -71,10 +71,10 @@ license: CC-BY-4.0 for own content; image attributions in titles
 `~~strike out~~`  ~~strike out~~
 ---               ---
 
-> - fast to type & easy to read (for both human & machine)
-> - defined in 2004 by John Gruber[^df] & Aaron Swartz
-> - designed for web publishing => converts to HTML
-> - has links, images, lists, quotes, etc.
+- fast to type & easy to read
+- defined in 2004 by John Gruber[^df] & Aaron Swartz
+- designed for web publishing => converts to HTML
+- has links, images, lists, quotes, etc.
 
 [^df]: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown)
 
@@ -85,9 +85,9 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ### Words of caution: try with finished doc, or small new one!
 
-> - up-front time investment to install tools & get used to MD
-> - accept hand-over of styling & templating to others
-> - return to `.docx` possible in any case
+- up-front time investment to install tools & get used to MD
+- accept hand-over of styling & templating to others
+- return to `.docx` possible in any case
 
 \begin{figure}
   \centering
@@ -111,8 +111,12 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ](https://rmarkdown.rstudio.com/)
 ](images/rmarkdown.jpg)
 
+### Use-case: preventing this...
 
-### Use-case: plain text version control with Git
+![](images/phd101212s-final.doc.png)
+
+
+### ...by plain text version control with Git
 
 ![30min intro at [konscience.de/git](http://www.konscience.de/2015/04/ksl002-digital-lab-journalling-with-git/)](images/file-changes-in-GitHub.png)
 
@@ -121,26 +125,26 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ##### [![](images/peerj.png)\ Paper Now: github.com/PeerJ/paper-now](https://github.com/PeerJ/paper-now)
 
-> - Git-based template & generator for article websites
-> - no submission options (yet)
+- Git-based template & generator for article websites
+- no submission options (yet)
 
 ##### [![](images/authorea-fav.png)\ Authorea.com](https://authorea.com/)
 
-> - academic text editor with citations, formulas, figures, commenting, etc.
-> - 1-click-formatting & journal submission
+- academic text editor with citations, formulas, figures, commenting, etc.
+- 1-click-formatting & journal submission
 
 
 ### Use-case: offline Scientific Markdown[^SMJE]
 
-![toolset for bridging MD to \LaTeX](images\scientific-markdown.png)
+![toolset for bridging Markdown to \LaTeX\ (and anything else)](images\scientific-markdown.png)
 
 [^SMJE]: [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown/master/presentation.pdf)
 
 
 ### **Write in Word?** Save in Markdown! Publish in \LaTeX!
 
-> - [Writage.com](http://www.writage.com/) adds Markdown support in Word
-> - messy plain text, renames media files & looses figure captions
+- [Writage.com](http://www.writage.com/) adds Markdown support in Word
+- messy plain text, renamed image files & lost figure captions
 
 ![](images/writage)
 
@@ -158,7 +162,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 > katrin.leinweber@uni-konstanz.de
 > 
-> slides will appear on konscience.de/md
+> notes, links & slides on [konscience.de/md](http://www.konscience.de/md)
 
 ##### Acknowledgements
 
