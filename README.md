@@ -7,6 +7,13 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ---
 
 
+### Why not talk about a research project?
+
+> Support research and training programs that transcend traditional disciplines.[^ms]
+
+[^ms]: [chembiol.uni.kn/statement.html](http://www.chembiol.uni-konstanz.de/statement.html)
+
+
 ### Markdown can help you with...
 
 \begin{center}
