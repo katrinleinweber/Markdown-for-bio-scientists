@@ -19,6 +19,7 @@ core:
 		README.md
 	latexmk -pdflatex="xelatex --shell-escape %O %S" -pdf markdown.tex
 	cp Markdown.pdf Markdown-core.pdf
+	cp Markdown.pdf ../../../../KonScience/Episoden/KSL003\ Markdown\ for\ Scientists/ksl003-markdown-for-bio-scientists.pdf
 
 writage:
 	pandoc \

@@ -7,13 +7,6 @@ license: CC-BY-4.0 for own content; image attributions in titles
 ---
 
 
-### Why not talk about a research project?
-
-> Support research and training programs that transcend traditional disciplines.[^ms]
-
-[^ms]: [chembiol.uni.kn/statement.html](http://www.chembiol.uni-konstanz.de/statement.html)
-
-
 ### Markdown can help you with...
 
 \begin{center}
@@ -160,14 +153,12 @@ license: CC-BY-4.0 for own content; image attributions in titles
 
 ### Thanks for your attention! Questions?
 
-> katrin.leinweber@uni-konstanz.de
-> 
-> notes, links & slides on [konscience.de/md](http://www.konscience.de/md)
+> Please see the notes & links on [konscience.de/md](http://www.konscience.de/2015/09/markdown-for-bioscientists/) and post comment there. 
 
 ##### Acknowledgements
 
 - retreat organisers
-- [github.com/JensErat/scientific-markdown](https://github.com/JensErat/scientific-markdown)
+- [Jens Erat for Scientific Markdown](https://github.com/JensErat/scientific-markdown)
 
 ##### Funding
 
