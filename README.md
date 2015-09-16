@@ -44,7 +44,7 @@ license: CC-BY-4.0 for own content; image attributions in titles
 \LaTeX\ (1985)               | HTML (1992)            | \ 
 -----------------------------|------------------------|---
 `\textbf{bold}`              | `<strong>bold</strong>`| **bold**
-`\emph{Species name}`        | `<i>Species name</i>`  | *Species name*
+`\textit{Species name}`      | `<i>Species name</i>`  | *Species name*
 `\section{Heading 1}`        | `<h1>Heading 1</h1>`   | **Heading 1**
 `\subsection{Heading 2}`     | `<h2>Heading 2</h2>`   | Heading 2
 `\sout{strike out}`          | `<strike>out</strike>` | ~~strike out~~
